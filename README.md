@@ -42,16 +42,26 @@ The prototype is meant to successfully detect common attack types such as DoS, p
 (These versions are used as of 2/4/2025)
 
 **Hypervisor**: VirtualBox 7.2.4
+
 - **Primary OS**: Debian 13
-VM specs: BM 4096 MB, 2 CPU, Disk size 20,00 GB
-Network: Internal Network or Bridged Adapter (for traffic mirroring)
+
+  
+VM specs: 
+
+- BM 4096 MB
+- 2 CPU 
+- Disk size 20,00 GB
+- Network: Internal Network or Bridged Adapter (for traffic mirroring)
 
 
 
 **Attack Simulation OS**:
-  VM specs: 2–4 GB RAM, 2 vCPUs
+
+
+- VM specs: 2–4 GB RAM, 2 vCPUs
 
 **Test Datasets**:
+
 - Small manual PCAP files
 
 
