@@ -74,3 +74,23 @@ VM specs:
 5. Start services: `systemctl enable --now elasticsearch kibana filebeat`
 6. Test traffic generation: `sudo tcpreplay --intf1=ens160 sample.pcap`
 7. Access Kibana → http://localhost:5601 → create index pattern `filebeat-*` → build dashboards
+
+
+
+
+
+
+
+
+## Contact
+
+
+**Oskari Häkämies**
+
+
+
+**Nico Saario**
+
+
+
+**Arttu Mukkula**
