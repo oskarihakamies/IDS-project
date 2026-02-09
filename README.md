@@ -52,7 +52,7 @@ VM specs:
 - 2 CPU 
 - Disk size 20,00 GB
 - Network: Internal Network or Bridged Adapter (for traffic mirroring)
-
+- 
 
 
 **Attack Simulation OS**:
