@@ -2,4 +2,10 @@
 
 Aloitin jo ensimmäisen prototyypin rakennusta tyhjälle debian alustalle. Alusta tarvitsi aluksi hieman hienotuunausta, joten asensin perusohjelmat (curl, sources.listin, tekstieditorin, wget, htop, neofetch, git, unzip ja zip)
 
-Tämän jälkeen lähdin suricatan ja zeekin sivuilta asentamaan ohjelmia, sekä suoraan elasticsearchin ja kibanan elastic.co/docs sivulta. 
+Tämän jälkeen lähdin suricatan ja zeekin sivuilta asentamaan ohjelmia, sekä suoraan elasticsearchin, beatsin ja kibanan elastic.co/docs sivulta. 
+
+Sivu ELK stackin asennukseen: https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-elasticsearch-with-debian-package
+
+Suricata: sudo apt install suricata -y
+
+Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
