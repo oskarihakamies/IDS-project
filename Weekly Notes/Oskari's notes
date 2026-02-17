@@ -15,3 +15,5 @@ Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring
 TROUBLESHOOTING:
 
 Minulla oli alkujaan ongelma muistin kanssa, sillä en päässyt käynnistämään elasticsearchia ja VM lagasi liikaa. Korjasin tilanteen lisäämällä läppärini muistia. Suositeltava VM muisti olisi vähintään 8 GB
+
+Kannattaa zeekia asentaessa varmistaan onko oma interface yhdistetty siihen. Komento *ip a* ensin varmistamaan oma, jonka jälkeen sudo nano /opt/zeek/etc/node.cfg varmistamaan, mikä zeekissa on. 
