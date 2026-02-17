@@ -9,3 +9,9 @@ Sivu ELK stackin asennukseen: https://www.elastic.co/docs/deploy-manage/deploy/s
 Suricata: sudo apt install suricata -y
 
 Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
+
+
+
+TROUBLESHOOTING:
+
+Minulla oli alkujaan ongelma muistin kanssa, sillä en päässyt käynnistämään elasticsearchia ja VM lagasi liikaa. Korjasin tilanteen lisäämällä läppärini muistia. Suositeltava VM muisti olisi vähintään 8 GB
