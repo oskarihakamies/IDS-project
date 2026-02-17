@@ -48,8 +48,8 @@ The prototype is meant to successfully detect common attack types such as DoS, p
   
 VM specs: 
 
-- BM 4096 MB
-- 2 CPU 
+- BM (Recommended) 8-12 MB
+- -4 CPU 
 - Disk size 20,00 GB
 - Network: Internal Network or Bridged Adapter (for traffic mirroring)
 - 
