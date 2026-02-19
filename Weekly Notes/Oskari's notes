@@ -17,3 +17,8 @@ TROUBLESHOOTING:
 Minulla oli alkujaan ongelma muistin kanssa, sillä en päässyt käynnistämään elasticsearchia ja VM lagasi liikaa. Korjasin tilanteen lisäämällä läppärini muistia. Suositeltava VM muisti olisi vähintään 8 GB
 
 Kannattaa zeekia asentaessa varmistaan onko oma interface yhdistetty siihen. Komento *ip a* ensin varmistamaan oma, jonka jälkeen sudo nano /opt/zeek/etc/node.cfg varmistamaan, mikä zeekissa on. 
+
+
+USEFUL LINKS:
+
+Damon Garn, How to use tcpreplay: https://www.techtarget.com/searchsecurity/tutorial/How-to-use-tcpreplay-to-replay-network-packet-files 
