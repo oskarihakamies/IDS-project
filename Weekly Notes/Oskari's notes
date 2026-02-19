@@ -24,3 +24,5 @@ USEFUL LINKS:
 Damon Garn, How to use tcpreplay: https://www.techtarget.com/searchsecurity/tutorial/How-to-use-tcpreplay-to-replay-network-packet-files 
 
 A website and framework for testing NIDS detection: testmynids.org
+
+PCAPs for Testing: https://docs.securityonion.net/en/2.4/pcaps.html
