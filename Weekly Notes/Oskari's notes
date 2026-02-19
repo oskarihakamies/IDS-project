@@ -1,4 +1,4 @@
-- WEEK 5
+- WEEK 5 & 6
 
 Aloitin jo ensimmäisen prototyypin rakennusta tyhjälle debian alustalle. Alusta tarvitsi aluksi hieman hienotuunausta, joten asensin perusohjelmat (curl, sources.listin, tekstieditorin, wget, htop, neofetch, git, unzip ja zip)
 
