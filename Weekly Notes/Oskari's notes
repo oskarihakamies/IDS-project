@@ -22,3 +22,5 @@ Kannattaa zeekia asentaessa varmistaan onko oma interface yhdistetty siihen. Kom
 USEFUL LINKS:
 
 Damon Garn, How to use tcpreplay: https://www.techtarget.com/searchsecurity/tutorial/How-to-use-tcpreplay-to-replay-network-packet-files 
+
+A website and framework for testing NIDS detection: testmynids.org
