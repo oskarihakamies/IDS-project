@@ -21,9 +21,15 @@ Decided not worth the time, doing a fresh install even thought I decided to do a
 ### Installing and QuickStart
 
 Tcpreplay
-```echo "deb http://deb.debian.org/debian bookworm main" | sudo tee /etc/apt/sources.list.d/bookworm.list```
-```sudo apt-get update```
-``` sudo apt install tcpreplay```
+```
+sudo apt install build-essential libpcap-dev
+wget https://github.com/appneta/tcpreplay/releases/download/v4.4.3/tcpreplay-4.4.3.tar.gz
+tar -xzf tcpreplay-4.4.3.tar.gz
+cd tcpreplay-4.4.3
+./configure
+make
+sudo make install
+```
 
 Suricata:
 
