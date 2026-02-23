@@ -172,3 +172,8 @@ Works!
 Kibana:
 
 <img width="530" height="206" alt="kuva" src="https://github.com/user-attachments/assets/ba39619a-d51e-4524-a8b3-3449defb6b68" />
+
+Currently having trouble installing it. 
+<img width="641" height="878" alt="kuva" src="https://github.com/user-attachments/assets/9931146b-8f15-42f6-9d20-406aac5f8d40" />
+
+Tried force removing and purging 15 different times, no luck so far.
