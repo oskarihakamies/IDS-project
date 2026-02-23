@@ -21,3 +21,14 @@ Decided not worth the time, doing a fresh install even thought I decided to do a
 
 ```sudo apt-get install suricata``` <- Suricata
 
+Zeek based on this source:
+https://github.com/zeek/zeek/wiki/Binary-Packages
+
+For Debian 13:
+
+```
+echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/security:zeek.list
+curl -fsSL https://download.opensuse.org/repositories/security:zeek/Debian_13/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/security_zeek.gpg > /dev/null
+sudo apt update
+sudo apt install zeek
+```
