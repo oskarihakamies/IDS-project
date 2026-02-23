@@ -14,3 +14,10 @@ After searching for a while, managed to find them. Install them, test out that t
 I believe this was caused when I started to install Wazuh, and while it was installing, it got stuck and the computer decided that it's time to recharge and shut down completely.
 
 Even the GUI won't start, so time to start debugging with CLI.
+
+Decided not worth the time, doing a fresh install even thought I decided to do a fresh one with installation guides
+
+### Installing
+
+```sudo apt-get install suricata``` <- Suricata
+
