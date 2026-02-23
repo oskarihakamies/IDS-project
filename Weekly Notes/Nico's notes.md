@@ -39,6 +39,18 @@ sudo apt update
 sudo apt install zeek
 ```
 
+## ELK - Stack
+From [here](https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-elasticsearch-with-debian-package) Under "Download and install the Debian package manually"
+
+Dependencies: 
+```sudo apt-get install wget```
+```
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.3.0-amd64.deb
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.3.0-amd64.deb.sha512
+shasum -a 512 -c elasticsearch-9.3.0-amd64.deb.sha512
+sudo dpkg -i elasticsearch-9.3.0-amd64.deb
+```
+
 ### Dummy-interface
 
 - I went into this whole thing by just figuring out an alternative way to test TCPREPLAY so that I can isolate the network not to leak anything out.
