@@ -41,6 +41,7 @@ sudo apt install zeek
 
 ### Dummy-interface
 
-I went into this whole thing by just figuring out an alternative way to test TCPREPLAY so that I can isolate the network not to leak anything out.
-I found a thread discussing about dummy interfaces which is built into the Linux Kernel from (here)[https://superuser.com/questions/1789157/black-hole-output-interface-for-tcpreplay]. I fell into the wormhole of digging deeper, chatting with Copilot and searching online and figured this might be worth the shot.
+- I went into this whole thing by just figuring out an alternative way to test TCPREPLAY so that I can isolate the network not to leak anything out.
+- I found a thread discussing about dummy interfaces which is built into the Linux Kernel from (here)[https://superuser.com/questions/1789157/black-hole-output-interface-for-tcpreplay].
+- I fell into the wormhole of digging deeper, chatting with Copilot and searching online and figured this might be worth the shot.
 
