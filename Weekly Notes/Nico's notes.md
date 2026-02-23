@@ -130,3 +130,23 @@ output.elasticsearch:
 ```
 Save and close.
 
+```
+filebeat.inputs:
+  - type: filestream
+    id: suricata-eve
+    enabled: true
+    paths:
+      - /var/log/suricata/eve.json
+    parsers:
+      - ndjson:
+          target: ""
+
+  - type: filestream
+    id: zeek-logs
+    enabled: true
+    paths:
+      - /opt/zeek/logs/current/*.log
+
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
+```
