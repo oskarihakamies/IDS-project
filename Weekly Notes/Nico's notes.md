@@ -9,4 +9,4 @@ After searching for a while, managed to find them. Install them, test out that t
 
 2nd issue was with the VM itself - which is what I'm troubleshooting now with a good friend of mine, Copilot.
 
-
+![onkelma](https://github.com/user-attachments/assets/378f402f-7c77-4cc7-b165-e3edebb6f638)
