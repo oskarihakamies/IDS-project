@@ -10,6 +10,8 @@ Suricata: sudo apt install suricata -y
 
 Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
 
+## WEEK 6 & 7
+
 
 
 TROUBLESHOOTING:
