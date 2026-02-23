@@ -11,6 +11,7 @@ After searching for a while, managed to find them. Install them, test out that t
 
 ![onkelma](https://github.com/user-attachments/assets/378f402f-7c77-4cc7-b165-e3edebb6f638)
 
+Could be a lack of memory.
 I believe this was caused when I started to install Wazuh, and while it was installing, it got stuck and the computer decided that it's time to recharge and shut down completely.
 
 Even the GUI won't start, so time to start debugging with CLI.
