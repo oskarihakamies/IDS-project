@@ -226,5 +226,24 @@ Woohooo! It works!
 
 <img width="1145" height="149" alt="kuva" src="https://github.com/user-attachments/assets/ef7e8713-301f-4bb3-a8f9-c67c76f771bf" />
 
+### Kibana
+
+<img width="1902" height="933" alt="kuva" src="https://github.com/user-attachments/assets/4a6eb9ea-d38b-4e00-ae36-04b193491cd9" />
+
+Test successfull! First demo completed.
+
+I used 
+
+```sudo tcpreplay --intf1=dummy0 test.pcap``` to "shoot" the pcap - file in
+```sudo suricata -i dummy0 -D``` to activate Suricata (doesn't function normally when using dummy0)
+```sudo /opt/zeek/bin/zeek -i dummy0```to listen on NIC dummy0
+```tail f /var/log/suricata/eve.json``` Suricata eve - file
+```./bin/kibana``` To start Kibana
+2nd attempt:
+
+<img width="1148" height="293" alt="kuva" src="https://github.com/user-attachments/assets/86d8b78c-f1d8-4790-a1f8-2c919da7145a" />
+
+<img width="1709" height="945" alt="kuva" src="https://github.com/user-attachments/assets/c31b48ca-f670-446f-8e20-2153ce72a909" />
+
 
 This is where I'm stuck at 24/02/2026 time 0:39 Helsinki
