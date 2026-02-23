@@ -246,4 +246,5 @@ I used
 <img width="1709" height="945" alt="kuva" src="https://github.com/user-attachments/assets/c31b48ca-f670-446f-8e20-2153ce72a909" />
 
 
-This is where I'm stuck at 24/02/2026 time 0:39 Helsinki
+Will be ending this run 24/02/2026 1:57 AM.
+Started from fresh 23/02/2026 at 9:40ish PM
