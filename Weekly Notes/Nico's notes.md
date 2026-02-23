@@ -53,6 +53,14 @@ sudo dpkg -i elasticsearch-9.3.0-amd64.deb
 
 <img width="735" height="150" alt="kuva" src="https://github.com/user-attachments/assets/e78fb11f-e337-410a-9cf2-a99d06a53238" />
 
+### Filebeat
+
+I was a bit lost on this one for a bit but found it [here](https://www.elastic.co/docs/reference/beats/filebeat/filebeat-installation-configuration)
+
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-9.3.0-amd64.deb
+sudo dpkg -i filebeat-9.3.0-amd64.deb
+```
 
 
 ### Dummy-interface
@@ -90,3 +98,35 @@ Zeek to listen
 <img width="655" height="146" alt="kuva" src="https://github.com/user-attachments/assets/67324a17-7dec-4207-9f2d-5be8729df77a" />
 
 Forgot path, so ```sudo /opt/zeek/bin/zeek -i dummy0```
+
+Configuring Filebeat with Copilot (didn't have enough time to figure this on my own)
+
+```
+sudo nano /etc/filebeat/filebeat.yml
+```
+Suricata eve.json
+```
+filebeat.inputs:
+  - type: filestream
+    id: suricata-eve
+    paths:
+      - /var/log/suricata/eve.json
+    parsers:
+      - ndjson:
+          target: ""
+```
+Zeek-logs
+```
+  - type: filestream
+    id: zeek-logs
+    paths:
+      - /opt/zeek/logs/current/*.log
+```
+
+Output to Elasticsearch
+```
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
+```
+Save and close.
+
