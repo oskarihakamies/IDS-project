@@ -51,6 +51,10 @@ shasum -a 512 -c elasticsearch-9.3.0-amd64.deb.sha512
 sudo dpkg -i elasticsearch-9.3.0-amd64.deb
 ```
 
+<img width="735" height="150" alt="kuva" src="https://github.com/user-attachments/assets/e78fb11f-e337-410a-9cf2-a99d06a53238" />
+
+
+
 ### Dummy-interface
 
 - I went into this whole thing by just figuring out an alternative way to test TCPREPLAY so that I can isolate the network not to leak anything out.
