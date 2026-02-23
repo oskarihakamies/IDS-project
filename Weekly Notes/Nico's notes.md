@@ -51,6 +51,14 @@ shasum -a 512 -c elasticsearch-9.3.0-amd64.deb.sha512
 sudo dpkg -i elasticsearch-9.3.0-amd64.deb
 ```
 
+### Kibana
+
+```
+wget https://artifacts.elastic.co/downloads/kibana/kibana-9.3.0-amd64.deb
+shasum -a 512 kibana-9.3.0-amd64.deb
+sudo dpkg -i kibana-9.3.0-amd64.deb
+```
+
 <img width="735" height="150" alt="kuva" src="https://github.com/user-attachments/assets/e78fb11f-e337-410a-9cf2-a99d06a53238" />
 
 ### Filebeat
@@ -161,3 +169,6 @@ Works!
 
 <img width="1205" height="463" alt="kuva" src="https://github.com/user-attachments/assets/81d5ede4-b55e-483e-a3a9-e455efd55a60" />
 
+Kibana:
+
+<img width="530" height="206" alt="kuva" src="https://github.com/user-attachments/assets/ba39619a-d51e-4524-a8b3-3449defb6b68" />
