@@ -179,3 +179,11 @@ Currently having trouble installing it.
 Tried force removing and purging 15 different times, no luck so far.
 
 ```curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg```
+
+```
+wget https://artifacts.elastic.co/downloads/kibana/kibana-9.3.0-linux-x86_64.tar.gz
+tar -xzf kibana-9.3.0-linux-x86_64.tar.gz
+cd kibana-9.3.0-linux-x86_64
+./bin/kibana
+```
+
