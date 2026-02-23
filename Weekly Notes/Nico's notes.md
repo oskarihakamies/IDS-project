@@ -18,11 +18,13 @@ Even the GUI won't start, so time to start debugging with CLI.
 
 Decided not worth the time, doing a fresh install even thought I decided to do a fresh one with installation guides after this "Hello World" - would've been successful.
 
-### Installing
+### Installing and QuickStart
 
 Suricata:
 
 ```sudo apt-get install suricata```
+```sudo systemctl status suricata```
+<img width="743" height="352" alt="kuva" src="https://github.com/user-attachments/assets/07c8bbb7-80e3-462f-bbe6-00cf3f04ee78" />
 
 Zeek based on this source:
 
