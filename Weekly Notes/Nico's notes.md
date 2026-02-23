@@ -20,6 +20,11 @@ Decided not worth the time, doing a fresh install even thought I decided to do a
 
 ### Installing and QuickStart
 
+Tcpreplay
+```echo "deb http://deb.debian.org/debian bookworm main" | sudo tee /etc/apt/sources.list.d/bookworm.list```
+```sudo apt-get update```
+``` sudo apt install tcpreplay```
+
 Suricata:
 
 ```sudo apt-get install suricata```
