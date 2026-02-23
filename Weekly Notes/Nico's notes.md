@@ -191,4 +191,18 @@ Correcting certificates:
 sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
 sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 ```
+
+I got an answer from GPT that this is ok to remove from Lab environment and should be removed since there's  a conflict between Debian 13 and Kibana/Elasticsearch
+
+In elasticsearch.yml:
+
+```
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+```
+
+<img width="722" height="484" alt="kuva" src="https://github.com/user-attachments/assets/e258f7d0-c7da-469f-a77c-5bf844503ce1" />
+Woohooo! It works!
+
 This is where I'm stuck at 24/02/2026 time 0:39 Helsinki
