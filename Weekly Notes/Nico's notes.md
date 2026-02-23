@@ -45,3 +45,5 @@ sudo apt install zeek
 - I found a thread discussing about dummy interfaces which is built into the Linux Kernel from [here](https://superuser.com/questions/1789157/black-hole-output-interface-for-tcpreplay).
 - I fell into the wormhole of digging deeper, chatting with Copilot and searching online and figured this might be worth the shot.
 
+Because it doesn't have any physical connections and Linux creates a virtual network card by using it, the packets will be dropped instead of jumping into the NIC that is actually being used. It is widely used for testing is what I gathered.
+
