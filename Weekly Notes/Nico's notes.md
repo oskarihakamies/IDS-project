@@ -186,4 +186,9 @@ tar -xzf kibana-9.3.0-linux-x86_64.tar.gz
 cd kibana-9.3.0-linux-x86_64
 ./bin/kibana
 ```
+Correcting certificates:
+```
+sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
+sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
 
