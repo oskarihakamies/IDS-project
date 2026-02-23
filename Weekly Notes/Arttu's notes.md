@@ -1,4 +1,4 @@
-Week 5 & 6
+## Week 5 & 6
 
 Aloitin rakentmaan ympäristöä virtuaalikoneelle. Alku oli helpohkoa, mutta zeekin kanssa törmäsin pieniin haasteisiin
 Ensimäisellä asennus kerralla vm:n levytila ei riittänyt zeekin lähdekoodin asennukseen, joten jouduin lisäämään levytilaa
