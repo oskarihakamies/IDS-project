@@ -19,9 +19,12 @@ Decided not worth the time, doing a fresh install even thought I decided to do a
 
 ### Installing
 
-```sudo apt-get install suricata``` <- Suricata
+Suricata:
+
+```sudo apt-get install suricata```
 
 Zeek based on this source:
+
 https://github.com/zeek/zeek/wiki/Binary-Packages
 
 For Debian 13:
