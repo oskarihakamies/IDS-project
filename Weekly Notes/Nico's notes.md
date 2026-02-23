@@ -5,9 +5,9 @@ test out the first working model and figure out how to Mount the ISO so that we 
 
 - I ran into a few problems during the installation - phase.
 1st was finding the right installers for the actual software, f.ex Zeek.
-After searching for a while, managed to find them. Install them, test out that they work individually. It was time to see if they work together but I ran into another trouble.
+After searching for a while, managed to find them. Install them, test out that they work individually.
 
-2nd issue was with the VM itself - which is what I'm troubleshooting now with a good friend of mine, Copilot.
+ It was time to see if they work together but I ran into another trouble, which was with the VM itself - which is what I'm troubleshooting now with a good friend of mine, Copilot.
 
 ![onkelma](https://github.com/user-attachments/assets/378f402f-7c77-4cc7-b165-e3edebb6f638)
 
@@ -16,7 +16,7 @@ I believe this was caused when I started to install Wazuh, and while it was inst
 
 Even the GUI won't start, so time to start debugging with CLI.
 
-Decided not worth the time, doing a fresh install even thought I decided to do a fresh one with installation guides
+Decided not worth the time, doing a fresh install even thought I decided to do a fresh one with installation guides after this "Hello World" - would've been successful.
 
 ### Installing
 
