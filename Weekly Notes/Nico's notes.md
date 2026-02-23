@@ -131,6 +131,13 @@ output.elasticsearch:
 Save and close.
 
 ```
+sudo systemctl enable filebeat
+sudo systemctl restart filebeat
+sudo systemctl status filebeat
+```
+
+Didn't work, took everything out and replaced with:
+```
 filebeat.inputs:
   - type: filestream
     id: suricata-eve
@@ -150,3 +157,7 @@ filebeat.inputs:
 output.elasticsearch:
   hosts: ["http://localhost:9200"]
 ```
+Works!
+
+<img width="1205" height="463" alt="kuva" src="https://github.com/user-attachments/assets/81d5ede4-b55e-483e-a3a9-e455efd55a60" />
+
