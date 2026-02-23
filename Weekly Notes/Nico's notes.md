@@ -63,3 +63,30 @@ sudo dpkg -i elasticsearch-9.3.0-amd64.deb
 
 Because it doesn't have any physical connections and Linux creates a virtual network card by using it, the packets will be dropped instead of jumping into the NIC that is actually being used. It is widely used for testing is what I gathered.
 
+Built in, no need to install
+```
+sudo ip link add dummy0 type dummy
+sudo ip addr add 192.0.2.0/24 dev dummy0
+sudo ip link set dummy0 up
+```
+
+### Testing and setting everything up
+
+1st the dummy which we already set up
+
+<img width="752" height="150" alt="kuva" src="https://github.com/user-attachments/assets/30825238-6060-4471-b271-25f287be6ac4" />
+
+Running Suricata
+
+```sudo suricata -i dummy0 -c /etc/suricata/suricata.yaml -D```
+Listens to dummy0
+
+Zeek to listen
+
+```sudo zeek -i dummy0```
+
+"Command not found". Didn't somehow have it installed, let's try again
+
+<img width="655" height="146" alt="kuva" src="https://github.com/user-attachments/assets/67324a17-7dec-4207-9f2d-5be8729df77a" />
+
+Forgot path, so ```sudo /opt/zeek/bin/zeek -i dummy0```
