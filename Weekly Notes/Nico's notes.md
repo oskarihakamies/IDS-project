@@ -216,4 +216,15 @@ xpack.security.transport.ssl.enabled: false
 <img width="722" height="484" alt="kuva" src="https://github.com/user-attachments/assets/e258f7d0-c7da-469f-a77c-5bf844503ce1" />
 Woohooo! It works!
 
+
+### Testing
+
+```sudo tcpreplay --intf1=dummy0 test.pcap``` which I downloaded from netresec.com
+<img width="1128" height="294" alt="kuva" src="https://github.com/user-attachments/assets/ed083a37-366a-426c-8702-f7a836a06ff3" />
+
+<img width="1155" height="530" alt="kuva" src="https://github.com/user-attachments/assets/810d7269-ac66-4890-928a-897e151e2e9c" />
+
+<img width="1145" height="149" alt="kuva" src="https://github.com/user-attachments/assets/ef7e8713-301f-4bb3-a8f9-c67c76f771bf" />
+
+
 This is where I'm stuck at 24/02/2026 time 0:39 Helsinki
