@@ -191,4 +191,4 @@ Correcting certificates:
 sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
 sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 ```
-
+This is where I'm stuck at 24/02/2026 time 0:39 Helsinki
