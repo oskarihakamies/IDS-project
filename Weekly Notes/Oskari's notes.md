@@ -6,13 +6,17 @@ After this, I went to the Suricata and Zeek websites to install the programs, as
 
 Page for ELK stack installation: https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-elasticsearch-with-debian-package
 
-ELK stack is installed quite similarly as Suricata. For example elasticsearch installs:
+**ELK stack** is installed quite similarly as Suricata. For example elasticsearch installs:
 ```
 sudo apt install elasticsearch -y
 ```
-Suricata: sudo apt install suricata -y
+**Suricata:** 
+```
+sudo apt install suricata -y
+```
+**Zeek:**
 
-Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
+https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
 
 ## WEEK 6 & 7
 
