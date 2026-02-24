@@ -12,6 +12,9 @@ Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring
 
 ## WEEK 6 & 7
 
+Ensimmäinen ilmoitus tehty kibanaan tcoreplaylla. 
+
+
 
 
 TROUBLESHOOTING:
