@@ -16,6 +16,34 @@ After the basic installs for the IDS were installed, I wanted to make the first 
 
 BTW you can use which ever pcap file you like while first testing this IDS. I still recommend downloading the full pcap file list from netresec here: https://share.netresec.com/s/nF5zNcaXLgwdQFZ?openfile=true
 
+Deployment of the programs is quite simple. The IDS is loaded in this way 
+
+sudo systemctl enable --now elasticsearch
+sudo systemctl enable --now kibana
+
+You can test if the elasticsearch is responding by using: curl http://localhost:9200
+
+
+
+
+
+
+sudo filebeat modules enable suricata zeek
+sudo filebeat setup    # lataa valmiit Kibana-dashboardit, kestää ~1-2 min
+sudo systemctl enable --now filebeat
+
+
+
+
+
+
+
+
+
+or thats the way I like to start ut 
+
+
+
 First alert generated in Kibana using tcpreplay.
 
 TROUBLESHOOTING:
