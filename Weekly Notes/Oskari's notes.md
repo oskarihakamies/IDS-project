@@ -60,7 +60,14 @@ curl http://localhost:9200
 
 It's going to print a JSON format with a elasticsearch as a cluster name. Other way you can check the programs is to normal systemctl status command on whichever program you would like to check. For example elasticsearch will show active:
 
+
 <img width="656" height="155" alt="image" src="https://github.com/user-attachments/assets/9dacaba1-b357-4f07-a22a-d135517094f8" />
+
+
+
+
+
+After that I enabled rest of the programs. 
 
 
 
