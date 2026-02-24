@@ -1,1 +1,16 @@
-Selvitystä ensimmäisestä prototyypistä 
+OSIRIS-T 
+Kokous 24.2
+
+-	Kibana saatu toimimaan, mutta tekemistä riittää vielä eri hyökkäyksiä tullaan kokeilemaan jatkossa enemmän ja monipuolisemmin.
+
+-	Posia githubista alkuun, Artun pitää parantaa versionhallintaa. Dokumentaatiota voisi parantaa (pitäisi).
+
+-	Labroista posia, nyt helppo lähteä tekemään työnjakoa. 
+
+-	Lisää arvoita dokumentaatioon.
+
+-	Mikä olisi ensimmäinen vaihe, jolla näkee esimerkin tällä? (Joku voisi kokeilla tätä luomusta)  -> Alustavasti oskarilla kaveri, joka voisi testata
+
+-	Seuraava milestone: näyttää kibanan dashboardilla enemmän liikennettä/hyökkäyksiä.
+
+-	Milestoneja enemmän, jotta työnjako selkeytyy ja sitä myöden helpottuu. 
