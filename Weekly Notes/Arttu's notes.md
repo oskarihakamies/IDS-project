@@ -17,4 +17,6 @@ tar -xzf zeek-6.0.0.tar.gz
 
 sudo make install
 
+ ## Week 7 & 8
 
+ 
