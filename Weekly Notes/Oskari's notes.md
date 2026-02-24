@@ -12,7 +12,9 @@ Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring
 
 ## WEEK 6 & 7
 
-After the basic installs for the IDS were installed, I wanted to make the first alert visible in Kibana using a older PCAP file and playing it in TCPreplay
+After the basic installs for the IDS were installed, I wanted to make the first alert visible in Kibana using a older PCAP file and playing it in TCPreplay.
+
+BTW you can use which ever pcap file you like while first testing this IDS. I still recommend downloading the full pcap file list from netresec here: https://share.netresec.com/s/nF5zNcaXLgwdQFZ?openfile=true
 
 First alert generated in Kibana using tcpreplay.
 
