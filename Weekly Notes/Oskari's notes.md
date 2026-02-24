@@ -8,9 +8,7 @@ Page for ELK stack installation: https://www.elastic.co/docs/deploy-manage/deplo
 
 ELK stack is installed quite similarly as Suricata. For example elasticsearch installs:
 ```
-
 sudo apt install elasticsearch -y
-
 ```
 Suricata: sudo apt install suricata -y
 
@@ -24,12 +22,10 @@ BTW you can use which ever pcap file you like while first testing this IDS. I st
 
 Deployment of the programs is quite simple. The IDS is loaded in this way 
 ```
-
 sudo systemctl enable --now elasticsearch
 
 
 sudo systemctl enable --now kibana
-
 ```
 
                                                           
