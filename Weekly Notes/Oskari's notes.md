@@ -1,10 +1,10 @@
 ## WEEK 5 & 6
 
-Aloitin jo ensimmäisen prototyypin rakennusta tyhjälle debian alustalle. Alusta tarvitsi aluksi hieman hienotuunausta, joten asensin perusohjelmat (curl, sources.listin, tekstieditorin, wget, htop, neofetch, git, unzip ja zip)
+I already started building the first prototype on a blank Debian platform. The platform initially needed some fine-tuning, so I installed the basic programs (curl, sources.list, a text editor, wget, htop, neofetch, git, unzip, and zip).
 
-Tämän jälkeen lähdin suricatan ja zeekin sivuilta asentamaan ohjelmia, sekä suoraan elasticsearchin, beatsin ja kibanan elastic.co/docs sivulta. 
+After this, I went to the Suricata and Zeek websites to install the programs, as well as directly from the elastic.co/docs site for Elasticsearch, Beats, and Kibana.
 
-Sivu ELK stackin asennukseen: https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-elasticsearch-with-debian-package
+Page for ELK stack installation: https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-elasticsearch-with-debian-package
 
 Suricata: sudo apt install suricata -y
 
@@ -12,16 +12,16 @@ Zeek: https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring
 
 ## WEEK 6 & 7
 
-Ensimmäinen ilmoitus tehty kibanaan tcoreplaylla. 
+After the basic installs for the IDS were installed, I wanted to make the first alert visible in Kibana using a older PCAP file and playing it in TCPreplay
 
-
-
+First alert generated in Kibana using tcpreplay.
 
 TROUBLESHOOTING:
 
-Minulla oli alkujaan ongelma muistin kanssa, sillä en päässyt käynnistämään elasticsearchia ja VM lagasi liikaa. Korjasin tilanteen lisäämällä läppärini muistia. Suositeltava VM muisti olisi vähintään 8 GB
+I initially had a memory issue, as I was unable to start Elasticsearch and the VM was lagging too much. I resolved the situation by increasing my laptop's memory allocation. The recommended VM memory would be at least 8 GB.
 
-Kannattaa zeekia asentaessa varmistaan onko oma interface yhdistetty siihen. Komento *ip a* ensin varmistamaan oma, jonka jälkeen sudo nano /opt/zeek/etc/node.cfg varmistamaan, mikä zeekissa on. 
+When installing Zeek, it's worth making sure your own interface is connected to it. First run the command ip a to confirm your interface, then run sudo nano /opt/zeek/etc/node.cfg to verify what is set in Zeek.
+
 
 
 USEFUL LINKS:
