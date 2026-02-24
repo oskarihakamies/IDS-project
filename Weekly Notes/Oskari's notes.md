@@ -26,7 +26,7 @@ You can test if the elasticsearch is responding by using: 'curl http://localhost
 <img width="410" height="80" alt="image" src="https://github.com/user-attachments/assets/87ae6446-cbf4-457f-9e1d-4e4f830c9d5a" />
 
 
-It's going to print a JSON format with a elasticsearch as a cluster name. Other way you can check the programs is to use:
+It's going to print a JSON format with a elasticsearch as a cluster name. Other way you can check the programs is to normal systemctl status command on whichever program you would like to check. For example elasticsearch will show this:
 
 
 
