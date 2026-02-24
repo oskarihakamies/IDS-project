@@ -20,8 +20,18 @@ https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-de
 
 The install is same in Debian 13 as in 12. To check if Zeek was downloaded you can just use: 
 ```
-zeek --version or 
+zeek --version  
 ```
+Or if you run to the same problem as me that Zeek wasn't connected fully to PATH you can use: 
+```
+/opt/zeek/bin/zeek --version
+```
+It prints out the version
+
+
+
+
+
 
 ## WEEK 6 & 7
 
