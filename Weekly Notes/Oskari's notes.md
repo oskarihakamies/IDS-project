@@ -28,6 +28,7 @@ Or if you run to the same problem as me that Zeek wasn't connected fully to PATH
 ```
 It prints out the version
 
+<img width="346" height="44" alt="image" src="https://github.com/user-attachments/assets/e738fb91-786c-4264-b4ef-b30bec2fcd07" />
 
 
 
