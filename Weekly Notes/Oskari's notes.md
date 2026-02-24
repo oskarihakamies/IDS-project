@@ -18,6 +18,11 @@ sudo apt install suricata -y
 
 https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
 
+The install is same in Debian 13 as in 12. To check if Zeek was downloaded you can just use: 
+```
+zeek --version or 
+```
+
 ## WEEK 6 & 7
 
 After the basic installs for the IDS were installed, I wanted to make the first alert visible in Kibana using a older PCAP file and playing it in TCPreplay.
