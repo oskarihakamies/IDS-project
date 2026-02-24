@@ -64,11 +64,13 @@ It's going to print a JSON format with a elasticsearch as a cluster name. Other 
 
 
 
-
+```
 sudo filebeat modules enable suricata zeek
-sudo filebeat setup    # lataa valmiit Kibana-dashboardit, kestää ~1-2 min
-sudo systemctl enable --now filebeat
 
+sudo filebeat setup    # downloads the already ready Kibana dashboards - takes like 1-2min
+
+sudo systemctl enable --now filebeat
+```
 
 
 
