@@ -40,7 +40,7 @@ After the basic installs for the IDS were installed, I wanted to make the first 
 
 BTW you can use which ever pcap file you like while first testing this IDS. I still recommend downloading the full pcap file list from netresec here: https://share.netresec.com/s/nF5zNcaXLgwdQFZ?openfile=true
 
-Deployment of the programs is quite simple. The IDS is loaded in this way 
+Deployment of the programs is quite simple. The first step for the first version of our IDS is to enable the tools for it. 
 ```
 sudo systemctl enable --now elasticsearch
 
