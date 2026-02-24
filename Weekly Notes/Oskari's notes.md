@@ -17,10 +17,10 @@ After the basic installs for the IDS were installed, I wanted to make the first 
 BTW you can use which ever pcap file you like while first testing this IDS. I still recommend downloading the full pcap file list from netresec here: https://share.netresec.com/s/nF5zNcaXLgwdQFZ?openfile=true
 
 Deployment of the programs is quite simple. The IDS is loaded in this way 
-
-'sudo systemctl enable --now elasticsearch'
-'sudo systemctl enable --now kibana'
-
+'''
+sudo systemctl enable --now elasticsearch
+sudo systemctl enable --now kibana
+'''
 You can test if the elasticsearch is responding by using: 'curl http://localhost:9200'
 
 <img width="410" height="80" alt="image" src="https://github.com/user-attachments/assets/87ae6446-cbf4-457f-9e1d-4e4f830c9d5a" />
