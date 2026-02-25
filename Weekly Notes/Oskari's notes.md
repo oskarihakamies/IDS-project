@@ -73,8 +73,13 @@ I used the tcpreplay here with
 sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
 ```
 
+I used multiplier but there are more commands to use after the interface part. For example top speed, loopback etc. 
+
 
 And then checked the printout on the command. 
+
+<img width="415" height="149" alt="image" src="https://github.com/user-attachments/assets/9341c8f7-02a5-45ac-b4c2-b0d16d5f89dd" />
+
 
 
 
