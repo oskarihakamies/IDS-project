@@ -109,7 +109,7 @@ or thats the way I like to start ut
 
 First alert generated in Kibana using tcpreplay.
 
-TROUBLESHOOTING:
+## TROUBLESHOOTING:
 
 I initially had a memory issue, as I was unable to start Elasticsearch and the VM was lagging too much. I resolved the situation by increasing my laptop's memory allocation. The recommended VM memory would be at least 8 GB.
 
@@ -127,7 +127,7 @@ You should then locate the af-packet and change the correct interface. Save the 
 
 Restart suricata and check the status on it. It should be active. For more research you can use the sudo tail command and the file name on for maybe 20 lines if the problem occurs. 
 
-USEFUL LINKS:
+## USEFUL LINKS:
 
 Damon Garn, How to use tcpreplay: https://www.techtarget.com/searchsecurity/tutorial/How-to-use-tcpreplay-to-replay-network-packet-files 
 
