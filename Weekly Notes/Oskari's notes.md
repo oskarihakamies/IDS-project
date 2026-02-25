@@ -115,6 +115,13 @@ I initially had a memory issue, as I was unable to start Elasticsearch and the V
 
 When installing Zeek, it's worth making sure your own interface is connected to it. First run the command ip a to confirm your interface, then run sudo nano /opt/zeek/etc/node.cfg to verify what is set in Zeek.
 
+The same interface should be checked with suricata. I can show the example on status command if the interface is wrong:
+
+<img width="506" height="185" alt="image" src="https://github.com/user-attachments/assets/eba2efc5-708f-43c8-b35e-f97c31aea067" />
+
+And to change it you would need to check your own interface with ip a. Mine was enp0s3 so I changed it in suricata.yml by using nano. 
+
+
 
 
 USEFUL LINKS:
