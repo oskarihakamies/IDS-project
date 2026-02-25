@@ -65,6 +65,18 @@ It's going to print a JSON format with a elasticsearch as a cluster name. Other 
 
 
 
+Now to the BTW part on pcap files. You can take any you want. I found one online and got it with wget command. 
+
+I used the tcpreplay here with 
+
+```
+sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
+```
+
+
+And then checked the printout on the command. 
+
+
 
 
 After that I enabled rest of the programs. 
