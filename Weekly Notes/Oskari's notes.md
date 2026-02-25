@@ -125,7 +125,7 @@ You should then locate the af-packet and change the correct interface. Save the 
 
 <img width="270" height="65" alt="image" src="https://github.com/user-attachments/assets/5d10889d-2865-4689-84d8-70c8a5820365" />
 
-
+Restart suricata and check the status on it. It should be active. For more research you can use the sudo tail command and the file name on for maybe 20 lines if the problem occurs. 
 
 USEFUL LINKS:
 
