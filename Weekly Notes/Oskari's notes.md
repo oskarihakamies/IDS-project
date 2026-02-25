@@ -121,6 +121,9 @@ The same interface should be checked with suricata. I can show the example on st
 
 And to change it you would need to check your own interface with ip a. Mine was enp0s3 so I changed it in suricata.yml by using nano. 
 
+You should then locate the af-packet and change the correct interface. Save the file in the process.
+
+<img width="270" height="65" alt="image" src="https://github.com/user-attachments/assets/5d10889d-2865-4689-84d8-70c8a5820365" />
 
 
 
