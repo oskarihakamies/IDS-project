@@ -34,3 +34,8 @@ ip -p -j route show default
 ```
 
 <img width="384" height="159" alt="Näyttökuva 2026-03-01 kello 20 22 26" src="https://github.com/user-attachments/assets/dced5775-8a76-4311-91d1-0f56a54c4cbb" />
+
+```
+sudo nano /etc/suricata/suricata.yaml
+```
+
