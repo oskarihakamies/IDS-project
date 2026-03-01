@@ -9,7 +9,7 @@
 Make basic updates and upgrades:
 
 ```sudo apt update
-sudo apt upgrade -y```
+sudo apt upgrade -y
 
 And then install it
 
