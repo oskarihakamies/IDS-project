@@ -17,7 +17,7 @@ sudo apt upgrade -y
 
 
 And then install it
-
+```
 sudo apt install suricata -y
-
+```
 
