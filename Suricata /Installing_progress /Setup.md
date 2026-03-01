@@ -2,7 +2,7 @@
 
 ### First Step 
 
-Make sure your VM has enough CPU and RAM to run our entire project, not only suricata
+
 
 ### Second Step
 
