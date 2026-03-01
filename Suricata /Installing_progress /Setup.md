@@ -9,6 +9,7 @@
 Make basic updates and upgrades:
 
 ```sudo apt update  sudo apt upgrade -y
+
 ```
 
 
