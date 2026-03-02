@@ -153,9 +153,10 @@ There are few additions you need to make after this. You can check the rest of t
 
 After with some problems regarding Kibana I finally got an alert showing. 
 
+<img width="943" height="353" alt="image" src="https://github.com/user-attachments/assets/c6655c41-ac4d-4a10-8f30-be905458dae0" />
 
 
-
+Next step is to design the own dashboard which includes the alerts shown and Wazuh showing data logs. 
 
 
 ## TROUBLESHOOTING:
