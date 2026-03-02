@@ -2,8 +2,17 @@
 
 Keskusteltu työnjaosta Wazuh, Kibana ja Suricata/Zeek asennus, missä Oskari: Wazuh, Nico: Kibana, Suricata/Zeek: Arttu. 
 
-Kesken kokouksen Kibana alkoi temppuilemaan muutamalla tiimissä. Se piti asentaa uudestaan. 
-
 Työnjakoa ja milestonen valmistamista ensi viikolle. Tähän mennessä ei vielä olla saatu useita eri hyökkäyksiä Kibanaan dashboardille. 
 
 Milestone viikolle ja seuraavaan kokoukseen 10.3. Tuoda esiin useampi hyökkäys dashboardille. 
+
+Pitkin viikkoa ollut ongelmia etenkin Kibanan kanssa. Tähän ei olla vielä löydetty toimivaa ratkaisua ja iso ongelma tulevaisuuteen katsottuna.
+
+Ongelmat olleet seuraavat:
+- Lataus ei onnistu "laakista", eli paketti näyttää asentuvan - todellisuudessa se asentuu rikkinäisenä
+- Ilmoitukset ei näy, vaikka muut OSIRIS-T - osat näyttää sen toimivan
+- Debian 12 - paketti meni onnistuneesti läpi, mutta updaten johdosta meni "broken-installation" - tilaan, tätä havaittavissa myös niillä, jotka eivät sitä asentaneet tuolla menetelmällä
+
+Toimenpiteet ensi viikolle:
+- Pyritään keksimään ratkaisu sille, että saataisiin ehjä paketti ja kaikille dashboardiin edes jotain näkyvää aikaiseksi. 
+- Onko ongelma yhteensopivuudessa, vai kaikkien yhteentoimivuudessa?
