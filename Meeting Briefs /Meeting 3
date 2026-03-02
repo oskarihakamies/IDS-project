@@ -4,7 +4,8 @@ Keskusteltu työnjaosta Wazuh, Kibana ja Suricata/Zeek asennus, missä Oskari: W
 
 Työnjakoa ja milestonen valmistamista ensi viikolle. Tähän mennessä ei vielä olla saatu useita eri hyökkäyksiä Kibanaan dashboardille. 
 
-Milestone viikolle ja seuraavaan kokoukseen 10.3. Tuoda esiin useampi hyökkäys dashboardille. Saada Kibana toimimaan niin, että dashboardeja on rakennettu myös loppuprojektia ajatellen. Visualisointi.
+Milestone viikolle ja seuraavaan kokoukseen 10.3. Tuoda esiin useampi hyökkäys dashboardille. Saada Kibana toimimaan niin, että dashboardeja on rakennettu myös loppuprojektia ajatellen.
+Visualisointi, Kibana-asennuksen pitkäikäisyys.
 
 Wazuh integraatio - toimiiko backuppina?
 
