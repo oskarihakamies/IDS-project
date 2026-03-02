@@ -31,6 +31,7 @@ Seuraavaksi vain:
 sudo apt update     sudo apt install elasticsearch -y
 ```
 
+
 Kun tiedosto oli asennettu laitoin sen käyntiin: sudo systemctl start elasticsearch, sudo systemctl status elasticsearch
 
 <img width="943" height="223" alt="Näyttökuva 2026-02-25 kello 14 17 53" src="https://github.com/user-attachments/assets/f1399bde-ebd3-449c-b201-a11cccefab2e" />
@@ -85,12 +86,25 @@ sudo systemctl status filebeat
 
 Status on active joten asennus onnistui, katsoin vielä kuitenkin onnistuinko konfiguraation parissa ja toimiiko yhteys elasticsearchiin
 
+konffitiedostoon ->
+
+```
+sudo nano /etc/filebeat/filebeat.yml
+```
+
+muokkasin output.elasticsearch kohtaa ja laitoin hostiksi localhostin
+
+jotta konffitiedosto toimii, se pitää yhdistää elasticsearchiin laittamalla käyttäjätunnus ja salasana konffitiedostoon
+
+
 ```
 sudo filebeat test config    sudo filebeat test output
 ```
 
 
+
 <img width="708" height="308" alt="Näyttökuva 2026-03-02 kello 23 20 29" src="https://github.com/user-attachments/assets/fea24607-2204-4852-ba29-38c2b8a21790" />
+
 
 
 Myöhemmin viikolla oli ongelmia kibanan kanssa, joita yritimme tiimin kanssa yhdessä ratkaista
