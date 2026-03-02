@@ -47,4 +47,9 @@ and your own ip
 
 <img width="337" height="74" alt="Näyttökuva 2026-03-02 kello 19 28 18" src="https://github.com/user-attachments/assets/661842b5-913c-4737-8378-0c0c9a01eb50" />
 
+after this remember to update it
+
+```
+sudo suricata-update
+```
 
