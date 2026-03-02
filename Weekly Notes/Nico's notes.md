@@ -246,14 +246,15 @@ I used
 <img width="1709" height="945" alt="kuva" src="https://github.com/user-attachments/assets/c31b48ca-f670-446f-8e20-2153ce72a909" />
 
 
-# Week 9
-
-<img width="749" height="851" alt="kuva" src="https://github.com/user-attachments/assets/f4c5320a-bdd1-47ed-a42e-2a631fbf10fa" />
-
-This is where all the trouble is right now. After ```sudo apt-get update```kibana cannot once again find its packages. I'm once again in the loop of trying to figure out how to get it to work. This has been an issue with the whole team and we're figuring out a way to get it installed to be stable.
-
 
 
 Will be ending this run 24/02/2026 1:57 AM.
 
 Started from scratch 23/02/2026 at 9:40ish PM
+
+
+# Week 9
+
+<img width="749" height="851" alt="kuva" src="https://github.com/user-attachments/assets/f4c5320a-bdd1-47ed-a42e-2a631fbf10fa" />
+
+This is where all the trouble is right now. After ```sudo apt-get update```kibana cannot once again find its packages. I'm once again in the loop of trying to figure out how to get it to work. This has been an issue with the whole team and we're figuring out a way to get it installed to be stable.
