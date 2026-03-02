@@ -109,6 +109,8 @@ or thats the way I like to start the IDS.
 First alert generated in Kibana using tcpreplay.
 
 
+## WEEK 8 & 9
+
 Next up I was tasked to connect wazuh in the program. Wazuh is used as a backup and is connected directly to filebeat. 
 
 
