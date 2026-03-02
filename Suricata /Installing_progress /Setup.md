@@ -53,3 +53,32 @@ after this remember to update it
 sudo suricata-update
 ```
 
+This is how you can test your configuration on suricata
+
+```
+sudo suricata -T -c /etc/suricata/suricata.yaml -v
+```
+and it should look like this if everything is right
+
+<img width="724" height="25" alt="Näyttökuva 2026-03-02 kello 19 36 21" src="https://github.com/user-attachments/assets/a48813b3-34aa-4f61-8099-edbf0ffc631f" />
+
+
+Then just start it by using these commands
+
+```
+sudo systemctl enable suricata
+```
+
+```
+sudo systemctl start suricata
+```
+
+```
+sudo systemctl status suricata
+```
+
+it should look like this 
+
+<img width="795" height="72" alt="Näyttökuva 2026-03-02 kello 19 40 19" src="https://github.com/user-attachments/assets/0dd05445-ade5-448f-b1fc-04f86723dd2b" />
+
+
