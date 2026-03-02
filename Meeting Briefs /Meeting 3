@@ -1,3 +1,9 @@
+3.2.2026
+
 Keskusteltu työnjaosta Wazuh, Kibana ja Suricata/Zeek asennus, missä Oskari: Wazuh, Nico: Kibana, Suricata/Zeek: Arttu. 
 
 Kesken kokouksen Kibana alkoi temppuilemaan muutamalla tiimissä. Se piti asentaa uudestaan. 
+
+Työnjakoa ja milestonen valmistamista ensi viikolle. Tähän mennessä ei vielä olla saatu useita eri hyökkäyksiä Kibanaan dashboardille. 
+
+Milestone viikolle ja seuraavaan kokoukseen 10.3. Tuoda esiin useampi hyökkäys dashboardille. 
