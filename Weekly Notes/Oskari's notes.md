@@ -126,7 +126,7 @@ For short:
 ```
 #Install the GPG key
 
-curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg
 
 #Add to the repo
 
@@ -163,6 +163,18 @@ You should then locate the af-packet and change the correct interface. Save the 
 <img width="270" height="65" alt="image" src="https://github.com/user-attachments/assets/5d10889d-2865-4689-84d8-70c8a5820365" />
 
 Restart suricata and check the status on it. It should be active. For more research you can use the sudo tail command and the file name on for maybe 20 lines if the problem occurs. 
+
+
+While installing Wazuh - make sure that it was added to right repo. To check it you can just update the system and see what error code it gives. 
+
+You can just use the basic: 
+
+```
+cat /etc/apt/sources.list.d/wazuh.list
+
+```
+
+And see if it downloaded correctly. 
 
 ## USEFUL LINKS:
 
