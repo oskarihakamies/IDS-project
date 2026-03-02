@@ -151,6 +151,13 @@ curl -so /etc/filebeat/filebeat.yml https://packages.wazuh.com/4.14/tpl/wazuh/fi
 There are few additions you need to make after this. You can check the rest of the installing from the official Wazuh documentation which i've linked up there and is also in the links part at the bottom of the page. 
 
 
+After with some problems regarding Kibana I finally got an alert showing. 
+
+
+
+
+
+
 ## TROUBLESHOOTING:
 
 I initially had a memory issue, as I was unable to start Elasticsearch and the VM was lagging too much. I resolved the situation by increasing my laptop's memory allocation. The recommended VM memory would be at least 8 GB.
