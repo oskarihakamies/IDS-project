@@ -97,17 +97,27 @@ sudo systemctl enable --now filebeat
 ```
 
 
+Then I sent the test pcap file in tcpreplay and checked the kibana alerts with localhost:5061 in the browser. 
 
 
+And the alert was created. 
 
 
-
-
-or thats the way I like to start ut 
-
+or thats the way I like to start the IDS. 
 
 
 First alert generated in Kibana using tcpreplay.
+
+
+Next up I was tasked to connect wazuh in the program. Wazuh is used as a backup and is connected directly to filebeat. 
+
+
+Wazuh is used as log backup and compliance tool. It can be connected to the Kibana dashboard so you can see the stored logs.
+
+
+For short - it has two elements. The Manager which is the server and the Agent which stores data logs. 
+
+
 
 ## TROUBLESHOOTING:
 
