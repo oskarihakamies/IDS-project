@@ -61,3 +61,32 @@ Konffitiedostot vielä työn alla
 
 Tällä viikolla työskenetelin suricatan asennusohjeiden parissa suurimmaksi osin
 
+Asensin myös filebeatin 
+
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-9.3.1-amd64.deb
+sudo dpkg -i filebeat-9.3.1-amd64.deb
+```
+
+
+https://www.elastic.co/docs/reference/beats/filebeat/filebeat-installation-configuration
+
+
+
+Asennuksen jälkeen testasin toimintaa 
+
+<img width="902" height="247" alt="Näyttökuva 2026-03-02 kello 23 21 16" src="https://github.com/user-attachments/assets/1e4e601c-4062-456b-9643-8dac3dd95404" />
+
+```
+sudo systemctl status filebeat
+```
+
+Status on active joten asennus onnistui, katsoin vielä kuitenkin onnistuinko konfiguraation parissa ja toimiiko yhteys elasticsearchiin
+
+```
+sudo filebeat test config    sudo filebeat test output
+```
+
+
+<img width="708" height="308" alt="Näyttökuva 2026-03-02 kello 23 20 29" src="https://github.com/user-attachments/assets/fea24607-2204-4852-ba29-38c2b8a21790" />
+
