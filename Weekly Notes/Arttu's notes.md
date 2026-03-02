@@ -59,7 +59,9 @@ Konffitiedostot vielä työn alla
 
 <img width="1467" height="269" alt="Näyttökuva 2026-02-25 kello 15 21 00" src="https://github.com/user-attachments/assets/a8c1878e-d8ce-423d-b662-f9ea5e3a4a70" />
 
+
 Tällä viikolla työskenetelin suricatan asennusohjeiden parissa suurimmaksi osin
+
 
 Asensin myös filebeatin 
 
@@ -89,4 +91,7 @@ sudo filebeat test config    sudo filebeat test output
 
 
 <img width="708" height="308" alt="Näyttökuva 2026-03-02 kello 23 20 29" src="https://github.com/user-attachments/assets/fea24607-2204-4852-ba29-38c2b8a21790" />
+
+
+Myöhemmin viikolla oli ongelmia kibanan kanssa, joita yritimme tiimin kanssa yhdessä ratkaista
 
