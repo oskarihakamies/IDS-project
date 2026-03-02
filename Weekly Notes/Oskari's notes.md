@@ -112,12 +112,30 @@ First alert generated in Kibana using tcpreplay.
 Next up I was tasked to connect wazuh in the program. Wazuh is used as a backup and is connected directly to filebeat. 
 
 
+
 Wazuh is used as log backup and compliance tool. It can be connected to the Kibana dashboard so you can see the stored logs.
+
 
 
 For short - it has two elements. The Manager which is the server and the Agent which stores data logs. 
 
 
+The installing process is quite simple. You can check it from here: https://documentation.wazuh.com/current/installation-guide/wazuh-server/step-by-step.html
+
+For short: 
+```
+#Install the GPG key
+
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg
+
+#Add to the repo
+
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list
+
+
+#And then update
+
+```
 
 ## TROUBLESHOOTING:
 
