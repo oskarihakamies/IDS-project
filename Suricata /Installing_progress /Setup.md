@@ -88,4 +88,16 @@ it should look like this
 
 <img width="795" height="72" alt="Näyttökuva 2026-03-02 kello 19 40 19" src="https://github.com/user-attachments/assets/0dd05445-ade5-448f-b1fc-04f86723dd2b" />
 
+Here is a great way to test if your suricata works real way ->
+
+```
+curl http://testmyids.com
+```
+
+```
+sudo tail -f /var/log/suricata/fast.log
+```
+
+<img width="1468" height="61" alt="Näyttökuva 2026-03-02 kello 20 11 14" src="https://github.com/user-attachments/assets/f5c8d2d9-420c-4619-ab82-9f03c6a38ff0" />
+
 
