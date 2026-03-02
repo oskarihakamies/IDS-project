@@ -246,8 +246,6 @@ I used
 <img width="1709" height="945" alt="kuva" src="https://github.com/user-attachments/assets/c31b48ca-f670-446f-8e20-2153ce72a909" />
 
 
-
-
 Will be ending this run 24/02/2026 1:57 AM.
 
 Started from scratch 23/02/2026 at 9:40ish PM
