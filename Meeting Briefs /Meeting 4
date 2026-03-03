@@ -1,0 +1,17 @@
+3.3.2026
+
+Pitäisi kirjata ylös pieninkin ongelma esim. tuli vähän ongelmia Kibanan kanssa.
+
+Mahdollinen scouppiräjähdys, jota kannattaa mahdollisesti varoa. Osa elementeistä ei tulisi loppukäyttäjälle.
+
+Hello world tyyppinen kokeilu ulkopuoliselle henkilölle. 
+
+Prototyypin testaus viikko 11 & 12 toiselle henkilölle. 
+
+Videoida myös testausvaihe. 
+
+Seuraava prototyyppi: kibana visuaalisti kuntoon, pitää miettiä laajuutta uudelta kannalta -> laajeenee ehkä liikaa
+
+Paketointi järkevästi
+ 
+Tärkeä seurata käyttäjää ja käyttäjäpalautteen kerääminen - missä epäselvää? Neutraali arvio, vapaata kerrontaa.
