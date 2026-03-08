@@ -205,6 +205,26 @@ cat /etc/apt/sources.list.d/wazuh.list
 
 And see if it downloaded correctly. 
 
+
+## QUICK START FOR IDS: 
+
+```
+sudo systemctl enable --now elasticsearch
+
+sudo systemctl enable --now kibana
+
+sudo filebeat modules enable suricata zeek
+
+sudo filebeat setup    # downloads the already ready Kibana dashboards - takes like 1-2min
+
+sudo systemctl enable --now filebeat
+
+sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
+
+```
+
+And localhost:5061
+
 ## USEFUL LINKS:
 
 Damon Garn, How to use tcpreplay: https://www.techtarget.com/searchsecurity/tutorial/How-to-use-tcpreplay-to-replay-network-packet-files 
