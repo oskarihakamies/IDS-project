@@ -170,7 +170,9 @@ I opened my VM and it had some kind of problem regarding packagekitd when I trie
 
 I just restarted it and tried updating the programs ones again it and started to work. 
 
+And now for the test part. 
 
+I loaded all of the parts in the program. 
 
 
 
