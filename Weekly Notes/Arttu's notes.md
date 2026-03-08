@@ -17,7 +17,7 @@ tar -xzf zeek-6.0.0.tar.gz
 
 sudo make install
 
- ## Week 7 & 8
+ ## Week 7-9 
 
  Zeekin ja suricatan asennusten jälkeen oli suunnitelmana saada ne tuottamaan logeja ja dataa elasticsearchiin. Aloitin lisäämällä elaticrepon, 
  jonka avulla saa ohjelmistopaketit virallisesta Elasticin reposta
@@ -108,4 +108,11 @@ sudo filebeat test config    sudo filebeat test output
 
 
 Myöhemmin viikolla oli ongelmia kibanan kanssa, joita yritimme tiimin kanssa yhdessä ratkaista
+
+
+## Week 10 & 11
+
+Suurin osa tämän viikon (vko 10) työstä meni Zeekin asennusohjeiden kirjoittamiseen ja niiden testaamiseen 
+
+
 
