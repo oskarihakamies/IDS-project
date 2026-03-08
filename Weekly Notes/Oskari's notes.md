@@ -164,7 +164,12 @@ Next step is to design the own dashboard which includes the alerts shown and Waz
 The task for week 11 & 12 was to make the prototype testworthy of an outsider. In this case my roommate. But first I had to see if Kibana had any problems like previously (they were fixed by restarting Kibana).
 
 
-I opened my VM and it had some kind of problem regarding packagekitd
+I opened my VM and it had some kind of problem regarding packagekitd when I tried updating it.
+
+<img width="618" height="113" alt="image" src="https://github.com/user-attachments/assets/e13b9a37-5176-4db7-ae44-917c1d882189" />
+
+I just restarted it and tried updating the programs ones again it and started to work. 
+
 
 
 
