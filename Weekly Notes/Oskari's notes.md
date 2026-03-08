@@ -225,6 +225,16 @@ sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
 
 And localhost:5061
 
+# Quick status check: 
+
+```
+sudo systemctl status suricata
+sudo zeekctl status
+sudo systemctl status filebeat
+sudo systemctl status elasticsearch
+sudo systemctl status kibana
+```
+
 ## USEFUL LINKS:
 
 Damon Garn, How to use tcpreplay: https://www.techtarget.com/searchsecurity/tutorial/How-to-use-tcpreplay-to-replay-network-packet-files 
