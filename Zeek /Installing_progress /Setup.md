@@ -90,4 +90,35 @@ After it is complete
 sudo make install
 ```
 
+Last thing is optional, because you need to add Zeek to yout PATH (if only needed)
+
+```
+echo 'export PATH=/usr/local/zeek/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Verify it by using zeek --version
+
+
+<img width="331" height="38" alt="Näyttökuva 2026-03-08 kello 22 27 43" src="https://github.com/user-attachments/assets/49d053b1-1996-4376-bb9f-71f4d2f01975" />
+
+
+## Configuartion
+
+After installation we need to configure Zeek so it works correctly.
+
+```
+sudo nano /opt/zeek/etc/networks.cfg
+```
+And add your IP there 
+
+<img width="600" height="47" alt="Näyttökuva 2026-03-08 kello 23 02 17" src="https://github.com/user-attachments/assets/91b774b0-b22d-4e3e-99fd-993cb756ac0e" />
+
+Next step is to configure node.cfg
+
+```
+sudo nano /opt/zeek/etc/node.cfg
+```
+
+<img width="607" height="123" alt="Näyttökuva 2026-03-08 kello 23 07 33" src="https://github.com/user-attachments/assets/54c4a1da-8f64-4f55-9811-d95fded11d1f" />
 
