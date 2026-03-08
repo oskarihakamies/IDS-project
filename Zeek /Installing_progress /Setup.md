@@ -27,3 +27,13 @@ gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/security_zeek.gpg > /dev/null
 
 After this just run sudo apt update and you should see multiple zeek options
 
+```
+sudo apt install zeek -y
+```
+After the installation completes, add the directory /opt/zeek/bin to your system’s PATH by updating your ~/.bashrc file. Once you’ve made the change, reload the ~/.bashrc file so the new PATH takes effect. You`ll then be able to run Zeek commands directly from your terminal.
+
+```
+echo "export PATH=$PATH:/opt/zeek/bin" >> ~/.bashrc
+source ~/.bashrc
+```
+
