@@ -227,7 +227,7 @@ sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
 
 And localhost:5061
 
-# Quick status check: 
+## Quick status check: 
 
 ```
 sudo systemctl status suricata
