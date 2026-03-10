@@ -177,6 +177,10 @@ I loaded all of the parts in the program.
 
 
 
+
+For one test I used git in this program because I realized I still hadn't used it. So first I cloned the git repo to my VM. 
+
+
 ## TROUBLESHOOTING:
 
 I initially had a memory issue, as I was unable to start Elasticsearch and the VM was lagging too much. I resolved the situation by increasing my laptop's memory allocation. The recommended VM memory would be at least 8 GB.
