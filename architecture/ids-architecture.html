@@ -327,7 +327,7 @@
 
   <!-- LAYER 0: Network Traffic -->
   <div class="layer">
-    <div class="layer-label">// 01 · verkkoliikenne &amp; simulaatio</div>
+    <div class="layer-label">// 01 · network traffic &amp; simulation</div>
     <div class="layer-row">
       <div class="box network">
         <span class="tag">input</span>
@@ -337,12 +337,12 @@
       <div class="box network">
         <span class="tag">simulation</span>
         <span class="name">tcpreplay</span>
-        <span class="desc">PCAP-tiedostojen toisto<br>DoS · portscan · brute-force</span>
+        <span class="desc">PCAP-file replay<br>DoS · portscan · brute-force</span>
       </div>
       <div class="box network">
         <span class="tag">test data</span>
         <span class="name">PCAP Files</span>
-        <span class="desc">Wireshark · CICIDS2017<br>Netresec · manuaaliset</span>
+        <span class="desc">Wireshark · CICIDS2017<br>Netresec · manual captures</span>
       </div>
     </div>
   </div>
@@ -356,22 +356,22 @@
 
   <!-- LAYER 1: Detection -->
   <div class="layer">
-    <div class="layer-label">// 02 · havaitseminen</div>
+    <div class="layer-label">// 02 · detection</div>
     <div class="layer-row">
       <div class="box detection">
         <span class="tag">signature-based IDS</span>
         <span class="name">Suricata</span>
-        <span class="desc">Sääntöpohjainen tunnistus<br>ET Open rules · fast.log · eve.json<br>DoS · scan · exploit alertit</span>
+        <span class="desc">Rule-based detection<br>ET Open rules · fast.log · eve.json<br>DoS · scan · exploit alerts</span>
       </div>
       <div class="box detection">
         <span class="tag">network monitor</span>
         <span class="name">Zeek</span>
-        <span class="desc">Protokolla-analyysi<br>conn.log · dns.log · http.log<br>ssh.log · notice.log</span>
+        <span class="desc">Protocol analysis<br>conn.log · dns.log · http.log<br>ssh.log · notice.log</span>
       </div>
       <div class="box detection">
         <span class="tag">geolocation</span>
         <span class="name">MaxMind GeoLite2</span>
-        <span class="desc">IP-osoitteiden rikastus<br>Maa · kaupunki · koordinaatit<br>GeoIP kartat Kibanassa</span>
+        <span class="desc">IP-address enrichment<br>Country · city · coordinates<br>GeoIP maps in Kibana</span>
       </div>
     </div>
   </div>
@@ -385,12 +385,12 @@
 
   <!-- LAYER 2: Collection -->
   <div class="layer">
-    <div class="layer-label">// 03 · lokien keruu &amp; lähetys</div>
+    <div class="layer-label">// 03 · log collection &amp; forwarding</div>
     <div class="layer-row">
       <div class="box collection wide">
         <span class="tag">log shipper</span>
         <span class="name">Filebeat</span>
-        <span class="desc">Moduulit: suricata · zeek · wazuh &nbsp;|&nbsp; Lähettää lokit Elasticsearchiin &nbsp;|&nbsp; Index: filebeat-*</span>
+        <span class="desc">Modules: suricata · zeek · wazuh &nbsp;|&nbsp; Sends logs to Elasticsearch &nbsp;|&nbsp; Index: filebeat-*</span>
       </div>
     </div>
   </div>
@@ -402,14 +402,14 @@
 
   <!-- LAYER 3: SIEM -->
   <div class="layer">
-    <div class="layer-label">// 04 · siem &amp; korrelaatio</div>
+    <div class="layer-label">// 04 · siem &amp; correlation</div>
     <div class="layer-row">
       <div class="box siem wazuh-special wide">
         <span class="tag">⚡ siem layer</span>
         <span class="name">Wazuh Manager + Agent</span>
         <span class="desc">
           Alert correlation · Log backup · Rule matching<br>
-          Vastaanottaa Suricatan &amp; Zeekin alertit → rikastaa → lähettää ES:ään<br>
+          Receives Suricata &amp; Zeek alerts → enriches → sends to ES<br>
           <span style="color:#f59e0b88;font-size:0.7rem;">Agent (127.0.0.1:1514) → Manager → Filebeat → Elasticsearch</span>
         </span>
       </div>
@@ -423,12 +423,12 @@
 
   <!-- LAYER 4: Storage -->
   <div class="layer">
-    <div class="layer-label">// 05 · tallennus &amp; indeksointi</div>
+    <div class="layer-label">// 05 · storage &amp; indexing</div>
     <div class="layer-row">
       <div class="box storage wide">
         <span class="tag">search engine</span>
         <span class="name">Elasticsearch</span>
-        <span class="desc">Lokien tallennus &amp; indeksointi · localhost:9200 · Index: filebeat-* · Single-node</span>
+        <span class="desc">Log storage &amp; indexing · localhost:9200 · Index: filebeat-* · Single-node</span>
       </div>
     </div>
   </div>
@@ -443,22 +443,22 @@
 
   <!-- LAYER 5: Visualization -->
   <div class="layer">
-    <div class="layer-label">// 06 · visualisointi &amp; dashboardit</div>
+    <div class="layer-label">// 06 · visualization &amp; dashboards</div>
     <div class="layer-row">
       <div class="box viz">
         <span class="tag">dashboard</span>
         <span class="name">Kibana</span>
-        <span class="desc">localhost:5601<br>IDS Overview dashboard<br>Alertit · Top IP:t · Tyypit</span>
+        <span class="desc">localhost:5601<br>IDS Overview dashboard<br>Alerts · Top IP's · Types</span>
       </div>
       <div class="box viz">
         <span class="tag">visualization</span>
         <span class="name">GeoIP Map</span>
-        <span class="desc">Maailmankartta<br>Hyökkäysten lähtömaat<br>MaxMind + Kibana Maps</span>
+        <span class="desc">World map viewing<br>Attack source countries<br>MaxMind + Kibana Maps</span>
       </div>
       <div class="box viz">
         <span class="tag">siem ui</span>
         <span class="name">Wazuh Dashboard</span>
-        <span class="desc">Alert correlation view<br>Compliance raportit<br>Log backup status</span>
+        <span class="desc">Alert correlation view<br>Compliance raports<br>Log backup status</span>
       </div>
     </div>
   </div>
@@ -466,11 +466,11 @@
   <!-- Legend -->
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:#00c8ff"></div>Network / Input</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#ff8c44"></div>Havaitseminen</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#c084fc"></div>Lokien keruu</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ff8c44"></div>Detection</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#c084fc"></div>Log collection</div>
     <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div>SIEM (Wazuh)</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div>Tallennus</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#f472b6"></div>Visualisointi</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div>Storage</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f472b6"></div>Visualization</div>
   </div>
 
 </div>
