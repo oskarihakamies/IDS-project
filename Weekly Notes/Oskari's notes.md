@@ -182,7 +182,7 @@ For one test I used git in this program because I realized I still hadn't used i
 
 <img width="420" height="122" alt="image" src="https://github.com/user-attachments/assets/18992c06-ed66-4df8-81a1-74a1ff40ddcd" />
 
-And I made one directory called arkkitehtuuri.
+Then I changed to my project directory from which I pushed our architecture from. 
 
 
 ## TROUBLESHOOTING:
