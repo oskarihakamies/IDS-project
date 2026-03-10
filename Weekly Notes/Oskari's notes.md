@@ -185,6 +185,9 @@ For one test I used git in this program because I realized I still hadn't used i
 
 Then I changed to my project directory from which I pushed our architecture from. 
 
+<img width="326" height="101" alt="image" src="https://github.com/user-attachments/assets/18977a9d-a08d-4667-8d74-032995e93382" />
+
+
 
 
 
