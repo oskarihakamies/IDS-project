@@ -178,7 +178,11 @@ I loaded all of the parts in the program.
 
 
 
-For one test I used git in this program because I realized I still hadn't used it. So first I cloned the git repo to my VM. 
+For one test I used git in this program because I realized I still hadn't used it. The purpose was to make the picture of the architecture and commmit it to our repo. So first I cloned the git repo to my VM. 
+
+<img width="420" height="122" alt="image" src="https://github.com/user-attachments/assets/18992c06-ed66-4df8-81a1-74a1ff40ddcd" />
+
+And I made one directory called arkkitehtuuri.
 
 
 ## TROUBLESHOOTING:
