@@ -122,3 +122,44 @@ sudo nano /opt/zeek/etc/node.cfg
 
 <img width="607" height="123" alt="Näyttökuva 2026-03-08 kello 23 07 33" src="https://github.com/user-attachments/assets/54c4a1da-8f64-4f55-9811-d95fded11d1f" />
 
+After you saved your configurations you can deploy it by using this command
+
+```
+sudo /opt/zeek/bin/zeekctl deploy
+```
+
+You should see something like this:
+
+<img width="859" height="313" alt="Näyttökuva 2026-03-11 kello 13 15 13" src="https://github.com/user-attachments/assets/356f7005-6875-4d8b-aa0e-37f71291d48c" />
+
+There is also a zeek status command, which tells you if everything is ok.
+
+```
+sudo /opt/zeek/bin/zeekctl status
+```
+
+<img width="748" height="68" alt="Näyttökuva 2026-03-11 kello 13 17 16" src="https://github.com/user-attachments/assets/0c90ea08-c017-4d4f-a420-dc73acf4249c" />
+
+How you can check your logs?
+
+```
+ls /opt/zeek/logs/current
+```
+
+<img width="1289" height="65" alt="Näyttökuva 2026-03-11 kello 13 28 32" src="https://github.com/user-attachments/assets/4ae2e4d1-38d2-40dc-ba0a-e1328b597f9a" />
+
+If you see this kind of files, Zeek is active and writing logs
+
+
+### Aftermath
+
+Your IDS now has:
+
+- Zeek installed
+- Interface configured
+- Local network defined
+- Sensor running
+- Logs being generated
+
+So the sensor part of your IDS is operational.
+
