@@ -156,7 +156,7 @@ I have taken a screenshot from the architecture to visualize the patch where Waz
 
 <img width="893" height="389" alt="image" src="https://github.com/user-attachments/assets/c75b57ec-2f1a-4cb8-a72a-d57380b40b10" />
 
-You can view the full Architecture also from here: 
+You can view the full Architecture also from here: [View IDS Architecture](https://oskarihakamies.github.io/IDS-project/architecture/ids-architecture.html)
 
 
 After with some problems regarding Kibana I finally got an alert showing. 
