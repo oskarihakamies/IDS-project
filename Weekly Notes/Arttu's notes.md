@@ -138,7 +138,17 @@ Huomasin että apache2 käytti porttia 80, joten suljin sen
 sudo systemctl start nginx
 ```
 
+```
+sudo systemctl status nginx
+```
 
+Tämän operaation jälkeen asentelin lisää paketteja ja ahrjoittelin niiden käyttöä
+
+Ensiksi tcpreplay
+
+```
+sudo apt update, sudo apt install -y tcpreplay
+```
 
 
 
