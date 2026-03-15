@@ -256,3 +256,22 @@ Started from scratch 23/02/2026 at 9:40ish PM
 <img width="749" height="851" alt="kuva" src="https://github.com/user-attachments/assets/f4c5320a-bdd1-47ed-a42e-2a631fbf10fa" />
 
 This is where all the trouble is right now. After ```sudo apt-get update```kibana cannot once again find its packages. I'm once again in the loop of trying to figure out how to get it to work. This has been an issue with the whole team and we're figuring out a way to get it installed to be stable.
+
+### Update on Kibana
+I did some research, troubleshooting and figured out that the main problem was that the ELK - stack was missing its keyring-file which caused a problem each time the VM launched and tried to do the ```sudo apt-get update```
+
+The same issue was with Wazuh
+
+This causes somewhat a security issue where the APT is not willing to update because of safety reasons.
+
+Command for Kibana:
+```curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg```
+
+It basically does this: 
+- It goes and loads up the official GPG - key from online
+- Loads up the key to the gpg
+- Transforms the key from ASCII to binary keyring (--dearmor)
+- Saves it to ```-o /usr/share/keyrings/elasticsearch-keyring.gpg```
+
+
+
