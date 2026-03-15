@@ -244,6 +244,10 @@ sudo filebeat setup    # downloads the already ready Kibana dashboards - takes l
 
 sudo systemctl enable --now filebeat
 
+sudo systemctl start wazuh-manager
+
+sudo systemctl start wazuh-agent
+
 sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
 
 ```
@@ -258,6 +262,8 @@ sudo zeekctl status
 sudo systemctl status filebeat
 sudo systemctl status elasticsearch
 sudo systemctl status kibana
+sudo systemctl status wazuh-manager
+sudo systemctl status wazuh-agent
 ```
 
 ## USEFUL LINKS:
