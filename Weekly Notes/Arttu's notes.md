@@ -114,5 +114,33 @@ Myöhemmin viikolla oli ongelmia kibanan kanssa, joita yritimme tiimin kanssa yh
 
 Suurin osa tämän viikon (vko 10) työstä meni Zeekin asennusohjeiden kirjoittamiseen ja niiden testaamiseen 
 
+Asensin nginxin myös, koska sitä ei aiemmin syystä tai toisesta ollut.
+
+```
+sudo apt install nginx
+```
+
+-> tuli kuitenkin ongelma, yritin katsoa nginx statusta, mutta tuli ilmoitus että portti on varattu
+
+Kokeilin etsiä, mikä on vikana ja vika selvisi heti ensimmäisessä vaiheessa. Portti 80 oli varattu toiselle palvellulle.
+
+-> tällä komennolla: 
+
+```
+sudo ss -tulpn | grep :80
+```
+
+Huomasin että apache2 käytti porttia 80, joten suljin sen 
+
+### kuvat ei toimi juuri nyt
+
+```
+sudo systemctl start nginx
+```
+
+
+
+
+
 
 
