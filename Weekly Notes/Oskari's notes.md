@@ -231,6 +231,9 @@ cat /etc/apt/sources.list.d/wazuh.list
 And see if it downloaded correctly. 
 
 
+
+
+
 ## QUICK START FOR IDS: 
 
 ```
