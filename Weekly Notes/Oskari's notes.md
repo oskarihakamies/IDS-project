@@ -151,6 +151,14 @@ curl -so /etc/filebeat/filebeat.yml https://packages.wazuh.com/4.14/tpl/wazuh/fi
 There are few additions you need to make after this. You can check the rest of the installing from the official Wazuh documentation which i've linked up there and is also in the links part at the bottom of the page. 
 
 
+I have taken a screenshot from the architecture to visualize the patch where Wazuh is located. The premise is that filebeat sends the traffic to Wazuh before it connects to elasticsearch. 
+
+
+<img width="893" height="389" alt="image" src="https://github.com/user-attachments/assets/c75b57ec-2f1a-4cb8-a72a-d57380b40b10" />
+
+You can view the full Architecture also from here: 
+
+
 After with some problems regarding Kibana I finally got an alert showing. 
 
 <img width="943" height="353" alt="image" src="https://github.com/user-attachments/assets/c6655c41-ac4d-4a10-8f30-be905458dae0" />
