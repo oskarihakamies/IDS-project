@@ -152,8 +152,11 @@ Ensiksi tcpreplay
 sudo apt update, sudo apt install -y tcpreplay
 ```
 
+Asennus onnistui, versiona 4.5.1. Nopella tarkistuksella tämä myös uusin versio mitä saatavilla.
 
 
+<img width="700" height="305" alt="Näyttökuva 2026-03-17 kello 20 09 50" src="https://github.com/user-attachments/assets/ed1ebc04-bda6-4105-96e9-9a9b5196e51a" />
 
-
+Asennuksen jälkeen olin hetken umpikujassa, sillä en ollut ihan varma mitä seuraavaksi pitäisi tehdä. Siispä aloin tuktia trpreplayta. 
+Työkaluhan on siis loistava juuri tähän projektiin, sillä sen avulla helpohko toistaa verkkoliikennettä. 
 
