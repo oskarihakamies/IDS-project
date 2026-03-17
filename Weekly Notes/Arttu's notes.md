@@ -132,7 +132,7 @@ sudo ss -tulpn | grep :80
 
 Huomasin että apache2 käytti porttia 80, joten suljin sen 
 
-```
+
 <img width="1317" height="85" alt="Näyttökuva 2026-03-15 kello 19 20 45" src="https://github.com/user-attachments/assets/45969f5d-0910-42fc-b21e-7eb8397104cc" />
 
 
