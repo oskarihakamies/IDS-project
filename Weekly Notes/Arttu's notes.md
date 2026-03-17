@@ -159,4 +159,7 @@ Asennus onnistui, versiona 4.5.1. Nopella tarkistuksella tämä myös uusin vers
 
 Asennuksen jälkeen olin hetken umpikujassa, sillä en ollut ihan varma mitä seuraavaksi pitäisi tehdä. Siispä aloin tuktia trpreplayta. 
 Työkaluhan on siis loistava juuri tähän projektiin, sillä sen avulla helpohko toistaa verkkoliikennettä. 
+Nikon vinkistä otin koppia ja aloin myös työstämään dummy-interfacea.
+
+
 
