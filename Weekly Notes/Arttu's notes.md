@@ -191,3 +191,13 @@ sudo suricata -i dummy0 -c /etc/suricata/suricata.yaml -D
 sudo /opt/zeek/bin/zeek -i dummy0
 ```
 
+Seuraaavaksi tuhlasin hieman aikaa, sillä luulin että minulla oli ongelma -> 
+
+<img width="1470" height="418" alt="Näyttökuva 2026-03-17 kello 21 27 58" src="https://github.com/user-attachments/assets/00cc1795-cfc8-4617-9b4b-c0710338c366" />
+
+Syynä oli siis eri prosessien toiminta, tuota systemd ei pysty siis tässä yhteydessä käyttämään. Manuualinen toimii
+
+
+
+<img width="1100" height="88" alt="Näyttökuva 2026-03-17 kello 21 34 46" src="https://github.com/user-attachments/assets/d64d90fa-9caa-4fae-951e-8419cb476bdb" />
+
