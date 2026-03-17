@@ -146,6 +146,8 @@ sudo systemctl status nginx
 
 Tämän operaation jälkeen asentelin lisää paketteja ja ahrjoittelin niiden käyttöä
 
+## tcpreplay
+
 Ensiksi tcpreplay
 
 ```
@@ -162,4 +164,30 @@ Työkaluhan on siis loistava juuri tähän projektiin, sillä sen avulla helpohk
 Nikon vinkistä otin koppia ja aloin myös työstämään dummy-interfacea.
 
 
+```
+sudo ip link add dummy0 type dummy
+sudo ip addr add 192.0.2.0/24 dev dummy0
+sudo ip link set dummy0 up
+```
+-> komennolla luotiin uusi verkkolaite, 
+
+<img width="518" height="103" alt="Näyttökuva 2026-03-17 kello 20 54 38" src="https://github.com/user-attachments/assets/8c7896b5-2ed2-4639-97af-91c373b627c9" />
+
+katsottiin että verkko luotiin ->
+
+```
+ip addr show dummy0
+```
+
+<img width="985" height="129" alt="Näyttökuva 2026-03-17 kello 20 57 56" src="https://github.com/user-attachments/assets/41d6419a-a571-4d0d-8669-e773e079140c" />
+
+Laitoin sen kuuntelemaan Suricataa ja zeekiä
+
+```
+sudo suricata -i dummy0 -c /etc/suricata/suricata.yaml -D
+```
+
+```
+sudo /opt/zeek/bin/zeek -i dummy0
+```
 
