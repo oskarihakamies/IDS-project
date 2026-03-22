@@ -169,7 +169,7 @@ sudo ip link add dummy0 type dummy
 sudo ip addr add 192.0.2.0/24 dev dummy0
 sudo ip link set dummy0 up
 ```
--> komennolla luotiin uusi verkkolaite, 
+-> komennolla luotiin uusi verkkolaite, PITÄÄ luoda uusiksi tietyin väliajoin (esim. rebootissa tai kun konffataan network asetuksia.
 
 <img width="518" height="103" alt="Näyttökuva 2026-03-17 kello 20 54 38" src="https://github.com/user-attachments/assets/8c7896b5-2ed2-4639-97af-91c373b627c9" />
 
