@@ -228,4 +228,10 @@ output.elasticsearch:
   hosts: ["http://localhost:9200"]
 ```
 
+Nyt toimii
+
+
+<img width="1469" height="327" alt="Näyttökuva 2026-03-23 kello 12 27 29" src="https://github.com/user-attachments/assets/bed692cd-7308-48f6-811c-8703ef4d5fef" />
+
+
 
