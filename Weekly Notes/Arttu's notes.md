@@ -201,3 +201,31 @@ Syynä oli siis eri prosessien toiminta, tuota systemd ei pysty siis tässä yht
 
 <img width="1100" height="88" alt="Näyttökuva 2026-03-17 kello 21 34 46" src="https://github.com/user-attachments/assets/d64d90fa-9caa-4fae-951e-8419cb476bdb" />
 
+
+```
+sudo nano /etc/filebeat/filebeat.yml
+```
+
+
+```
+filebeat.inputs:
+  - type: filestream
+    id: suricata-eve
+    enabled: true
+    paths:
+      - /var/log/suricata/eve.json
+    parsers:
+      - ndjson:
+          target: ""
+
+  - type: filestream
+    id: zeek-logs
+    enabled: true
+    paths:
+      - /opt/zeek/logs/current/*.log
+
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
+```
+
+
