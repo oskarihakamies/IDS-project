@@ -234,4 +234,17 @@ Nyt toimii
 <img width="1469" height="327" alt="Näyttökuva 2026-03-23 kello 12 27 29" src="https://github.com/user-attachments/assets/bed692cd-7308-48f6-811c-8703ef4d5fef" />
 
 
+Yritin saada testitiedostoja toimimaan ja samalla harjoittelin miten ne toimivat ja miten niitä on mahdollista muokata, jotta saadaan enemmän dataa läpi
 
+
+<img width="608" height="291" alt="Näyttökuva 2026-03-23 kello 13 22 45" src="https://github.com/user-attachments/assets/702589a5-8dae-4bd3-9c20-5a58f3980c2d" />
+
+pingasin ja ajoin eri testikomentoja 
+
+<img width="786" height="297" alt="Näyttökuva 2026-03-23 kello 13 23 22" src="https://github.com/user-attachments/assets/cf61186a-85ce-4b50-9087-4b7fd38a673e" />
+
+<img width="775" height="85" alt="Näyttökuva 2026-03-23 kello 13 24 07" src="https://github.com/user-attachments/assets/436b0866-5eb7-4f72-bc7b-aabc0ffb7dbd" />
+
+Testit nyt osoittavat sen, että tulokset näkyvät myös kibanassa
+
+<img width="1170" height="615" alt="Näyttökuva 2026-03-23 kello 13 25 29" src="https://github.com/user-attachments/assets/8aa81da5-1ffd-4c8d-b26a-186583c3e1fa" />
