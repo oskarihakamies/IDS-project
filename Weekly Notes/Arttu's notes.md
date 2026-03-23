@@ -248,3 +248,13 @@ pingasin ja ajoin eri testikomentoja
 Testit nyt osoittavat sen, että tulokset näkyvät myös kibanassa
 
 <img width="1170" height="615" alt="Näyttökuva 2026-03-23 kello 13 25 29" src="https://github.com/user-attachments/assets/8aa81da5-1ffd-4c8d-b26a-186583c3e1fa" />
+
+
+Myöhemmässä vaiheessa tuli onglema kibanan kanssa, kun en saanut enää hälytykisä siellä.
+
+<img width="670" height="505" alt="Näyttökuva 2026-03-23 kello 20 19 35" src="https://github.com/user-attachments/assets/fa76767b-9657-4c7c-8a1b-87d721aad913" />
+
+Pienen ihmettelyn jälkeen ongelmaksi selvisi http protokolla, sillä sen piti olla https.
+
+
+
