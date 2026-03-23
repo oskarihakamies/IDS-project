@@ -146,6 +146,9 @@ sudo systemctl status nginx
 
 Tämän operaation jälkeen asentelin lisää paketteja ja ahrjoittelin niiden käyttöä
 
+# Week 12-14...
+
+
 ## tcpreplay & dummy
 
 Ensiksi tcpreplay
@@ -255,6 +258,10 @@ Myöhemmässä vaiheessa tuli onglema kibanan kanssa, kun en saanut enää häly
 <img width="670" height="505" alt="Näyttökuva 2026-03-23 kello 20 19 35" src="https://github.com/user-attachments/assets/fa76767b-9657-4c7c-8a1b-87d721aad913" />
 
 Pienen ihmettelyn jälkeen ongelmaksi selvisi http protokolla, sillä sen piti olla https.
+
+Nyt järjestelmän rakennus on jo loppusuoralla.
+
+
 
 
 
