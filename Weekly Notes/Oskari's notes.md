@@ -333,8 +333,8 @@ nano playbook.yml
 You can then start the IDS whenever you'd like with command below. 
 
 ```
-sudo ansible-playbook ~/'owndirectory'/playbook.yml
-
+sudo ansible-playbook ~/ids-ansible/playbook.yml
+#use your own directory after ~/
 ```
 
 After starting the IDS. You can play your own pcap- file. Whichever you choose really.
@@ -350,7 +350,9 @@ And enter localhost:5061 to see the Kibana dashboards.
 Same as before. Attach the text below to nano. You can name it for stop.yml for example. 
 
 ```
-sudo ansible-playbook ~/'owndirectory'/stop.yml
+sudo ansible-playbook ~/ids-ansible/stop.yml
+#  use your own directory after ~/
+
 ```
 
 ```
