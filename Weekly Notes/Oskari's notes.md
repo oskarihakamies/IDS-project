@@ -333,7 +333,7 @@ nano playbook.yml
 You can then start the IDS whenever you'd like with command below. 
 
 ```
-ansible-playbook ~/'owndirectory'/playbook.yml
+sudo ansible-playbook ~/'owndirectory'/playbook.yml
 
 ```
 
@@ -350,7 +350,7 @@ And enter localhost:5061 to see the Kibana dashboards.
 Same as before. Attach the text below to nano. You can name it for stop.yml for example. 
 
 ```
-ansible-playbook ~/'owndirectory'/stop.yml
+sudo ansible-playbook ~/'owndirectory'/stop.yml
 ```
 
 ```
