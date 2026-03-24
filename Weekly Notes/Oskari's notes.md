@@ -243,7 +243,7 @@ sudo systemctl enable --now kibana
 
 sudo filebeat modules enable suricata zeek
 
-sudo filebeat setup    # downloads the already ready Kibana dashboards - takes like 1-2min
+sudo filebeat setup    
 
 sudo systemctl enable --now filebeat
 
