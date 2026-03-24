@@ -243,19 +243,141 @@ And see if it downloaded correctly.
 
 
 
+## Quick start IDS with Ansible: 
 
-## QUICK START FOR IDS BY ANSIBLE: 
+First you need to download it: 
+```
+sudo apt install -y ansible
+```
+And add the text below to playbook.yml using nano. 
+```
+nano playbook.yml
+```
+
+```
+---
+- name: Start IDS Project
+  hosts: localhost
+  become: yes
+
+  tasks:
+
+    - name: Start Elasticsearch
+      systemd:
+        name: elasticsearch
+        state: started
+        enabled: yes
+
+    - name: Wait for Elasticsearch to be ready
+      wait_for:
+        port: 9200
+        delay: 10
+        timeout: 60
+
+    - name: Start Kibana
+      systemd:
+        name: kibana
+        state: started
+        enabled: yes
+
+    - name: Start Suricata
+      systemd:
+        name: suricata
+        state: started
+        enabled: yes
+
+    - name: Start Filebeat
+      systemd:
+        name: filebeat
+        state: started
+        enabled: yes
+
+    - name: Start Wazuh Manager
+      systemd:
+        name: wazuh-manager
+        state: started
+        enabled: yes
+
+    - name: Start Wazuh Agent
+      systemd:
+        name: wazuh-agent
+        state: started
+        enabled: yes
+
+    - name: Start Zeek
+      command: zeekctl start
+      ignore_errors: yes
+
+    - name: Check all services
+      command: systemctl is-active {{ item }}
+      loop:
+        - elasticsearch
+        - kibana
+        - suricata
+        - filebeat
+        - wazuh-manager
+      register: service_status
+      ignore_errors: yes
+
+    - name: Print service statuses
+      debug:
+        msg: "{{ item.item }}: {{ item.stdout }}"
+      loop: "{{ service_status.results }}"
+
+
+
 
 ```
 
+You can then start the IDS whenever you'd like with command below. 
 
+```
+ansible-playbook ~/'owndirectory'/playbook.yml
 
+```
 
+After starting the IDS. You can play your own pcap- file. Whichever you choose really.
+
+```
 sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
+```
+
+And enter localhost:5061 to see the Kibana dashboards. 
+
+## Closing the IDS with Ansible:
+
+Same as before. Attach the text below to nano. You can name it for stop.yml for example. 
+
+```
+ansible-playbook ~/'owndirectory'/stop.yml
+```
 
 ```
 
-And localhost:5061
+---
+- name: Stop IDS Project
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Stop all IDS services
+      systemd:
+        name: "{{ item }}"
+        state: stopped
+      loop:
+        - filebeat
+        - kibana
+        - elasticsearch
+        - suricata
+        - wazuh-manager
+        - wazuh-agent
+
+    - name: Stop Zeek
+      command: zeekctl stop
+      ignore_errors: yes
+
+
+```
 
 ## Quick status check: 
 
