@@ -379,6 +379,17 @@ ansible-playbook ~/'owndirectory'/stop.yml
 
 ```
 
+So for recap and next start time you would like to start it. 
+
+```
+# Start IDS
+ansible-playbook ~/'owndir'/playbook.yml
+
+# Stop IDS
+ansible-playbook ~/'owndir'/stop.yml
+
+
+```
 ## Quick status check: 
 
 ```
