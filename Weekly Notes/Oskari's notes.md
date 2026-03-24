@@ -386,10 +386,10 @@ So for recap and next start time you would like to start it.
 
 ```
 # Start IDS
-ansible-playbook ~/'owndir'/playbook.yml
+sudo ansible-playbook ~/ids-ansible/playbook.yml
 
 # Stop IDS
-ansible-playbook ~/'owndir'/stop.yml
+sudo ansible-playbook ~/ids-ansible/stop.yml
 
 
 ```
