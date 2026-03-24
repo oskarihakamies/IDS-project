@@ -16,7 +16,8 @@ sudo apt install suricata -y
 ```
 **Zeek:**
 
-https://www.howtoforge.com/how-to-install-zeek-network-security-monitoring-on-debian-12/
+
+https://software.opensuse.org//download.html?project=security%3Azeek&package=zeek
 
 The install is same in Debian 13 as in 12. To check if Zeek was downloaded you can just use: 
 ```
