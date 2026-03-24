@@ -244,22 +244,12 @@ And see if it downloaded correctly.
 
 
 
-## QUICK START FOR IDS: 
+## QUICK START FOR IDS BY ANSIBLE: 
 
 ```
-sudo systemctl enable --now elasticsearch
 
-sudo systemctl enable --now kibana
 
-sudo filebeat modules enable suricata zeek
 
-sudo filebeat setup    
-
-sudo systemctl enable --now filebeat
-
-sudo systemctl start wazuh-manager
-
-sudo systemctl start wazuh-agent
 
 sudo tcpreplay --intf1=enp0s3 --multiplier=1.0 /home/$USER/portscan.pcap
 
