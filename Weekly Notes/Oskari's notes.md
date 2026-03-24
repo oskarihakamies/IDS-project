@@ -197,6 +197,16 @@ Then I changed to my project directory from which I pushed our architecture from
 
 
 
+After a while we wanted to test the thing by an "outsider" by exporting the IDS and testing it outside our systems. 
+
+There were few problems that occurred for example the exporting to USB stick. My stick had format of FAT32 which only can download 4GB files at a time. 
+
+<img width="312" height="311" alt="image" src="https://github.com/user-attachments/assets/830a3867-c957-4be3-8db3-c327f854e4c7" />
+
+I fixed that by using Minitool Partition Wizard which is a minitool for changing the sticks format. 
+
+
+But after some testing we finally got the video for first user test.
 
 
 
