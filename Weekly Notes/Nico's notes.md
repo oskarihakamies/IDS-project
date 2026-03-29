@@ -879,3 +879,14 @@ Complete yml:
     path: /var/wazuh-indexer-security-initialized.flag
     state: touch
 ```
+
+Test it again by ```sudo bash install.sh```
+
+Woohoo! Gotta appreciate how decently accurate the AIs have become lately in troubleshooting. Like 4 - 6 months ago I would've been in a massive loop modifying the code over and over and over again.
+
+Even Gemini decided to celebrate:
+
+<img width="717" height="96" alt="kuva" src="https://github.com/user-attachments/assets/2cade52a-2fbe-4ff5-9492-b1598d89ffd6" />
+
+<img width="1271" height="759" alt="kuva" src="https://github.com/user-attachments/assets/963c955e-d038-4386-ad4d-b0c24f5d1e5d" />
+
