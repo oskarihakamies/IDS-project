@@ -1111,6 +1111,18 @@ This is the sensor part of our operations
     state: present
     update_cache: yes
 
+- name: Set correct network interface in Suricata config
+  replace:
+    path: /etc/suricata/suricata.yaml
+    regexp: 'interface: eth0'
+    replace: 'interface: {{ ansible_default_ipv4.interface }}'
+
+- name: Set correct network interface in Suricata default file (Debian)
+  lineinfile:
+    path: /etc/default/suricata
+    regexp: '^IFACE='
+    line: 'IFACE={{ ansible_default_ipv4.interface }}'
+
 - name: Ensure Suricata service is enabled and running
   systemd:
     name: suricata
@@ -1138,7 +1150,131 @@ It basically installs it, makes sure that Suricata is up and running and kicks W
 
 Once again -> playbook.yml and add the sensors
 
+Ran into another issue, but fixed it in the code ABOVE! As we configured in the earlier parts, Suricata needs a network card to follow. We told it to follow with Ansibles default ipv4 interface.
+
+<img width="1028" height="554" alt="kuva" src="https://github.com/user-attachments/assets/a2caafad-1983-4a46-8846-be39b76f3ae3" 
+ />
 
 
+Now it works :)
+
+<img width="985" height="408" alt="kuva" src="https://github.com/user-attachments/assets/7a19f7b6-9320-4aa6-a626-02aebf2112d3" />
+
+I tried this test site ```curl http://testmynids.org/uid/index.html```which is used for testing out f.ex Suricata. It didn't show up in Wazuh, decided to try and look at Suricata logs. Figured out Suricata noticed it -> Went ahead and updated Suricata. Now putting it back online
+
+Didn't work, but everything else seems to be running fine...
+
+<img width="1028" height="395" alt="kuva" src="https://github.com/user-attachments/assets/725fce38-851d-4ae0-ab98-865bbc40e769" />
+
+I thought everything works, but is Filebeat on?
+
+<img width="405" height="135" alt="kuva" src="https://github.com/user-attachments/assets/da18db2e-42ec-48df-92e9-332d6b1c8b89" />
+
+Got a WARN secure connection disabled... It only likes HTPPS?
+
+Did a bit of offline - troubleshooting.. Problem was with Filebeat not liking HTTPS. When we installed Suricata, it did something to Filebeat that caused the error. While I fix these, I also fix the homepage not working
+
+
+wazuh_manager/tasks/main.yml:
+
+```
+- name: Install and configure Filebeat
+  block:
+    - name: Download Filebeat config template
+      get_url:
+        url: https://packages.wazuh.com/4.9/tpl/wazuh/filebeat/filebeat.yml
+        dest: /etc/filebeat/filebeat.yml
+
+    - name: Configure Filebeat to use correct nodes and certs
+      replace:
+        path: /etc/filebeat/filebeat.yml
+        regexp: "{{ item.regexp }}"
+        replace: "{{ item.replace }}"
+      with_items:
+        - { regexp: 'wazuh-server.pem', replace: 'node-1.pem' }
+        - { regexp: 'wazuh-server-key.pem', replace: 'node-1-key.pem' }
+        - { regexp: '\${username}', replace: 'admin' }
+        - { regexp: '\${password}', replace: 'admin' }
+
+    - name: Restart Filebeat
+      systemd:
+        name: filebeat
+        state: restarted
+        enabled: yes
+```
+
+wazuh_dashboard:
+
+```---
+---
+# tasks file for wazuh_dashboard
+
+- name: Install wazuh-dashboard package
+  apt:
+    name: wazuh-dashboard
+    state: present
+    update_cache: yes
+
+- name: Ensure Dashboard certs directory exists
+  file:
+    path: /etc/wazuh-dashboard/certs
+    state: directory
+    owner: wazuh-dashboard
+    group: wazuh-dashboard
+    mode: '0500'
+
+- name: Copy certificates for Dashboard
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/wazuh-dashboard/certs/{{ item }}"
+    remote_src: yes
+    owner: wazuh-dashboard
+    group: wazuh-dashboard
+    mode: '0400'
+  loop:
+    - dashboard.pem
+    - dashboard-key.pem
+    - root-ca.pem
+
+- name: Configure Wazuh Dashboard settings
+  copy:
+    dest: /etc/wazuh-dashboard/opensearch_dashboards.yml
+    owner: wazuh-dashboard
+    group: wazuh-dashboard
+    mode: '0640'
+    content: |
+      server.host: 0.0.0.0
+      server.port: 443
+      opensearch.hosts: https://127.0.0.1:9200
+      opensearch.ssl.verificationMode: certificate
+      server.ssl.enabled: true
+      server.ssl.certificate: /etc/wazuh-dashboard/certs/dashboard.pem
+      server.ssl.key: /etc/wazuh-dashboard/certs/dashboard-key.pem
+      opensearch.ssl.certificateAuthorities: [ "/etc/wazuh-dashboard/certs/root-ca.pem" ]
+      uiSettings.overrides.defaultRoute: /app/wazuh
+
+- name: Enable and start wazuh-dashboard service
+  systemd:
+    name: wazuh-dashboard
+    enabled: yes
+    state: started
+```
+
+sensors:
+
+```
+- name: Update Suricata rules
+  command: suricata-update
+  args:
+    creates: /var/lib/suricata/rules/suricata.rules # Ajaa vain jos sääntöjä ei ole
+
+- name: Set permissions for Wazuh to read Suricata logs
+  file:
+    path: "{{ item }}"
+    mode: '0644'
+  with_items:
+    - /var/log/suricata
+    - /var/log/suricata/eve.json
+```
 
 
