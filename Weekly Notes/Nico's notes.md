@@ -307,5 +307,120 @@ Figure out a way to install our whole project from a Zip - file. Also by trouble
 
 What this does is narrow down the things we have to build from scratch - Wazuh can do it pretty much out of the Box. Wazuh is also more of a security platform that stores data whereas ELK is more of a data platform that can do security [source](https://news.fmisec.com/02-wazuh-vs-ossec-graylog-and-elk-stack-a-real-world-comparison)
 
+### Ansible
+We start this by making a project folder. This basically creates the whole hierarchy as well
 
+```
+mkdir -p soc-project/roles/{common,wazuh_indexer,wazuh_manager,wazuh_dashboard,sensors,logging}/tasks
+cd soc-project
+```
+
+
+<img width="560" height="122" alt="kuva" src="https://github.com/user-attachments/assets/f174ee4e-cfd3-4cb2-ad29-0edaf068bb0c" />
+
+As you can see, the command creates the folders as described
+
+<img width="590" height="192" alt="kuva" src="https://github.com/user-attachments/assets/0f92f729-6589-4cbf-99db-da6f98cd7d79" />
+
+After that it's the time to do a install.sh which will be the command run by anyone that will use the project
+
+This next part is completely created by Gemini Pro to save time and help to turn this project around
+
+```
+#!/bin/bash
+# install.sh
+# Purpose: Bootstrap the Debian system, install Ansible, and run the SOC deployment playbook.
+
+# Ensure the script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo "Error: Please run as root (e.g., sudo bash install.sh)"
+  exit 1
+fi
+
+echo "--- Updating system and installing Ansible ---"
+apt-get update -y
+apt-get install -y ansible git curl gnupg python3-apt
+
+echo "--- Starting SOC environment deployment ---"
+# Run the Ansible playbook locally on this machine
+ansible-playbook -i inventory.ini -c local playbook.yml
+
+echo "--- Deployment process finished! ---"
+```
+
+It needs permission ```chmod +x install.sh```
+
+<img width="556" height="346" alt="kuva" src="https://github.com/user-attachments/assets/e7aa3775-c824-4a94-a4e0-28dbcedf7a8a" />
+
+After that we need two files: ```inventory.ini``` that defines that the installations will run locally and ```playbook.yml``` that will complete the installation in the order that we defined.
+
+```inventory.ini```:
+
+```[soc_server]
+localhost ansible_connection=local
+```
+<img width="561" height="339" alt="kuva" src="https://github.com/user-attachments/assets/bbe6f939-d107-4199-a0fa-21816a8539c8" />
+
+playbook.yml:
+
+```
+---
+- name: Deploy Native Debian SOC Environment
+  hosts: soc_server
+  become: yes
+  
+  tasks:
+    - name: Update apt cache before starting
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+  roles:
+    - common
+    # - wazuh_indexer
+    # - wazuh_manager
+    # - wazuh_dashboard
+    # - sensors
+    # - logging
+```
+
+Commenting will be temporary for testing. 
+
+Then we'll create a "common" role basic tools, f.ex ```curl```and ```gnupg```that will be needed later for Wazuh and Suricata keys.
+
+```micro roles/common/tasks/main.yml```: 
+
+```
+---
+# tasks file for common role
+- name: Install required baseline packages
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - unzip
+      - wget
+      - jq
+    state: present
+
+- name: Ensure /etc/apt/keyrings directory exists for external repositories
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0755'
+```
+
+Time to test now so we don't have to follow every step back later:
+Navigate to ```soc-project```, run ```sudo bash install.sh```
+And now we wait... 
+
+<img width="857" height="205" alt="kuva" src="https://github.com/user-attachments/assets/3db0fe8d-0521-45de-978f-64b51c6f266c" />
+
+Seems like Ansible couldn't read our inventory.ini - file. 
+
+I had accidentally put the name as ```invventory.ini```, let's try again:
+
+<img width="460" height="54" alt="kuva" src="https://github.com/user-attachments/assets/64c07630-90c4-48df-9b50-37a31124c999" />
 
