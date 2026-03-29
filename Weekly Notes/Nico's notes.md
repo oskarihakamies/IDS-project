@@ -887,6 +887,8 @@ Woohoo! Gotta appreciate how decently accurate the AIs have become lately in tro
 Even Gemini decided to celebrate:
 
 <img width="717" height="96" alt="kuva" src="https://github.com/user-attachments/assets/2cade52a-2fbe-4ff5-9492-b1598d89ffd6" />
+<img width="596" height="87" alt="kuva" src="https://github.com/user-attachments/assets/2d7248dd-fa9a-4723-9f48-580bf6f0239a" />
 
 <img width="1271" height="759" alt="kuva" src="https://github.com/user-attachments/assets/963c955e-d038-4386-ad4d-b0c24f5d1e5d" />
 
+So now we have the database Wazuh Indexer set up. This was hopefully the hardest part.
