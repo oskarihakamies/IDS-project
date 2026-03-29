@@ -893,6 +893,8 @@ Even Gemini decided to celebrate:
 
 So now we have the database Wazuh Indexer set up. This was hopefully the hardest part.
 
+### Wazuh Manager
+
 Next up we will create the installing code to wazuh_manager/tasks/
 
 ```
@@ -916,6 +918,25 @@ It just installs and starts at the background! How simple and sweet. Now we modi
 
 <img width="472" height="255" alt="kuva" src="https://github.com/user-attachments/assets/a023d209-eea3-432f-9008-cc8b45362d22" />
 
-Now we run it once again and see how it works.
+Now we run it once again and see how or if it works. Be aware, this might take a while to progress. For me it took roughly 4 minutes.
+
+We once again see what it does. Don't mind the ^[[B^[[A]. I tested wether it crashed or not.
+
+<img width="1775" height="870" alt="kuva" src="https://github.com/user-attachments/assets/db5edd96-c345-45ef-b67a-9527fc86ad4a" />
+
+It works! Onto the next part - The Mail Delivery - Guy.
+
+### Filebeat - The Mail Delivery Guy
+
+So we have Wazuh Indexer as the database on Wazuh Manager as the brains. To get the alerts to work with each other and carry them in real time and safely into the database, we need the Filebeat in order to work. This is pretty straightforward:
+
+
+Why do we do it this way? Isn't it troublesome to go over and over again to change a file?
+- Yes, but it's less troubleshooting if something goes wrong.
+
+
+
+
+
 
 
