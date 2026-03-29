@@ -694,7 +694,188 @@ I had no idea what this was, had to ask once again from Gemini.
 
 <img width="1269" height="195" alt="kuva" src="https://github.com/user-attachments/assets/08217994-b736-444f-89e6-2959af8e6ffb" />
 
-We need to do some sort of a sorcery for modifying the "vm.max_map_count"
+We need to do some sort of a sorcery for modifying the "vm.max_map_count" to make it so that the OS is able to handle more rows of logs. It also decided to programm the database brains ```opensearch.yml```. One key point is that now it monitors all the network cards, not just in local network ```network.host: 0.0.0.0```.
+
+As for short: The first mission is to make sure the OS doesn't suffocate the database and the other task ties the database to use the secret keys we helped it to create previously.
+
+So we add this to the main.yml - file:
+
+```- name: Configure kernel parameters for Wazuh Indexer (vm.max_map_count)
+  sysctl:
+    name: vm.max_map_count
+    value: '262144'
+    state: present
+    reload: yes
+
+- name: Configure Wazuh Indexer settings
+  copy:
+    dest: /etc/wazuh-indexer/opensearch.yml
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0660'
+    content: |
+      network.host: 0.0.0.0
+      node.name: "node-1"
+      cluster.initial_master_nodes:
+        - "node-1"
+      cluster.name: "wazuh-cluster"
+      path.data: /var/lib/wazuh-indexer
+      path.logs: /var/log/wazuh-indexer
+      plugins.security.ssl.transport.pemcert_filepath: /etc/wazuh-indexer/certs/node-1.pem
+      plugins.security.ssl.transport.pemkey_filepath: /etc/wazuh-indexer/certs/node-1-key.pem
+      plugins.security.ssl.transport.pemtrustedcas_filepath: /etc/wazuh-indexer/certs/root-ca.pem
+      plugins.security.ssl.transport.enforce_hostname_verification: false
+      plugins.security.ssl.http.enabled: true
+      plugins.security.ssl.http.pemcert_filepath: /etc/wazuh-indexer/certs/node-1.pem
+      plugins.security.ssl.http.pemkey_filepath: /etc/wazuh-indexer/certs/node-1-key.pem
+      plugins.security.ssl.http.pemtrustedcas_filepath: /etc/wazuh-indexer/certs/root-ca.pem
+      plugins.security.allow_unsafe_democertificates: false
+      plugins.security.allow_default_init_securityindex: true
+      plugins.security.authcz.admin_dn:
+        - "CN=admin,OU=Wazuh,O=Wazuh,L=California,C=US"
+      plugins.security.nodes_dn:
+        - "CN=node-1,OU=Wazuh,O=Wazuh,L=California,C=US"
+```
+
+Complete yml:
+
+```---
+# tasks file for wazuh_indexer
+
+- name: Download Wazuh GPG key
+  get_url:
+    url: https://packages.wazuh.com/key/GPG-KEY-WAZUH
+    dest: /tmp/GPG-KEY-WAZUH
+
+- name: Import Wazuh GPG key
+  command: gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/keyrings/wazuh.gpg --import /tmp/GPG-KEY-WAZUH
+  args:
+    creates: /etc/apt/keyrings/wazuh.gpg
+
+- name: Set permissions on Wazuh GPG key
+  file:
+    path: /etc/apt/keyrings/wazuh.gpg
+    mode: '0644'
+
+- name: Add Wazuh APT repository
+  apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main"
+    state: present
+    filename: wazuh
+
+- name: Install wazuh-indexer package
+  apt:
+    name: wazuh-indexer
+    state: present
+    update_cache: yes
+
+- name: Create configuration for certificate generation
+  copy:
+    dest: /tmp/config.yml
+    content: |
+      nodes:
+        indexer:
+          - name: node-1
+            ip: "127.0.0.1"
+        server:
+          - name: wazuh-1
+            ip: "127.0.0.1"
+        dashboard:
+          - name: dashboard
+            ip: "127.0.0.1"
+
+- name: Download Wazuh certificate generation tool
+  get_url:
+    url: https://packages.wazuh.com/4.9/wazuh-certs-tool.sh
+    dest: /tmp/wazuh-certs-tool.sh
+    mode: '0755'
+
+- name: Generate SSL/TLS certificates for the entire SOC stack
+  command: bash /tmp/wazuh-certs-tool.sh -A
+  args:
+    creates: /tmp/wazuh-certificates/node-1.pem
+
+- name: Ensure certificate directory exists
+  file:
+    path: /etc/wazuh-indexer/certs
+    state: directory
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0500'
 
 
+- name: Copy indexer certificates to the correct directory
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/wazuh-indexer/certs/{{ item }}"
+    remote_src: yes
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0400'
+  loop:
+    - node-1.pem
+    - node-1-key.pem
+    - admin.pem
+    - admin-key.pem
+    - root-ca.pem
 
+- name: Configure kernel parameters for Wazuh Indexer (vm.max_map_count)
+  sysctl:
+    name: vm.max_map_count
+    value: '262144'
+    state: present
+    reload: yes
+
+- name: Configure Wazuh Indexer settings
+  copy:
+    dest: /etc/wazuh-indexer/opensearch.yml
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0660'
+    content: |
+      network.host: 0.0.0.0
+      node.name: "node-1"
+      cluster.initial_master_nodes:
+        - "node-1"
+      cluster.name: "wazuh-cluster"
+      path.data: /var/lib/wazuh-indexer
+      path.logs: /var/log/wazuh-indexer
+      plugins.security.ssl.transport.pemcert_filepath: /etc/wazuh-indexer/certs/node-1.pem
+      plugins.security.ssl.transport.pemkey_filepath: /etc/wazuh-indexer/certs/node-1-key.pem
+      plugins.security.ssl.transport.pemtrustedcas_filepath: /etc/wazuh-indexer/certs/root-ca.pem
+      plugins.security.ssl.transport.enforce_hostname_verification: false
+      plugins.security.ssl.http.enabled: true
+      plugins.security.ssl.http.pemcert_filepath: /etc/wazuh-indexer/certs/node-1.pem
+      plugins.security.ssl.http.pemkey_filepath: /etc/wazuh-indexer/certs/node-1-key.pem
+      plugins.security.ssl.http.pemtrustedcas_filepath: /etc/wazuh-indexer/certs/root-ca.pem
+      plugins.security.allow_unsafe_democertificates: false
+      plugins.security.allow_default_init_securityindex: true
+      plugins.security.authcz.admin_dn:
+        - "CN=admin,OU=Wazuh,O=Wazuh,L=California,C=US"
+      plugins.security.nodes_dn:
+        - "CN=node-1,OU=Wazuh,O=Wazuh,L=California,C=US"
+
+- name: Enable and start wazuh-indexer service
+  systemd:
+    name: wazuh-indexer
+    enabled: yes
+    state: started
+
+- name: Wait for Wazuh Indexer to start (can take up to a minute)
+  wait_for:
+    port: 9200
+    delay: 10
+    timeout: 120
+
+- name: Initialize Wazuh Indexer security (Admin passwords)
+  command: /usr/share/wazuh-indexer/bin/indexer-security-init.sh
+  environment:
+    JAVA_HOME: /usr/share/wazuh-indexer/jdk
+  args:
+    creates: /var/wazuh-indexer-security-initialized.flag
+
+- name: Mark security initialization as complete
+  file:
+    path: /var/wazuh-indexer-security-initialized.flag
+    state: touch
+```
