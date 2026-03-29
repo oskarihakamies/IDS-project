@@ -448,3 +448,245 @@ It:
 - Tells us what went well, what went wrong
 
 ### Ansible + Wazuh
+
+I basically know how to read this and work it out but again in order to save my precious time, I will ask Gemini help with setting the files
+
+```roles/wazuh_indexer/tasks/main.yml```:
+
+```
+---
+# tasks file for wazuh_indexer
+
+- name: Download Wazuh GPG key
+  get_url:
+    url: https://packages.wazuh.com/key/GPG-KEY-WAZUH
+    dest: /tmp/GPG-KEY-WAZUH
+
+- name: Import Wazuh GPG key
+  command: gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/keyrings/wazuh.gpg --import /tmp/GPG-KEY-WAZUH
+  args:
+    creates: /etc/apt/keyrings/wazuh.gpg
+
+- name: Set permissions on Wazuh GPG key
+  file:
+    path: /etc/apt/keyrings/wazuh.gpg
+    mode: '0644'
+
+- name: Add Wazuh APT repository
+  apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main"
+    state: present
+    filename: wazuh
+
+- name: Install wazuh-indexer package
+  apt:
+    name: wazuh-indexer
+    state: present
+    update_cache: yes
+
+- name: Create configuration for certificate generation
+  copy:
+    dest: /tmp/config.yml
+    content: |
+      nodes:
+        indexer:
+          - name: node-1
+            ip: "127.0.0.1"
+        server:
+          - name: wazuh-1
+            ip: "127.0.0.1"
+        dashboard:
+          - name: dashboard
+            ip: "127.0.0.1"
+
+- name: Download Wazuh certificate generation tool
+  get_url:
+    url: https://packages.wazuh.com/4.9/wazuh-certs-tool.sh
+    dest: /tmp/wazuh-certs-tool.sh
+    mode: '0755'
+
+- name: Generate SSL/TLS certificates for the entire SOC stack
+  command: bash /tmp/wazuh-certs-tool.sh -A
+  args:
+    creates: /tmp/wazuh-certificates/node-1.pem
+
+- name: Copy indexer certificates to the correct directory
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/wazuh-indexer/certs/{{ item }}"
+    remote_src: yes
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0400'
+  loop:
+    - node-1.pem
+    - node-1-key.pem
+    - admin.pem
+    - admin-key.pem
+    - root-ca.pem
+
+- name: Enable and start wazuh-indexer service
+  systemd:
+    name: wazuh-indexer
+    enabled: yes
+    state: started
+
+- name: Wait for Wazuh Indexer to start (can take up to a minute)
+  wait_for:
+    port: 9200
+    delay: 10
+    timeout: 120
+
+- name: Initialize Wazuh Indexer security (Admin passwords)
+  command: /usr/share/wazuh-indexer/bin/indexer-security-init.sh
+  environment:
+    JAVA_HOME: /usr/share/wazuh-indexer/jdk
+  args:
+    creates: /var/wazuh-indexer-security-initialized.flag
+
+- name: Mark security initialization as complete
+  file:
+    path: /var/wazuh-indexer-security-initialized.flag
+    state: touch
+  ```
+
+Then we move to activate the previously commented lines from "playbook.yml"
+
+<img width="984" height="340" alt="kuva" src="https://github.com/user-attachments/assets/a9044c43-a5c4-4441-8588-d6ce5d6fe7b7" />
+
+I also wanted to see that not running root worked :)
+
+<img width="351" height="32" alt="kuva" src="https://github.com/user-attachments/assets/8ac63144-0f6c-45b6-854e-bb0dab8d1a3e" />
+
+No need to be a professor to see what went wrong:
+
+<img width="988" height="303" alt="kuva" src="https://github.com/user-attachments/assets/9b01ec06-f1fe-4688-8071-b3eade4272d7" />
+
+By deleting the comments, I think I accidentally changed the YAML syntax which causes the errors..
+
+I will also do a couple of changes so that it doesn't start to panic:
+
+<img width="593" height="323" alt="kuva" src="https://github.com/user-attachments/assets/79c43d7c-10f4-4681-9a39-7988f8631f24" />
+
+NOTE: This will possible take minutes to run. Mine took 4 minutes and 12 seconds and failed again
+
+I feel like this error is caused by a missing directory? <img width="1101" height="227" alt="kuva" src="https://github.com/user-attachments/assets/13ad2ac1-f559-4794-a4f8-86c01926a3bd" />
+
+<img width="691" height="46" alt="kuva" src="https://github.com/user-attachments/assets/81038c05-dd35-475d-a81b-82ff6b3e73ee" />
+
+So now what we wan't to do is actually not change it manually but to use the script in order-to-get it to work for the final product
+
+We will change the code to ensure that the directory exists:
+
+<img width="633" height="377" alt="kuva" src="https://github.com/user-attachments/assets/1daaea37-bbf9-48cb-aa40-762a390871c5" />
+
+Note: Ansible is great, because it remembers what it already did so it continues straight from where we left :)
+
+Final code in ```main.yml```
+
+```
+---
+# tasks file for wazuh_indexer
+
+- name: Download Wazuh GPG key
+  get_url:
+    url: https://packages.wazuh.com/key/GPG-KEY-WAZUH
+    dest: /tmp/GPG-KEY-WAZUH
+
+- name: Import Wazuh GPG key
+  command: gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/keyrings/wazuh.gpg --import /tmp/GPG-KEY-WAZUH
+  args:
+    creates: /etc/apt/keyrings/wazuh.gpg
+
+- name: Set permissions on Wazuh GPG key
+  file:
+    path: /etc/apt/keyrings/wazuh.gpg
+    mode: '0644'
+
+- name: Add Wazuh APT repository
+  apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main"
+    state: present
+    filename: wazuh
+
+- name: Install wazuh-indexer package
+  apt:
+    name: wazuh-indexer
+    state: present
+    update_cache: yes
+
+- name: Create configuration for certificate generation
+  copy:
+    dest: /tmp/config.yml
+    content: |
+      nodes:
+        indexer:
+          - name: node-1
+            ip: "127.0.0.1"
+        server:
+          - name: wazuh-1
+            ip: "127.0.0.1"
+        dashboard:
+          - name: dashboard
+            ip: "127.0.0.1"
+
+- name: Download Wazuh certificate generation tool
+  get_url:
+    url: https://packages.wazuh.com/4.9/wazuh-certs-tool.sh
+    dest: /tmp/wazuh-certs-tool.sh
+    mode: '0755'
+
+- name: Generate SSL/TLS certificates for the entire SOC stack
+  command: bash /tmp/wazuh-certs-tool.sh -A
+  args:
+    creates: /tmp/wazuh-certificates/node-1.pem
+
+- name: Ensure certificate directory exists
+  file:
+    path: /etc/wazuh-indexer/certs
+    state: directory
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0500'
+
+
+- name: Copy indexer certificates to the correct directory
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/wazuh-indexer/certs/{{ item }}"
+    remote_src: yes
+    owner: wazuh-indexer
+    group: wazuh-indexer
+    mode: '0400'
+  loop:
+    - node-1.pem
+    - node-1-key.pem
+    - admin.pem
+    - admin-key.pem
+    - root-ca.pem
+
+- name: Enable and start wazuh-indexer service
+  systemd:
+    name: wazuh-indexer
+    enabled: yes
+    state: started
+
+- name: Wait for Wazuh Indexer to start (can take up to a minute)
+  wait_for:
+    port: 9200
+    delay: 10
+    timeout: 120
+
+- name: Initialize Wazuh Indexer security (Admin passwords)
+  command: /usr/share/wazuh-indexer/bin/indexer-security-init.sh
+  environment:
+    JAVA_HOME: /usr/share/wazuh-indexer/jdk
+  args:
+    creates: /var/wazuh-indexer-security-initialized.flag
+
+- name: Mark security initialization as complete
+  file:
+    path: /var/wazuh-indexer-security-initialized.flag
+    state: touch
+```
+
