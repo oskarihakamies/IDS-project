@@ -1011,6 +1011,9 @@ Why do we do it this way? Isn't it troublesome to go over and over again to chan
 - This code goes ahead and gets Filebeat, copies the secret keys and the Indexer let's Filebeat in. It also tells the settings that we have it named node-1.pem and not the default
 - It also saves the password to Filebeats own vault with pass admin so it doesn't have to be written in normal language. Normally we wouldn't use it, but as this is a school project and not yet in production, all good.
 
+It works!
+
+<img width="1408" height="855" alt="kuva" src="https://github.com/user-attachments/assets/97293b31-ff6a-4984-a62c-b12bfc8194da" />
 
 
 
