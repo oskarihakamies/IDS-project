@@ -273,7 +273,19 @@ It basically does this:
 - Transforms the key from ASCII to binary keyring (--dearmor)
 - Saves it to ```-o /usr/share/keyrings/elasticsearch-keyring.gpg```
 
+### New machine, updates ect.
 
+/etc/apt/sources.list
+```
+deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+
+deb http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
+deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
+
+deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
+```
 
 
 
