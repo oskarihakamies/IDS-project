@@ -690,3 +690,9 @@ Final code in ```main.yml```
     state: touch
 ```
 
+I had no idea what this was
+
+<img width="1269" height="195" alt="kuva" src="https://github.com/user-attachments/assets/08217994-b736-444f-89e6-2959af8e6ffb" />
+
+
+
