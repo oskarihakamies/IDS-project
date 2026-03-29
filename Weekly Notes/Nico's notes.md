@@ -930,9 +930,88 @@ It works! Onto the next part - The Mail Delivery - Guy.
 
 So we have Wazuh Indexer as the database on Wazuh Manager as the brains. To get the alerts to work with each other and carry them in real time and safely into the database, we need the Filebeat in order to work. This is pretty straightforward:
 
+```roles/wazuh_manager/tasks/main.yml```: Complete code
+
+```
+---
+# tasks file for wazuh_manager
+
+- name: Install wazuh-manager package
+  apt:
+    name: wazuh-manager
+    state: present
+    update_cache: yes
+
+- name: Enable and start wazuh-manager service
+  systemd:
+    name: wazuh-manager
+    enabled: yes
+    state: started
+
+- name: Install filebeat package
+  apt:
+    name: filebeat
+    state: present
+
+- name: Download Wazuh Filebeat configuration
+  get_url:
+    url: https://packages.wazuh.com/4.9/tpl/wazuh/filebeat/filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+    mode: '0640'
+
+- name: Download Wazuh Filebeat module
+  unarchive:
+    src: https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.3.tar.gz
+    dest: /usr/share/filebeat/module
+    remote_src: yes
+
+- name: Ensure Filebeat certs directory exists
+  file:
+    path: /etc/filebeat/certs
+    state: directory
+    mode: '0500'
+
+- name: Copy certificates for Filebeat to connect to Indexer
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/filebeat/certs/{{ item }}"
+    remote_src: yes
+    mode: '0400'
+  loop:
+    - node-1.pem
+    - node-1-key.pem
+    - root-ca.pem
+
+- name: Configure Filebeat certificates in filebeat.yml
+  replace:
+    path: /etc/filebeat/filebeat.yml
+    regexp: '{{ item.regexp }}'
+    replace: '{{ item.replace }}'
+  loop:
+    - { regexp: '/etc/filebeat/certs/wazuh-server.pem', replace: '/etc/filebeat/certs/node-1.pem' }
+    - { regexp: '/etc/filebeat/certs/wazuh-server-key.pem', replace: '/etc/filebeat/certs/node-1-key.pem' }
+
+- name: Create Filebeat keystore for Indexer password
+  command: filebeat keystore create
+  args:
+    creates: /var/lib/filebeat/filebeat.keystore
+
+- name: Add default admin password to Filebeat keystore
+  shell: echo "admin" | filebeat keystore add password --stdin --force
+
+- name: Enable and start filebeat service
+  systemd:
+    name: filebeat
+    enabled: yes
+    state: started
+  ```
 
 Why do we do it this way? Isn't it troublesome to go over and over again to change a file?
 - Yes, but it's less troubleshooting if something goes wrong.
+- This code goes ahead and gets Filebeat, copies the secret keys and the Indexer let's Filebeat in. It also tells the settings that we have it named node-1.pem and not the default
+- It also saves the password to Filebeats own vault with pass admin so it doesn't have to be written in normal language. Normally we wouldn't use it, but as this is a school project and not yet in production, all good.
+
+
 
 
 
