@@ -1015,7 +1015,72 @@ It works!
 
 <img width="1408" height="855" alt="kuva" src="https://github.com/user-attachments/assets/97293b31-ff6a-4984-a62c-b12bfc8194da" />
 
+### Wazuh Dashboard
 
+The next part is for the Wazuh dashboard to replace kibana
+
+```roles/wazuh_dashboard/tasks/main.yml```:
+
+```
+---
+# tasks file for wazuh_dashboard
+
+- name: Install wazuh-dashboard package
+  apt:
+    name: wazuh-dashboard
+    state: present
+    update_cache: yes
+
+- name: Ensure Dashboard certs directory exists
+  file:
+    path: /etc/wazuh-dashboard/certs
+    state: directory
+    owner: wazuh-dashboard
+    group: wazuh-dashboard
+    mode: '0500'
+
+- name: Copy certificates for Dashboard
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/wazuh-dashboard/certs/{{ item }}"
+    remote_src: yes
+    owner: wazuh-dashboard
+    group: wazuh-dashboard
+    mode: '0400'
+  loop:
+    - dashboard.pem
+    - dashboard-key.pem
+    - root-ca.pem
+
+- name: Configure Wazuh Dashboard settings
+  copy:
+    dest: /etc/wazuh-dashboard/opensearch_dashboards.yml
+    owner: wazuh-dashboard
+    group: wazuh-dashboard
+    mode: '0640'
+    content: |
+      server.host: 0.0.0.0
+      server.port: 443
+      opensearch.hosts: https://127.0.0.1:9200
+      opensearch.ssl.verificationMode: certificate
+      server.ssl.enabled: true
+      server.ssl.certificate: /etc/wazuh-dashboard/certs/dashboard.pem
+      server.ssl.key: /etc/wazuh-dashboard/certs/dashboard-key.pem
+      opensearch.ssl.certificateAuthorities: [ "/etc/wazuh-dashboard/certs/root-ca.pem" ]
+      uiSettings.overrides.defaultRoute: /app/wazuh
+
+- name: Enable and start wazuh-dashboard service
+  systemd:
+    name: wazuh-dashboard
+    enabled: yes
+    state: started
+  ```
+
+And once again ```micro playbook.yml```
+
+<img width="1117" height="582" alt="kuva" src="https://github.com/user-attachments/assets/a139e9dc-cdcc-45a2-a9b6-aafa4af6fd2d" />
+
+This might take a while for everything to start up. Patience is the key to victory.
 
 
 
