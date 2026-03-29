@@ -1082,6 +1082,61 @@ And once again ```micro playbook.yml```
 
 This might take a while for everything to start up. Patience is the key to victory.
 
+<img width="815" height="330" alt="kuva" src="https://github.com/user-attachments/assets/29df1de7-e52b-4fc0-a325-40613b71c939" />
+
+I went into the search bar, typed in "localhost", went in -> user and pass ad
+
+It didn't launch. went into ```localhost/app/home/``` and now it works! Need to test this to see if it works later down the road.
+
+<img width="1204" height="754" alt="kuva" src="https://github.com/user-attachments/assets/3c87306a-838b-410e-b5e6-02a0194709d7" />
+
+<img width="1909" height="1086" alt="kuva" src="https://github.com/user-attachments/assets/f389b3b2-3336-4ade-b43c-ee56d004a72c" />
+
+
+### Suricata
+
+Now that Wazuh runs smoothly as a butterfly, we need to go ahead and tell Wazuh Manager to read what Suricata keeps on noticing. 
+
+This is the sensor part of our operations
+
+```roles/sensors/tasks/main.yml```:
+
+```
+---
+# tasks file for sensors (Suricata)
+
+- name: Install Suricata package
+  apt:
+    name: suricata
+    state: present
+    update_cache: yes
+
+- name: Ensure Suricata service is enabled and running
+  systemd:
+    name: suricata
+    enabled: yes
+    state: started
+
+- name: Configure Wazuh Manager to read Suricata logs
+  blockinfile:
+    path: /var/ossec/etc/ossec.conf
+    marker: "  "
+    insertbefore: "</ossec_config>"
+    content: |
+      <localfile>
+        <log_format>json</log_format>
+        <location>/var/log/suricata/eve.json</location>
+      </localfile>
+
+- name: Restart Wazuh Manager to apply new configuration
+  systemd:
+    name: wazuh-manager
+    state: restarted
+```
+
+It basically installs it, makes sure that Suricata is up and running and kicks Wazuh Manager to get it to understand that something has changed.
+
+Once again -> playbook.yml and add the sensors
 
 
 
