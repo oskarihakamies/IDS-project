@@ -1178,29 +1178,41 @@ Did a bit of offline - troubleshooting.. Problem was with Filebeat not liking HT
 wazuh_manager/tasks/main.yml:
 
 ```
-- name: Install and configure Filebeat
-  block:
-    - name: Download Filebeat config template
-      get_url:
-        url: https://packages.wazuh.com/4.9/tpl/wazuh/filebeat/filebeat.yml
-        dest: /etc/filebeat/filebeat.yml
+---
+# Filebeat-asennus ja konfigurointi
+- name: Install Filebeat package
+  apt:
+    name: filebeat
+    state: present
 
-    - name: Configure Filebeat to use correct nodes and certs
-      replace:
-        path: /etc/filebeat/filebeat.yml
-        regexp: "{{ item.regexp }}"
-        replace: "{{ item.replace }}"
-      with_items:
-        - { regexp: 'wazuh-server.pem', replace: 'node-1.pem' }
-        - { regexp: 'wazuh-server-key.pem', replace: 'node-1-key.pem' }
-        - { regexp: '\${username}', replace: 'admin' }
-        - { regexp: '\${password}', replace: 'admin' }
+- name: Download official Wazuh Filebeat template
+  get_url:
+    url: https://packages.wazuh.com/4.9/tpl/wazuh/filebeat/filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+    force: yes
 
-    - name: Restart Filebeat
-      systemd:
-        name: filebeat
-        state: restarted
-        enabled: yes
+- name: Apply Wazuh specific configurations to Filebeat
+  replace:
+    path: /etc/filebeat/filebeat.yml
+    regexp: "{{ item.regexp }}"
+    replace: "{{ item.replace }}"
+  with_items:
+    # Pakotetaan HTTPS ja localhost osoite
+    - { regexp: 'hosts: \["127.0.0.1:9200"\]', replace: 'hosts: ["https://127.0.0.1:9200"]' }
+    # Korjataan sertifikaatit (node-1 on meidän käyttämä nimi)
+    - { regexp: 'wazuh-server.pem', replace: 'node-1.pem' }
+    - { regexp: 'wazuh-server-key.pem', replace: 'node-1-key.pem' }
+    # Korjataan autentikointi
+    - { regexp: 'username: \$\{username\}', replace: 'username: "admin"' }
+    - { regexp: 'password: \$\{password\}', replace: 'password: "admin"' }
+    # Varmistetaan SSL-varmennuksen asetukset (hyödyllinen POC-ympäristössä)
+    - { regexp: 'ssl.verification_mode: "full"', replace: 'ssl.verification_mode: "none"' }
+
+- name: Restart and enable Filebeat
+  systemd:
+    name: filebeat
+    state: restarted
+    enabled: yes
 ```
 
 wazuh_dashboard:
@@ -1277,4 +1289,4 @@ sensors:
     - /var/log/suricata/eve.json
 ```
 
-
+Everything seems to work, but still no alerts... Need to keep troubleshooting
