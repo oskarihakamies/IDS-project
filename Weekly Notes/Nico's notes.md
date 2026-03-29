@@ -287,5 +287,25 @@ deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib 
 deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
 ```
 
+Getting the copy+paste to work so I don't have to search this up every single time I make a new one
+
+"Clipboard -> Bidirectional"
+
+```sudo apt update && sudo apt install build-essential dkms linux-headers-$(uname -r)```
+Insert Guest additions - CD
+
+```
+sudo mount /dev/cdrom /mnt
+sudo /mnt/VBoxLinuxAdditions.run
+```
+
+### New ERA, new plans
+After a ton of research and some guidance from Tero, we decided to start figuring out Ansible. It basically functions the same as Salt but being agentless. 
+
+The new plan:
+Figure out a way to install our whole project from a Zip - file. Also by troubleshooting Kibana countless amounts of times, I figured out that there's a possibility to make our project smaller and smoother by throwing out Kibana and Elasticsearch out the window and to replace it completely with Wazuh.
+
+What this does is narrow down the things we have to build from scratch - Wazuh can do it pretty much out of the Box. Wazuh is also more of a security platform that stores data whereas ELK is more of a data platform that can do security [source](https://news.fmisec.com/02-wazuh-vs-ossec-graylog-and-elk-stack-a-real-world-comparison)
+
 
 
