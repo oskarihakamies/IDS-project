@@ -892,3 +892,30 @@ Even Gemini decided to celebrate:
 <img width="1271" height="759" alt="kuva" src="https://github.com/user-attachments/assets/963c955e-d038-4386-ad4d-b0c24f5d1e5d" />
 
 So now we have the database Wazuh Indexer set up. This was hopefully the hardest part.
+
+Next up we will create the installing code to wazuh_manager/tasks/
+
+```
+---
+# tasks file for wazuh_manager
+
+- name: Install wazuh-manager package
+  apt:
+    name: wazuh-manager
+    state: present
+    update_cache: yes
+
+- name: Enable and start wazuh-manager service
+  systemd:
+    name: wazuh-manager
+    enabled: yes
+    state: started
+```
+
+It just installs and starts at the background! How simple and sweet. Now we modify once again the ```playbook.yml```. I decided to do this manually instead of taking out the comments, idk why but got scared because of the YAML - language once again.
+
+<img width="472" height="255" alt="kuva" src="https://github.com/user-attachments/assets/a023d209-eea3-432f-9008-cc8b45362d22" />
+
+Now we run it once again and see how it works.
+
+
