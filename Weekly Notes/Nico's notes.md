@@ -307,7 +307,7 @@ Figure out a way to install our whole project from a Zip - file. Also by trouble
 
 What this does is narrow down the things we have to build from scratch - Wazuh can do it pretty much out of the Box. Wazuh is also more of a security platform that stores data whereas ELK is more of a data platform that can do security [source](https://news.fmisec.com/02-wazuh-vs-ossec-graylog-and-elk-stack-a-real-world-comparison)
 
-### Ansible
+### Ansible first test run
 We start this by making a project folder. This basically creates the whole hierarchy as well
 
 ```
@@ -424,3 +424,27 @@ I had accidentally put the name as ```invventory.ini```, let's try again:
 
 <img width="460" height="54" alt="kuva" src="https://github.com/user-attachments/assets/64c07630-90c4-48df-9b50-37a31124c999" />
 
+<img width="851" height="298" alt="kuva" src="https://github.com/user-attachments/assets/fb8bb214-b052-4009-9cba-75411cfee7c4" />
+
+I feel like this has something to do with the actual file. Let's go ahead and look what te made. I have another typo there...
+
+<img width="466" height="119" alt="kuva" src="https://github.com/user-attachments/assets/8231a2e5-17a8-4001-bc0d-a4cf74ee8d77" />
+
+Seems like everything runs smoothly!
+
+<img width="985" height="410" alt="kuva" src="https://github.com/user-attachments/assets/52364a52-6d8a-44ab-95e1-466f5efbbf83" />
+
+
+I asked Gemini about that python error and it said that "Debian 13 uses Python 3.13 and the WARNING - message is normal. You can ignore it".
+
+So basically what the install.sh does is it creates the foundation for our automation.
+It:
+
+- Updates ```sudo apt-get update```
+- Ensures that it's run by root
+- Installs Ansible, curl, gnupg, python3, git
+- Installs mandatory packages such as ```apt-transport-https and ca-certificates```
+- Defines where and how the keyrings will be saved --> ```/etc/apt/keyrings```
+- Tells us what went well, what went wrong
+
+### Ansible + Wazuh
