@@ -17,6 +17,7 @@ tar -xzf zeek-6.0.0.tar.gz
 
 sudo make install
 
+
  ## Week 7-9 
 
  Zeekin ja suricatan asennusten jälkeen oli suunnitelmana saada ne tuottamaan logeja ja dataa elasticsearchiin. Aloitin lisäämällä elaticrepon, 
@@ -394,4 +395,13 @@ Ei toimi, alan selvittämään missähän vika.
 
 <img width="506" height="72" alt="Näyttökuva 2026-03-30 kello 22 43 02" src="https://github.com/user-attachments/assets/bbe54e50-0d49-45c1-a8e7-3846fc9710a6" />
 
+Ongelma ei ole se että sitä ei olisi asennettua vaan se on jossain syvemmällä. 
+
+
+<img width="479" height="109" alt="Näyttökuva 2026-03-30 kello 22 59 25" src="https://github.com/user-attachments/assets/68fb1292-16f7-43dc-a42b-ba8ad81cb21d" />
+
+Poistin aiemman skrpitin kokonaan ja pyrin vain muokkaamaan wazuhn valmista skriptiä, en saanut haluttua lopputulosta
+
+
+<img width="1051" height="87" alt="Näyttökuva 2026-03-30 kello 22 55 50" src="https://github.com/user-attachments/assets/edff3287-d893-43eb-b958-c940d325e52f" />
 
