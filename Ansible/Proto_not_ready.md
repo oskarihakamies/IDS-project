@@ -1,5 +1,8 @@
 ## Note. The product isn't fully finished, not completely ready and everything that happens is at users own risk
 
+The pipeline is 
+Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
+
 # Howto?
 
 1. Create a new VM or use an existing one. (Debian 13)
