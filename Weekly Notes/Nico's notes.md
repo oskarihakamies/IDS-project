@@ -1290,3 +1290,63 @@ sensors:
 ```
 
 Everything seems to work, but still no alerts... Need to keep troubleshooting
+
+Update: Mail Delivery guy has not recieved enough instructions - let's give it some. This adds a guidebook for Filebeat to understand to talk to Wazuh.
+
+wazuh_manager:
+
+```
+---
+# Filebeat-asennus ja konfigurointi
+- name: Install Filebeat package
+  apt:
+    name: filebeat
+    state: present
+
+- name: Download official Wazuh Filebeat template
+  get_url:
+    url: https://packages.wazuh.com/4.9/tpl/wazuh/filebeat/filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+    force: yes
+
+- name: Download Wazuh alerts template for Elasticsearch/Indexer
+  get_url:
+    url: https://raw.githubusercontent.com/wazuh/wazuh/4.9/extensions/elasticsearch/7.x/wazuh-template.json
+    dest: /etc/filebeat/wazuh-template.json
+
+- name: Download and extract Wazuh Filebeat module
+  unarchive:
+    src: https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.4.3.tar.gz
+    dest: /usr/share/filebeat/module
+    remote_src: yes
+
+- name: Apply Wazuh specific configurations to Filebeat
+  replace:
+    path: /etc/filebeat/filebeat.yml
+    regexp: "{{ item.regexp }}"
+    replace: "{{ item.replace }}"
+  with_items:
+    - { regexp: 'hosts: \["127.0.0.1:9200"\]', replace: 'hosts: ["https://127.0.0.1:9200"]' }
+    - { regexp: 'wazuh-server.pem', replace: 'node-1.pem' }
+    - { regexp: 'wazuh-server-key.pem', replace: 'node-1-key.pem' }
+    - { regexp: 'username: \$\{username\}', replace: 'username: "admin"' }
+    - { regexp: 'password: \$\{password\}', replace: 'password: "admin"' }
+    - { regexp: 'ssl.verification_mode: "full"', replace: 'ssl.verification_mode: "none"' }
+
+- name: Run Filebeat setup (Pipelines and Index Management)
+  command: "{{ item }}"
+  with_items:
+    - filebeat setup --pipelines
+    - filebeat setup --index-management -E output.elasticsearch.hosts=["https://127.0.0.1:9200"] -E output.elasticsearch.ssl.verification_mode=none
+  register: filebeat_setup
+  changed_when: false
+  ignore_errors: yes
+
+- name: Restart and enable Filebeat
+  systemd:
+    name: filebeat
+    state: restarted
+    enabled: yes
+```
+
+
