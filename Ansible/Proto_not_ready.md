@@ -39,6 +39,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
 ... (alkuosa pysyy samana asennukseen asti)
 
+```
 - name: Configure Wazuh Indexer settings
   copy:
     dest: /etc/wazuh-indexer/opensearch.yml
@@ -98,3 +99,4 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
   file:
     path: /var/wazuh-indexer-security-initialized.flag
     state: touch
+```
