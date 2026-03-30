@@ -364,6 +364,7 @@ sudo systemctl status wazuh-manager --no-pager || true
 sudo systemctl status wazuh-indexer --no-pager || true
 sudo systemctl status wazuh-dashboard --no-pager || true
 
+
 echo ""
 echo "======================================"
 echo " WAZUH VALMIS "
@@ -385,3 +386,6 @@ Filebeat, kibana ja elcsearch piti pysäyttää tässä vaiheessa, jotta ongelmi
 
 <img width="1437" height="624" alt="Näyttökuva 2026-03-30 kello 22 31 54" src="https://github.com/user-attachments/assets/3edfe817-3ac5-4d9a-b94b-b07f3c7c2ae4" />
 
+Uusi skripti siis toimii.
+
+<img width="840" height="788" alt="Näyttökuva 2026-03-30 kello 22 39 07" src="https://github.com/user-attachments/assets/d16d2d33-c667-4beb-9e04-76dd80224ead" />
