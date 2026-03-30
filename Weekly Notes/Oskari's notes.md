@@ -210,6 +210,10 @@ I fixed that by using Minitool Partition Wizard which is a minitool for changing
 But after some testing we finally got the video for first user test.
 
 
+Then after few months of testing we decided to make the package launchable by Ansible. That way the end user can start and close the program with one command. 
+
+
+
 
 ## TROUBLESHOOTING:
 
