@@ -389,3 +389,9 @@ Filebeat, kibana ja elcsearch piti pysäyttää tässä vaiheessa, jotta ongelmi
 Uusi skripti siis toimii.
 
 <img width="840" height="788" alt="Näyttökuva 2026-03-30 kello 22 39 07" src="https://github.com/user-attachments/assets/d16d2d33-c667-4beb-9e04-76dd80224ead" />
+
+Ei toimi, alan selvittämään missähän vika.
+
+<img width="506" height="72" alt="Näyttökuva 2026-03-30 kello 22 43 02" src="https://github.com/user-attachments/assets/bbe54e50-0d49-45c1-a8e7-3846fc9710a6" />
+
+
