@@ -290,4 +290,12 @@ Tein sille oman kansionn ja tein testi tiedoston sisällöllä:
 
 En kuitenkaan omaan labraani lähde enempää yrittämään, sillä muu ryhmä hoitaa sitä. 
 
+Kokeilin saada Wazuhin omat dashboardit toimimaan, joka voisi tiputtaa siis kokonaan Kibanan esimerkiksi pois. 
+
+<img width="1181" height="92" alt="Näyttökuva 2026-03-30 kello 11 48 20" src="https://github.com/user-attachments/assets/52dd53b4-6d04-4af7-af47-2bd678dc9c98" />
+
+```
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --dearmor -o /usr/share/keyrings/wazuh.gpg
+```
+
 
