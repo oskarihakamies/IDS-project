@@ -261,7 +261,33 @@ Pienen ihmettelyn jälkeen ongelmaksi selvisi http protokolla, sillä sen piti o
 
 Nyt järjestelmän rakennus on jo loppusuoralla.
 
+### Week 14
+
+Palaverien jälkeen päätimme tehdä muutamia muutoksia projektiin, ensinäkin ansiblen käyttöönotto tässä vaiheessa oli käytännön must have tilanne.
+
+Nyt käyttöön otettavan ansiblen myötä pohdimme olisiko Wazuh dashboard parempi ratkaisu, sillä tämä pystyisi korvaamaan kibanan mahdollisesti kokonaan. Päätin tutkia enemmän tätä asiaa nyt
+
+Mutta ensin asensin ansible
+
+```
+sudo apt install ansible
+```
+
+Tein sille oman kansionn ja tein testi tiedoston sisällöllä:
+
+```
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Test
+      debug:
+        msg: "Ansible futaa!"
+```
 
 
+
+<img width="1130" height="336" alt="Näyttökuva 2026-03-30 kello 11 18 44" src="https://github.com/user-attachments/assets/839b2861-a467-4db6-8878-6bb682914582" />
+
+En kuitenkaan omaan labraani lähde enempää yrittämään, sillä muu ryhmä hoitaa sitä. 
 
 
