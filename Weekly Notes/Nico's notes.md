@@ -1275,18 +1275,74 @@ wazuh_dashboard:
 sensors:
 
 ```
+---
+# tasks file for sensors (Suricata)
+
+- name: Install Suricata package
+  apt:
+    name: suricata
+    state: present
+    update_cache: yes
+
 - name: Update Suricata rules
   command: suricata-update
-  args:
-    creates: /var/lib/suricata/rules/suricata.rules # Ajaa vain jos sääntöjä ei ole
+  register: rule_update
+  changed_when: "'No changes' not in rule_update.stdout"
+  # Ignore errors if no internet connection is available
+  ignore_errors: yes
 
-- name: Set permissions for Wazuh to read Suricata logs
+- name: Set correct network interface in Suricata config
+  replace:
+    path: /etc/suricata/suricata.yaml
+    # Regex to find 'interface: ' followed by any word (like eth0)
+    regexp: 'interface: \w+'
+    replace: "interface: {{ ansible_default_ipv4.interface }}"
+
+- name: Set correct network interface in Suricata default file (Debian)
+  lineinfile:
+    path: /etc/default/suricata
+    regexp: '^IFACE='
+    line: "IFACE={{ ansible_default_ipv4.interface }}"
+
+- name: Ensure Suricata log directory has correct permissions
   file:
-    path: "{{ item }}"
+    path: /var/log/suricata
+    state: directory
+    # Directories need 0755 so Wazuh can enter them (execution bit)
+    mode: '0755'
+    owner: root
+    group: root
+
+- name: Ensure eve.json exists with correct permissions
+  file:
+    path: /var/log/suricata/eve.json
+    state: touch
     mode: '0644'
-  with_items:
-    - /var/log/suricata
-    - /var/log/suricata/eve.json
+    owner: root
+    group: root
+
+- name: Ensure Suricata service is enabled and running
+  systemd:
+    name: suricata
+    enabled: yes
+    state: restarted
+
+- name: Configure Wazuh Manager to read Suricata logs
+  blockinfile:
+    path: /var/ossec/etc/ossec.conf
+    # Use a clear marker so Ansible doesn't get confused on multiple runs
+    marker: ""
+    insertbefore: "</ossec_config>"
+    content: |
+      <localfile>
+        <log_format>json</log_format>
+        <location>/var/log/suricata/eve.json</location>
+      </localfile>
+
+- name: Restart Wazuh Manager to apply new configuration
+  systemd:
+    name: wazuh-manager
+    state: restarted
 ```
 
 Everything seems to work, but still no alerts... Need to keep troubleshooting
@@ -1297,50 +1353,78 @@ wazuh_manager:
 
 ```
 ---
-# Filebeat-asennus ja konfigurointi
-- name: Install Filebeat package
+# tasks file for wazuh_manager
+
+- name: Install wazuh-manager package
+  apt:
+    name: wazuh-manager
+    state: present
+    update_cache: yes
+
+- name: Enable and start wazuh-manager service
+  systemd:
+    name: wazuh-manager
+    enabled: yes
+    state: started
+
+- name: Install filebeat package
   apt:
     name: filebeat
     state: present
 
-- name: Download official Wazuh Filebeat template
+- name: Download Wazuh Filebeat configuration
   get_url:
     url: https://packages.wazuh.com/4.9/tpl/wazuh/filebeat/filebeat.yml
     dest: /etc/filebeat/filebeat.yml
-    force: yes
+    mode: '0640'
 
-- name: Download Wazuh alerts template for Elasticsearch/Indexer
-  get_url:
-    url: https://raw.githubusercontent.com/wazuh/wazuh/4.9/extensions/elasticsearch/7.x/wazuh-template.json
-    dest: /etc/filebeat/wazuh-template.json
-
+# Fixed to version 0.3
 - name: Download and extract Wazuh Filebeat module
   unarchive:
-    src: https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.4.3.tar.gz
+    src: https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.3.tar.gz
     dest: /usr/share/filebeat/module
     remote_src: yes
 
-- name: Apply Wazuh specific configurations to Filebeat
+- name: Ensure Filebeat certs directory exists
+  file:
+    path: /etc/filebeat/certs
+    state: directory
+    mode: '0500'
+
+- name: Copy certificates for Filebeat
+  copy:
+    src: "/tmp/wazuh-certificates/{{ item }}"
+    dest: "/etc/filebeat/certs/{{ item }}"
+    remote_src: yes
+    mode: '0400'
+  loop:
+    - node-1.pem
+    - node-1-key.pem
+    - root-ca.pem
+
+- name: Apply configuration changes to filebeat.yml
   replace:
     path: /etc/filebeat/filebeat.yml
     regexp: "{{ item.regexp }}"
     replace: "{{ item.replace }}"
-  with_items:
+  loop:
     - { regexp: 'hosts: \["127.0.0.1:9200"\]', replace: 'hosts: ["https://127.0.0.1:9200"]' }
     - { regexp: 'wazuh-server.pem', replace: 'node-1.pem' }
     - { regexp: 'wazuh-server-key.pem', replace: 'node-1-key.pem' }
+    - { regexp: 'ssl.verification_mode: "full"', replace: 'ssl.verification_mode: "none"' }
     - { regexp: 'username: \$\{username\}', replace: 'username: "admin"' }
     - { regexp: 'password: \$\{password\}', replace: 'password: "admin"' }
-    - { regexp: 'ssl.verification_mode: "full"', replace: 'ssl.verification_mode: "none"' }
 
-- name: Run Filebeat setup (Pipelines and Index Management)
-  command: "{{ item }}"
-  with_items:
-    - filebeat setup --pipelines
-    - filebeat setup --index-management -E output.elasticsearch.hosts=["https://127.0.0.1:9200"] -E output.elasticsearch.ssl.verification_mode=none
+- name: Run Filebeat setup
+  command: "filebeat setup {{ item }} -E output.elasticsearch.ssl.verification_mode=none"
+  loop:
+    - "--pipelines"
+    - "--index-management"
   register: filebeat_setup
   changed_when: false
-  ignore_errors: yes
+  until: filebeat_setup is succeeded
+  retries: 5
+  delay: 10
 
 - name: Restart and enable Filebeat
   systemd:
@@ -1348,5 +1432,12 @@ wazuh_manager:
     state: restarted
     enabled: yes
 ```
+
+<img width="752" height="575" alt="kuva" src="https://github.com/user-attachments/assets/981327fb-38ea-40dd-a1d6-3648bb31e6ef" />
+
+After 7 hours of troubleshooting... Suricata sees it... Does Wazuh?
+
+<img width="1332" height="607" alt="kuva" src="https://github.com/user-attachments/assets/09e5d00e-927b-48e0-aa16-8eb93e7a0871" />
+
 
 
