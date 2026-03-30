@@ -318,8 +318,15 @@ Etsin tietoa miten dashboardit toimisivat tässä:
 
 https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/index.html
 
+Seuraavaksi kuitenkin asensin wazuh-agentin. Agentti toimii yhdessä managerin kanssa.
 
 
+<img width="865" height="490" alt="Näyttökuva 2026-03-30 kello 18 07 02" src="https://github.com/user-attachments/assets/46e52ab2-5f14-42fd-a678-751ecb371c36" />
 
+
+Komento takaisin se ei toimikkaan samassa koneessa. Elikkä pääydin pitämään vain managerin.
+
+
+<img width="884" height="539" alt="Näyttökuva 2026-03-30 kello 20 40 56" src="https://github.com/user-attachments/assets/291ffce8-a89c-4b93-b7c6-932edf3bdb07" />
 
 
