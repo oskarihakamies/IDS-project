@@ -1439,5 +1439,10 @@ After 7 hours of troubleshooting... Suricata sees it... Does Wazuh?
 
 <img width="1332" height="607" alt="kuva" src="https://github.com/user-attachments/assets/09e5d00e-927b-48e0-aa16-8eb93e7a0871" />
 
+Wazuh works and gets info from Suricata but yet doesn't show anything on dashboard...
+
+<img width="1331" height="549" alt="kuva" src="https://github.com/user-attachments/assets/43282985-489d-4cb0-a047-0237dfd76db8" />
+
+I did a test with filebeat+suricata+testsite to see if wazuh sees anything.. It just drops them all. 
 
 
