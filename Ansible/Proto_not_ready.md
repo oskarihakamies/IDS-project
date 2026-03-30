@@ -32,5 +32,5 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
 11. NOTE: IF Wazuh sends an error, change the address to /app/home/ - this tends to happen.
 
-12. user ```admin``` pass ```admin```
+12. user `````` pass ``````
 
