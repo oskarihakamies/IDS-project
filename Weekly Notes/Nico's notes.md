@@ -1445,4 +1445,10 @@ Wazuh works and gets info from Suricata but yet doesn't show anything on dashboa
 
 I did a test with filebeat+suricata+testsite to see if wazuh sees anything.. It just drops them all. 
 
+```
+krotti@ansibel:~/soc-project$ sudo tail -f /var/ossec/logs/ossec.log [sudo] password for krotti: 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder.
+```
+
+
+
 
