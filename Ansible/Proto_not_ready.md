@@ -21,7 +21,7 @@
 
 7. Use ```sudo bash install.sh``` to launch it
 
-8. Let it do its magic
+8. Let it do its magic. This takes around 2-10 minutes. Grab a coffee.
 
 9. When it's done, navigate to Firefox or w.e Browser
 
@@ -30,5 +30,3 @@
 11. NOTE: IF Wazuh sends an error, change the address to /app/home/ - this tends to happen.
 
 12. user ```admin``` pass ```admin```
-
-13. 
