@@ -1449,6 +1449,9 @@ I did a test with filebeat+suricata+testsite to see if wazuh sees anything.. It 
 krotti@ansibel:~/soc-project$ sudo tail -f /var/ossec/logs/ossec.log [sudo] password for krotti: 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder. 2026/03/30 18:40:37 wazuh-analysisd: ERROR: Too many fields for JSON decoder.
 ```
 
+### Last try for now with an empty, fresh Deb13
+
+<img width="1654" height="530" alt="kuva" src="https://github.com/user-attachments/assets/be2dddfd-bdcc-433b-a839-eb372cdb34b0" />
 
 
 
