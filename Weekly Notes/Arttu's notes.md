@@ -288,14 +288,38 @@ Tein sille oman kansionn ja tein testi tiedoston sisällöllä:
 
 <img width="1130" height="336" alt="Näyttökuva 2026-03-30 kello 11 18 44" src="https://github.com/user-attachments/assets/839b2861-a467-4db6-8878-6bb682914582" />
 
-En kuitenkaan omaan labraani lähde enempää yrittämään, sillä muu ryhmä hoitaa sitä. 
+En kuitenkaan omaan labraani lähde enempää yrittämään, sillä muu ryhmä hoitaa sitä. Tarkoitus saada samanlainen labra kaikille zip- tiedoston avulla. 
 
 Kokeilin saada Wazuhin omat dashboardit toimimaan, joka voisi tiputtaa siis kokonaan Kibanan esimerkiksi pois. 
+
+Ennenkuin pääsen sen kimppuun, täytyy kuitenkin hieman tutkia wazuhia.
 
 <img width="1181" height="92" alt="Näyttökuva 2026-03-30 kello 11 48 20" src="https://github.com/user-attachments/assets/52dd53b4-6d04-4af7-af47-2bd678dc9c98" />
 
 ```
 curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --dearmor -o /usr/share/keyrings/wazuh.gpg
 ```
+
+Avain toimii!
+
+Seuraavaksi lisäsin repon 
+
+```
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+```
+
+Ja asensin wazuh-managerin, joka siis on serveri joka vastaanottaa dataa agenteilta, analysoi sitä ja generoi hälytyksiä.
+Seuraavaksi asennan wazuh clientin 
+
+
+<img width="940" height="729" alt="Näyttökuva 2026-03-30 kello 17 36 49" src="https://github.com/user-attachments/assets/09eca163-9491-4bbf-87ef-00cf43be5f50" />
+
+Etsin tietoa miten dashboardit toimisivat tässä: 
+
+https://documentation.wazuh.com/current/installation-guide/wazuh-dashboard/index.html
+
+
+
+
 
 
