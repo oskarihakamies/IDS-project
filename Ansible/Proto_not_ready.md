@@ -8,4 +8,7 @@
 
 [soc-project.zip](https://github.com/user-attachments/files/26360296/soc-project.zip)
 
-3. 
+3. Navigate to Downloads and look for the file
+
+
+
