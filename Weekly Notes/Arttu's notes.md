@@ -405,3 +405,5 @@ Poistin aiemman skrpitin kokonaan ja pyrin vain muokkaamaan wazuhn valmista skri
 
 <img width="1051" height="87" alt="Näyttökuva 2026-03-30 kello 22 55 50" src="https://github.com/user-attachments/assets/edff3287-d893-43eb-b958-c940d325e52f" />
 
+
+Löysin paljon tietoa siitä miten wazuh ei tue tätä debian versiota mikä minulla on 
