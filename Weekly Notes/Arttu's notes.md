@@ -329,4 +329,59 @@ Komento takaisin se ei toimikkaan samassa koneessa. Elikkä pääydin pitämää
 
 <img width="884" height="539" alt="Näyttökuva 2026-03-30 kello 20 40 56" src="https://github.com/user-attachments/assets/291ffce8-a89c-4b93-b7c6-932edf3bdb07" />
 
+Tein nyt myös uuden virtuaalikoneen, jolla tarkoitus myöhemmin ajaa testinä zip- tiedosto.
+
+Nyt rakensin tiedostoa, mikä 
+
+```
+#!/bin/bash
+
+set -e
+
+echo "[+] Päivitetään järjestelmä..."
+sudo apt update && sudo apt upgrade -y
+
+echo "[+] Asennetaan riippuvuudet..."
+sudo apt install curl apt-transport-https lsb-release gnupg -y
+
+echo "[+] Lisätään Wazuh repo..."
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --dearmor -o /usr/share/keyrings/wazuh.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+
+sudo apt update
+
+echo "[+] Asennetaan Wazuh (all-in-one)..."
+curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+
+sudo bash wazuh-install.sh -a --ignore-check
+
+echo "[+] Odotetaan palveluiden käynnistymistä..."
+sleep 30
+
+echo "[+] Tarkistetaan palvelut..."
+sudo systemctl status wazuh-manager --no-pager || true
+sudo systemctl status wazuh-indexer --no-pager || true
+sudo systemctl status wazuh-dashboard --no-pager || true
+
+echo ""
+echo "======================================"
+echo " WAZUH VALMIS "
+echo "======================================"
+echo "Dashboard: https://localhost"
+echo "User: admin"
+echo "Password: löytyy /root/wazuh-passwords.txt"
+echo ""
+```
+
+Lisäsin tämän tiedostoon
+
+```
+nano wazuh-install.sh
+```
+
+
+Filebeat, kibana ja elcsearch piti pysäyttää tässä vaiheessa, jotta ongelmia ei tulisi, sillä nämä järjesteömät ovat hyvin samankaltaisia ja käyttävät todennäköisesti samoja portteja. 
+
+<img width="1437" height="624" alt="Näyttökuva 2026-03-30 kello 22 31 54" src="https://github.com/user-attachments/assets/3edfe817-3ac5-4d9a-b94b-b07f3c7c2ae4" />
 
