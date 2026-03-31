@@ -35,3 +35,6 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 12. user `````` pass ``````
 
 [soc-project-fixed.zip](https://github.com/user-attachments/files/26385742/soc-project-fixed.zip)
+
+
+[soc-project-fixed (1).zip](https://github.com/user-attachments/files/26385854/soc-project-fixed.1.zip)
