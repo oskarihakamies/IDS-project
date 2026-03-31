@@ -335,6 +335,9 @@ nano playbook.yml
 
 ```
 
+The Ansible code was finished with Claude Sonnet 4.6 and checked with me. 
+
+
 You can then start the IDS whenever you'd like with command below. 
 
 ```
