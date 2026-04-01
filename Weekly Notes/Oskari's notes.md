@@ -250,8 +250,23 @@ As you can see it had the other 25,92 GB unreserved. (Obviously put more storage
 
 Just change the size for it to be fixed and reboot the VM for IDS. Remember to change the boot order from system. 
 
+After the hassle, I started the Ansible playbook agaim. 
+
+<img width="368" height="359" alt="image" src="https://github.com/user-attachments/assets/6ae5eeac-a8fc-4ff8-a24c-bedc09340985" />
+
+The Zip version is in Ansible repo. 
 
 
+<img width="548" height="97" alt="image" src="https://github.com/user-attachments/assets/842deb69-4140-4300-9681-7200c70d69fe" />
+
+It went through. 
+
+After it went through I went to check localhost, https://localhost and opened the page. 
+
+<img width="536" height="314" alt="image" src="https://github.com/user-attachments/assets/31c1360a-9c6d-4c87-92ba-917b22929a64" />
+
+
+The password and username are - admin
 
 
 
