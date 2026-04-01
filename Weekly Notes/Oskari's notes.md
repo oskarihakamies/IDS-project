@@ -222,7 +222,15 @@ So I downloaded the zip Nico had in our Github and tested it in a clean machine.
 
 I had an problem regarding the storage in my VM. 
 
+<img width="444" height="114" alt="image" src="https://github.com/user-attachments/assets/57ac1c63-640e-4e97-b1bb-6086eedbc9be" />
 
+<img width="581" height="269" alt="image" src="https://github.com/user-attachments/assets/c8ca9b4d-3e2b-4d97-9a4e-8366d778a78c" />
+
+So I checked inside and how to add more storage space from VirtualBox settings. 
+
+<img width="643" height="130" alt="image" src="https://github.com/user-attachments/assets/fa077c1b-7d4e-40f2-8660-ae6d22406afb" />
+
+I realized I only had 20GB before so I pumped it up to 45GB. 
 
 
 
