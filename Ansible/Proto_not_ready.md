@@ -13,6 +13,8 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
 Maybe a ready zip file: 
 
+[soc-project-vol10.zip](https://github.com/user-attachments/files/26418022/soc-project-vol10.zip)
+
 
 
 3. Navigate to Downloads and look for the file
