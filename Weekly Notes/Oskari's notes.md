@@ -213,6 +213,16 @@ https://youtube.com/shorts/msbZ8qhYue0?si=ib8AbE47ec7qmXlh
 
 Then after few months of testing we decided to make the package launchable by Ansible. That way the end user can start and close the program with one command. 
 
+Also if we could change the whole IDS to Wazuh and by that skipping ELK fully. 
+
+
+## Week 14 & 15
+
+So I downloaded the zip Nico had in our Github and tested it in a clean machine. 
+
+
+
+
 
 
 
