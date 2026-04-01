@@ -416,4 +416,6 @@ Our project is now on the finishline, which means that it need to be tested prop
 
 Now took [soc-project-fixed (1).zip](https://github.com/user-attachments/files/26385854/soc-project-fixed.1.zip) and tested it out in a empty VM
 
+Used these insturtions https://github.com/oskarihakamies/IDS-project/blob/main/Ansible/Proto_not_ready.md 
+
 
