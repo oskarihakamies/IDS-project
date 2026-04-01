@@ -11,6 +11,10 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
 [soc-project.zip](https://github.com/user-attachments/files/26360296/soc-project.zip)
 
+Maybe a ready zip file: 
+
+
+
 3. Navigate to Downloads and look for the file
 
 <img width="735" height="301" alt="kuva" src="https://github.com/user-attachments/assets/640f9480-8673-4f41-8bcc-154deb6fc857" />
