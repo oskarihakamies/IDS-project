@@ -419,3 +419,10 @@ Now took [soc-project-fixed (1).zip](https://github.com/user-attachments/files/2
 Used these insturtions https://github.com/oskarihakamies/IDS-project/blob/main/Ansible/Proto_not_ready.md 
 
 
+<img width="1470" height="412" alt="Näyttökuva 2026-04-01 kello 12 25 32" src="https://github.com/user-attachments/assets/394cb4f9-8b3e-48f2-9a28-11cdd9712202" />
+
+Somtehing failed, need to tak care of it.
+
+There is problem with sertificates. 
+
+
