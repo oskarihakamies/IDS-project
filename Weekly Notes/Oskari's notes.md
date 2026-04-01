@@ -232,6 +232,26 @@ So I checked inside and how to add more storage space from VirtualBox settings.
 
 I realized I only had 20GB before so I pumped it up to 45GB. 
 
+Then I had a problem inside of the machine that the actual size was 18,92GB so it didn't register the storage pump up. I had to google the answer and found Gparted from sourceforge.net
+
+<img width="466" height="137" alt="image" src="https://github.com/user-attachments/assets/33ed0a83-373d-4131-a57f-11c43f85d077" />
+
+I put the iso image in the machine and booted it first. 
+
+I only put the default settings and it opened. 
+
+
+<img width="458" height="212" alt="image" src="https://github.com/user-attachments/assets/9d5e8a38-42ca-4ce9-a075-e1a04a227ae4" />
+
+
+As you can see it had the other 25,92 GB unreserved. (Obviously put more storage when starting your own VM so you don't have to do this) Im just documenting the problems for futures stake if someone encounters the same problem. 
+
+<img width="415" height="227" alt="image" src="https://github.com/user-attachments/assets/0e97ad95-490a-44d5-b62d-bd46126d5f48" />
+
+Just change the size for it to be fixed and reboot the VM for IDS. Remember to change the boot order from system. 
+
+
+
 
 
 
