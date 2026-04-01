@@ -407,3 +407,13 @@ Poistin aiemman skrpitin kokonaan ja pyrin vain muokkaamaan wazuhn valmista skri
 
 
 Löysin paljon tietoa siitä miten wazuh ei tue tätä debian versiota mikä minulla on 
+
+### Week 15-16
+
+From now on i will use english as a main language. Later also will translate all the above to engilsh. 
+
+Our project is now on the finishline, which means that it need to be tested properly. I created a new VM and try to run this.
+
+Now took [soc-project-fixed (1).zip](https://github.com/user-attachments/files/26385854/soc-project-fixed.1.zip) and tested it out in a empty VM
+
+
