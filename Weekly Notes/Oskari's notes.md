@@ -220,6 +220,8 @@ Also if we could change the whole IDS to Wazuh and by that skipping ELK fully.
 
 So I downloaded the zip Nico had in our Github and tested it in a clean machine. 
 
+I had an problem regarding the storage in my VM. 
+
 
 
 
