@@ -410,7 +410,7 @@ Löysin paljon tietoa siitä miten wazuh ei tue tätä debian versiota mikä min
 
 ### Week 15-16
 
-From now on i will use english as a main language. Later also will translate all the above to engilsh. 
+From now on i will use english as a main language. Later also will translate all the above to english. 
 
 Our project is now on the finishline, which means that it need to be tested properly. I created a new VM and try to run this.
 
