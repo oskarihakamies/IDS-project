@@ -423,6 +423,15 @@ Used these insturtions https://github.com/oskarihakamies/IDS-project/blob/main/A
 
 Somtehing failed, need to tak care of it.
 
-There is problem with sertificates. 
+There is problem with sertificates. Took care of it
+
+I think there may be a loop going on in the project. Now i try to locate that and fix it if possible.
+
+
+<img width="1470" height="428" alt="Näyttökuva 2026-04-02 kello 11 50 26" src="https://github.com/user-attachments/assets/5a200bee-f420-4205-abee-94a31a5f6371" />
+
+It failed.
+
+
 
 
