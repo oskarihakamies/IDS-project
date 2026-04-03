@@ -427,11 +427,20 @@ There is problem with sertificates. Took care of it
 
 I think there may be a loop going on in the project. Now i try to locate that and fix it if possible.
 
+My new empty VM crashed couple of times when i was trying this zip file. 
 
-<img width="1470" height="428" alt="Näyttökuva 2026-04-02 kello 11 50 26" src="https://github.com/user-attachments/assets/5a200bee-f420-4205-abee-94a31a5f6371" />
-
-It failed.
-
+The problem was my disk space. So I had to grow it inside UTM and also on my computer. 
 
 
+<img width="506" height="96" alt="Näyttökuva 2026-04-03 kello 12 45 51" src="https://github.com/user-attachments/assets/7e262025-8947-4c4b-9f72-6e4294a0cc2f" />
+
+Now i have more than enough. 
+
+Got it through and dashboard is now working!
+
+<img width="1470" height="423" alt="Näyttökuva 2026-04-03 kello 14 15 18" src="https://github.com/user-attachments/assets/3f483756-a239-4271-8596-d1f2777729dd" />
+
+
+
+<img width="958" height="318" alt="Näyttökuva 2026-04-03 kello 14 30 49" src="https://github.com/user-attachments/assets/f21f3437-5457-41cf-b706-c857de202534" />
 
