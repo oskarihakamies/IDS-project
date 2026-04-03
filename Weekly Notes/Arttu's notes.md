@@ -444,3 +444,11 @@ Got it through and dashboard is now working!
 
 <img width="958" height="318" alt="Näyttökuva 2026-04-03 kello 14 30 49" src="https://github.com/user-attachments/assets/f21f3437-5457-41cf-b706-c857de202534" />
 
+
+Next thing i did was creating some traffic down there with this file https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap
+
+Also had tcpreplay 
+
+<img width="726" height="210" alt="Näyttökuva 2026-04-03 kello 15 15 34" src="https://github.com/user-attachments/assets/3555798d-6472-4de6-87d0-9f135eb7e10e" />
+
+
