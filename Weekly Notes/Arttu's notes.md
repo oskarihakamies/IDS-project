@@ -543,5 +543,10 @@ Goal
 - Great again when checking status. (Ok or not OK)
 
 
+In this example i used goal
 
+
+<img width="708" height="261" alt="Näyttökuva 2026-04-06 kello 15 15 59" src="https://github.com/user-attachments/assets/526adbeb-cb9d-4626-b7f2-22112632b0d2" />
+
+After you choose your visualzation your need to choose a source. This won´t work without a source. 
 
