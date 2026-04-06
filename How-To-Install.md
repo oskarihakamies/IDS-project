@@ -7,12 +7,13 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 ### Pre-requirements and troubleshooting
 
 **Req**
-- Debian 13 - Not tested in other versions or distros
+
+- A computer
+- Debian 13 - Not tested in other versions or distros. VM recommended
 - Being Sudo
 - Able to connect to the Internet (you should be if you're reading this
 - At least 25GB of memory, +8gb RAM preferred as well
 - **We will update the memory and RAM requirements after more testing**
-- 
 
 **Troubleshooting**
 
