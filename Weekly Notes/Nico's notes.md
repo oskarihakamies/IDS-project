@@ -1454,4 +1454,11 @@ krotti@ansibel:~/soc-project$ sudo tail -f /var/ossec/logs/ossec.log [sudo] pass
 <img width="1654" height="530" alt="kuva" src="https://github.com/user-attachments/assets/be2dddfd-bdcc-433b-a839-eb372cdb34b0" />
 
 
+## Update 06/04 - Week 15
+
+- Forgot to do regular updates because we focused on getting it to work and testing
+- We got the first actual successfull run and decided to put all into it so that we'd be able to run tests for more groups
+- This is the working file [soc-project-v4.zip](https://github.com/user-attachments/files/26519081/soc-project-v4.zip)
+- I focused on creating the first "How-To-Install-Guide" and validating the progress
+
 
