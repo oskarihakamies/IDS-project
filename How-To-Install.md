@@ -4,6 +4,39 @@ This is the pipeline that will be installed and functional after following the s
 
 Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
+### Pre-requirements and troubleshooting
+
+**Req**
+- Debian 13 - Not tested in other versions or distros
+- Being Sudo
+- Able to connect to the Internet (you should be if you're reading this
+
+**Troubleshooting**
+
+1. Make sure your Debian is well set beforehand:
+
+If some packets are missing, simple Googling will usually do the trick, f.ex the right packages for the apt-manager
+
+```
+/etc/apt/sources.list
+
+deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
+
+deb http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
+deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
+
+deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
+deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
+```
+
+2. User not in sudo group
+ ```~su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
+
+3. No Internet... Get one
+
+
+
 # How to install?
 
 1. Create a new VM or use an existing one. (Debian 13)
