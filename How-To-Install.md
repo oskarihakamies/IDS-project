@@ -67,14 +67,17 @@ deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware cont
 
 8. Let it do its magic. This takes around 2-10 minutes. Grab a coffee.
 
-9. When it's done, navigate to Firefox or w.e Browser
+ <img width="741" height="484" alt="kuva" src="https://github.com/user-attachments/assets/d328d9b8-a918-4048-b2df-b04cb162458d" />
 
-10. Type into the URL: localhost
 
-11. NOTE: IF Wazuh sends an error, change the address to /app/home/ - this tends to happen.
+10. When it's done, navigate to Firefox or w.e Browser
 
-12. user ```admin``` pass ```admin```
+11. Type into the URL: localhost
 
-13. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
+12. NOTE: IF Wazuh sends an error, change the address to /app/home/ - this tends to happen.
 
-14.  You can use f.ex ```tcpreplay```and a file from https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap. This will be in upcoming instructions - still working on it
+13. user ```admin``` pass ```admin```
+
+14. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
+
+15.  You can use f.ex ```tcpreplay```and a file from https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap. This will be in upcoming instructions - still working on it
