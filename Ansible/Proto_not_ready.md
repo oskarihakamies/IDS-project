@@ -1,5 +1,6 @@
 ## Note. The product isn't fully finished, not completely ready and everything that happens is at users own risk
 
+## Updated "GUIDE" on https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md
 The pipeline is 
 Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
