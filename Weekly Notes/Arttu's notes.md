@@ -604,4 +604,6 @@ This dashboard will provide overview of security alerts collected by the Wazuh s
  
 <img width="1469" height="849" alt="Näyttökuva 2026-04-06 kello 17 09 33" src="https://github.com/user-attachments/assets/4d1fac56-623e-49f5-9dab-26e5c1545f1c" />
 
+### Overall 
 
+Based on this dashboard there are no no critical threats detected and majority of alerts are concentrated in medium severity. It is also good to konw that activty is low and not continuous. But keep in mind that data volume in this dashboard is small.
