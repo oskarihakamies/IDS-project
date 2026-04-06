@@ -497,9 +497,51 @@ From here you can add more data.
 
 From "Install some sample data" you can choose if you want more data to your dashboard.
 
--> if you choose to do that 
+-> if you choose to do that wait untill it says "Installed" in top of the paragraph. Otherwise it won´t use your sample data. 
 
 
 <img width="809" height="605" alt="Näyttökuva 2026-04-06 kello 14 52 23" src="https://github.com/user-attachments/assets/e09356a3-04ff-4e12-8d43-dde68f5220f7" />
+
+
+Next thing you get to choose is "New Visualization"
+
+These next ones are important (in my opinion):
+
+Data Table
+
+- Shows raw data as a table
+- When to use? : When wanting a aletrs as a list or list of recent events
+- Gives you a great context in your dashboard
+
+Line 
+
+- Shows events as a time series and over time.
+- When to use? : When wanting to know number of alerts over a time
+- Biggest benefit is that you can clearly see if problem on the screen is growing or not
+
+Verical Bar 
+
+- When is it useful? : If you need to see top IP´s or attack types you are receiving
+- In this option you get clear comparasion.
+
+Pie 
+
+- You get precentage distribuiton
+- This is a great option if you want a quick overview from your data
+- Would not recommend to use in bigger datasets
+
+Heat Map 
+
+- Shows you intensity, meanning color = ammount
+- Login in attempts per day/hour/month
+- Biggest advantage is when seeing spikes and anomalies in data
+
+Goal 
+
+- a gauge style mitter
+- When to use? : If you want risk score or CPU usage
+- Great again when checking status. (Ok or not OK)
+
+
 
 
