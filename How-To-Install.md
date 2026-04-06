@@ -74,3 +74,6 @@ deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware cont
 
 12. user ```admin``` pass ```admin```
 
+13. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
+
+14.  You can use f.ex ```tcpreplay```and a file from https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap. This will be in upcoming instructions - still working on it
