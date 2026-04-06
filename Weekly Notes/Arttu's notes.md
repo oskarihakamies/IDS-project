@@ -579,4 +579,29 @@ And now you see it on your dashboard menu.
 
 <img width="1425" height="718" alt="Näyttökuva 2026-04-06 kello 15 40 55" src="https://github.com/user-attachments/assets/da802408-b938-4df0-86b4-64b759719a2c" />
 
+### Few examples:
+
+
+In this scenario i see biggest threats that our service faced.
+
+Output is data table and specific metrics for aggeregation is Max and for field it is rule.level
+
+As you see on the screen there were 15 max level threats.
+
+<img width="1460" height="525" alt="Näyttökuva 2026-04-06 kello 15 59 42" src="https://github.com/user-attachments/assets/948193f0-d92d-4198-82ba-ca97a30615a7" />
+
+
+Here is a dashboard that i creted from our data
+
+This dashboard will provide overview of security alerts collected by the Wazuh system over the selected time range 
+
+1. On the left side of the screen is KPI metrics. Those tells us how bad the threat is.
+2. Total alerts = number of alerts in selected timeframe
+3. Aletrs over time = Line chart showing alerts across time, in this case only one spike which means that alerts are not continuous
+4. Top Triggered Rules (Bottom Left) = Bar chart of most frequently triggered detection rules, that shows only that one rule dominates
+5. Alert Severity Distribution (Bottom Right) = Pie chart showing proportion of alerts by severity meaning that this environment is relatively stable. 
+ 
+ 
+<img width="1469" height="849" alt="Näyttökuva 2026-04-06 kello 17 09 33" src="https://github.com/user-attachments/assets/4d1fac56-623e-49f5-9dab-26e5c1545f1c" />
+
 
