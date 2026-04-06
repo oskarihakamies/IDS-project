@@ -550,3 +550,22 @@ In this example i used goal
 
 After you choose your visualzation your need to choose a source. This won´t work without a source. 
 
+
+And my source was wazuh-alerts*
+
+
+Now you see your dashboard! 
+
+<img width="1469" height="807" alt="Näyttökuva 2026-04-06 kello 15 18 28" src="https://github.com/user-attachments/assets/adec724f-83a3-406b-a104-dea219fb7706" />
+
+On the right side of your screen is everythin you need to modify your dashboard. There are many different options to choose.
+
+
+For example i used these metrics and now it jumped many precentages upwards. (I used sample data when creating this visualization)
+
+
+<img width="1449" height="730" alt="Näyttökuva 2026-04-06 kello 15 33 09" src="https://github.com/user-attachments/assets/d76e23e0-2d45-4e94-8ce4-b234df4dfdd5" />
+
+
+
+
