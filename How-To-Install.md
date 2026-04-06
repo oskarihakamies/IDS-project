@@ -10,6 +10,9 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 - Debian 13 - Not tested in other versions or distros
 - Being Sudo
 - Able to connect to the Internet (you should be if you're reading this
+- At least 25GB of memory, +8gb RAM preferred as well
+- **We will update the memory and RAM requirements after more testing**
+- 
 
 **Troubleshooting**
 
@@ -31,11 +34,11 @@ deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware cont
 ```
 
 2. User not in sudo group
- ```~su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
+ ```su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
 
 3. No Internet... Get one
 
-
+4. If got any more issues, please inform us
 
 # How to install?
 
