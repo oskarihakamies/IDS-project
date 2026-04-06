@@ -478,15 +478,28 @@ Now it should work when you go to web browser and type url localhost
 
 ### DASHBOARDS 
 
-So how to use dashboards in Wazuh 
+How to use dashboards in Wazuh?
 
 <img width="1344" height="754" alt="Näyttökuva 2026-04-05 kello 19 41 05" src="https://github.com/user-attachments/assets/68a5e73a-6dcc-48ee-8656-273fcb070931" />
 
+
 Go to the Dashboards and you should see this view
+
 
 <img width="692" height="374" alt="Näyttökuva 2026-04-05 kello 19 41 38" src="https://github.com/user-attachments/assets/7c21b710-0f41-4dc5-af9f-e5dc39618e9d" />
 
+
 From here you can add more data. 
 
+
+<img width="1431" height="692" alt="Näyttökuva 2026-04-06 kello 14 48 25" src="https://github.com/user-attachments/assets/e493f926-fecf-4d7f-ad4e-573908117dce" />
+
+
+From "Install some sample data" you can choose if you want more data to your dashboard.
+
+-> if you choose to do that 
+
+
+<img width="809" height="605" alt="Näyttökuva 2026-04-06 kello 14 52 23" src="https://github.com/user-attachments/assets/e09356a3-04ff-4e12-8d43-dde68f5220f7" />
 
 
