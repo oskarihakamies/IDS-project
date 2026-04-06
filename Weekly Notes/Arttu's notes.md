@@ -567,5 +567,16 @@ For example i used these metrics and now it jumped many precentages upwards. (I 
 <img width="1449" height="730" alt="Näyttökuva 2026-04-06 kello 15 33 09" src="https://github.com/user-attachments/assets/d76e23e0-2d45-4e94-8ce4-b234df4dfdd5" />
 
 
+After you are ready with your dashboard click "Save" on the right top corner. 
+
+From here you can name your dashboard and write a description if you want.
+
+<img width="402" height="409" alt="Näyttökuva 2026-04-06 kello 15 36 49" src="https://github.com/user-attachments/assets/8375c0f6-91e4-4556-a135-6b7c395a013a" />
+
+
+And now you see it on your dashboard menu.
+
+
+<img width="1425" height="718" alt="Näyttökuva 2026-04-06 kello 15 40 55" src="https://github.com/user-attachments/assets/da802408-b938-4df0-86b4-64b759719a2c" />
 
 
