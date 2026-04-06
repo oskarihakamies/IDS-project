@@ -11,7 +11,7 @@
 
 **Purpose**: Build and demonstrate a functional open-source IDS capable of detecting known attacks, enriching logs with context (e.g. geolocation), and visualizing results in dashboards.
 
-**TO INSTALL** Follow this link to the guide: 
+## **TO INSTALL** Follow this link to the guide: 
 
 https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md
 
