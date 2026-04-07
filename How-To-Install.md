@@ -33,7 +33,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 # How to install?
 
-## Step 1, Environment
+## Step 1 - Environment
 ### If you have Debian 13 installed on a clean Virtual machine or know how to install, Skip to [Step 2](https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md#step-2---download-unzip-run-enjoy)
 
 1. Managing machines
