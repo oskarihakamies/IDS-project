@@ -31,6 +31,12 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 3. If got any more issues, please inform us at osiris-t-form@protonmail.com
 
+4. Something failed during installation?
+   - Run again
+   - Failed again?
+   - Run again
+   - Failed? Send us mail or try to troubleshoot and mail us after!
+
 # How to install?
 For beginners, keep on reading. Full setup guide.
 
