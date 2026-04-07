@@ -1,6 +1,15 @@
 ## Note. The product isn't fully finished, not completely ready and everything that happens is at users own risk
 
+## Feedback
+
 This is the pipeline that will be installed and functional after following the steps:
+
+Thank you for stopping by and showing interest. We appreciate every feedback you have.
+You can send feedback to: [osiris-t-form@protonmail.com]
+
+Our main goal for this project is to make it as easy as possible for the newbies and veterans to start experimenting and learning on their own terms.
+
+That's why we mainly focus to keep it simple and straightforward without spending the already limited hours in installing and researching every aspect separately.
 
 Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexer
 
