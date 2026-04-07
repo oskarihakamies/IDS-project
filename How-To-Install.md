@@ -108,3 +108,15 @@ Accept the risks
 21. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
 
 22.  You can use f.ex ```tcpreplay```and a file from https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap. This will be in upcoming instructions - still working on it
+
+### Thank you
+
+Thank you for stopping by and showing interest.
+We appreciate every feedback you have.
+
+Our main goal for this project is to make it as easy as possible for the newbies and veterans to start experimenting and learning on their own terms. 
+
+That's why we mainly focus to keep it simple and straightforward without spending the already limited hours in installing and researching every aspect separately. 
+
+~ Make installation and configuration easy, Open-Source and let the open-minded explore their own path
+
