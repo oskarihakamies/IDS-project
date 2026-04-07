@@ -38,9 +38,9 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
    - Failed? Send us mail or try to troubleshoot and mail us after!
 
 # How to install?
-For beginners, keep on reading. Full setup guide.
+**For beginners, keep on reading. Full setup guide.**
 
-For advanced users: 
+**For advanced users:**
 - Install Debian 13 on a virtual machine, set +30GB disc space and +8GB RAM. 
 - After that, head to [Step 2](https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md#step-2---download-unzip-run-enjoy)
 
