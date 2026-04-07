@@ -22,9 +22,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 2. User not in sudo group
  ```su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
 
-3. No Internet... Get one
-
-4. If got any more issues, please inform us
+3. If got any more issues, please inform us
 
 # How to install?
 
