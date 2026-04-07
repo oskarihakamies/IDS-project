@@ -150,8 +150,16 @@ Can be left blank
 
 <img width="787" height="448" alt="kuva" src="https://github.com/user-attachments/assets/0162c26f-3513-462a-aaa3-2bdb47f2fdda" />
 
-The next installation will take 2-10 minutes, go get some fresh air while it runs.
+The next installation will take around 1 minute.
 
+Optional
+<img width="787" height="298" alt="kuva" src="https://github.com/user-attachments/assets/70a7eb8b-05ca-47a6-9642-1df0503759d8" />
+
+Next.. lighter is Xfce, most commonly used GNOME. This part is optional as well, feel free to explore
+
+<img width="787" height="457" alt="kuva" src="https://github.com/user-attachments/assets/162b2e02-2af0-4a5d-9cef-a2d1f16ad058" />
+
+Now, finally - go get some fresh air. This installation should take around 5-15 minutes.
 
 
 1. Create a new VM or use an existing one. (Debian 13)
