@@ -35,7 +35,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 For beginners, keep on reading. Full setup guide.
 
 For advanced users: 
-- Install Debian 13 on a virtual machine, set +25BGB disc space and +8GB RAM. 
+- Install Debian 13 on a virtual machine, set +25GB disc space and +8GB RAM. 
 - After that, head to [Step 2](https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md#step-2---download-unzip-run-enjoy)
 
 ## Step 1 - Environment - Full guide
