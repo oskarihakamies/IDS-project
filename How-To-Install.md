@@ -1,18 +1,15 @@
-## Note. The product isn't fully finished, not completely ready and everything that happens is at users own risk
+## Please Note. The product isn't fully finished, is in development and for testing only
 
 ## Feedback
+Thank you for stopping by and showing interest.
+You can send any feedback related to this project to: osiris-t-form@protonmail.com
 
-This is the pipeline that will be installed and functional after following the steps:
-
-Thank you for stopping by and showing interest. We appreciate every feedback you have.
-You can send feedback to: osiris-t-form@protonmail.com
-
-Our main goal for this project is to make it as easy as possible for the newbies and veterans to start experimenting and learning on their own terms.
+Our main goal for this guide and the project as a whole is to make it as easy as possible for the newbies and veterans to start experimenting and learning on their own terms.
 
 That's why we mainly focus to keep it simple and straightforward without spending the already limited hours in installing and researching every aspect separately.
 
 
-After installation, this will be the pipeline and what you got:
+After installation, this will be the working pipeline and you got:
 
 Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexer
 
@@ -20,26 +17,29 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 **Req**
 
-- A computer
-- Debian 13 - Not tested in other versions or distros. VM recommended
-- Being Sudo
-- Able to connect to the Internet (you should be if you're reading this)
+- Debian 13 running on a Virtual Machine (recommended) - Not tested in other versions or distros.
 - At least 25GB of disk space +8GB RAM preferred as well
-- **This is only suitable for testing**
 
 **Troubleshooting**
 
-1. Make sure your Debian is well set beforehand
+1. Make sure your Debian is well set beforehand.
 
 2. User not in sudo group
  ```su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
 
-3. If got any more issues, please inform us
+3. If got any more issues, please inform us at osiris-t-form@protonmail.com
 
 # How to install?
 
-### Step 1, Environment - If you have Debian 13 installed on a clean Virtual machine, Skip to Step 2
+### Step 1, Environment - If you have Debian 13 installed on a clean Virtual machine, Skip to Step 2, if not follow from here on
 
+1. Managing machines
+- The most common way is to download https://www.virtualbox.org/wiki/Downloads which will be the "manager" for your Virtual Machines
+- Choose your host OS
+- Download and follow the installation process
+
+
+ 2. Getting Debian
 - Navigate to https://www.debian.org/download
 - 
 
