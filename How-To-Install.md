@@ -2,7 +2,7 @@
 
 This is the pipeline that will be installed and functional after following the steps:
 
-Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
+Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexer
 
 ### Pre-requirements and troubleshooting
 
