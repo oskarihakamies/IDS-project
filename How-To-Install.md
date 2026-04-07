@@ -85,7 +85,7 @@ Accept the risks
 
 (read more [here](https://github.com/3CORESec/testmynids.org))
 
-19. Now check your Wazuh dashboard again. You should see an alert pop up!
+19. Now check your Wazuh dashboard again. You should see that something has happened. If not, every single field will be 0 which means that the setup is not fully working or you haven't been fully successfull in creating any alerts.
 
 <img width="1650" height="445" alt="kuva" src="https://github.com/user-attachments/assets/87d019e8-88e4-48e4-b100-14de7d542638" />
 
