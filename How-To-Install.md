@@ -26,6 +26,12 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 # How to install?
 
+### Step 1, Environment - If you have Debian 13 installed on a clean Virtual machine, Skip to Step 2
+
+- Navigate to https://www.debian.org/download
+- 
+
+
 1. Create a new VM or use an existing one. (Debian 13)
 
 2. Download the zip file
