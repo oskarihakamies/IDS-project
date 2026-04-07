@@ -100,6 +100,8 @@ Accept the risks
 18. If you don't see any alerts, let's trigger one manually. Open your terminal and run this curl command, which is widely used for testing IDS systems:
 ```curl http://testmynids.org/uid/index.html```
 
+(read more [here](https://github.com/3CORESec/testmynids.org)
+
 19. Now check your Wazuh dashboard again. You should see an alert pop up!
 
 <img width="1650" height="445" alt="kuva" src="https://github.com/user-attachments/assets/87d019e8-88e4-48e4-b100-14de7d542638" />
