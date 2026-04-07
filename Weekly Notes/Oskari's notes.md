@@ -268,6 +268,11 @@ After it went through I went to check localhost, https://localhost and opened th
 
 The password and username are - admin
 
+After that. You can go to your dashboard and check the alert you created.
+
+I used pcap file. a simple port scan with tcpreplay.
+
+
 
 
 
