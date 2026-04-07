@@ -43,7 +43,7 @@ For advanced users:
 
 #### 1. Managing machines
 - For Windows hosts, the most common way is to download https://www.virtualbox.org/wiki/Downloads which will be the "manager" for your Virtual Machines
-- For Arm https://mac.getutm.app/
+- For Arm64 https://mac.getutm.app/ (guide coming soon)
 - Choose your host OS
 - Download and follow the installation process
 
