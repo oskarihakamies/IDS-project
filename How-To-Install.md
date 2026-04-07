@@ -17,7 +17,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 **Troubleshooting**
 
-1. Make sure your Debian is well set beforehand:
+1. Make sure your Debian is well set beforehand
 
 2. User not in sudo group
  ```su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
