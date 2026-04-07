@@ -95,11 +95,12 @@ Accept the risks
 
 <img width="1657" height="646" alt="kuva" src="https://github.com/user-attachments/assets/5f5bf856-6dcf-460a-8536-4afe20673e8b" />
 
-17. Some traffic should be visible, if not reset a couple of times
+17. Navigate to the Security Events or Threat Hunting tab. Some initial traffic should be visible. If not, refresh the page a couple of times
 
-18. If still not, run this ```curl http://testmynids.org/uid/index.html```
+18. If you don't see any alerts, let's trigger one manually. Open your terminal and run this curl command, which is widely used for testing IDS systems:
+```curl http://testmynids.org/uid/index.html```
 
-19. Now you should have something in here:
+19. Now check your Wazuh dashboard again. You should see an alert pop up!
 
 <img width="1650" height="445" alt="kuva" src="https://github.com/user-attachments/assets/87d019e8-88e4-48e4-b100-14de7d542638" />
 
@@ -107,7 +108,8 @@ Accept the risks
 
 21. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
 
-22.  You can use f.ex ```tcpreplay```and a file from https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap. This will be in upcoming instructions - still working on it
+22.  You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
+ https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap.
 
 ### Thank you
 
@@ -118,5 +120,5 @@ Our main goal for this project is to make it as easy as possible for the newbies
 
 That's why we mainly focus to keep it simple and straightforward without spending the already limited hours in installing and researching every aspect separately. 
 
-~ Make installation and configuration easy, Open-Source and let the open-minded explore their own path
+~ Make installation and configuration easy, Open-Source and let the open-minded explore their own path ~
 
