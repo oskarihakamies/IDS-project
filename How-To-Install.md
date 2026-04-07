@@ -181,12 +181,19 @@ Rest of the install 2 - minutes
 
 Reboot and you should have yourself a Debian 13 running on a Virtual Machine
 
+Log in
+
+<img width="1279" height="883" alt="kuva" src="https://github.com/user-attachments/assets/b69cc7aa-220d-4cce-8b63-aa8f00996d3b" />
+
+Follow to Step 2
+
 ## Step 2 - Download, Unzip, Run, Enjoy
 
 1. Download the zip file:
 
 [soc-project-v4.zip](https://github.com/user-attachments/files/26421526/soc-project-v4.zip)
 
+or ```wget https://github.com/user-attachments/files/26421526/soc-project-v4.zip```
 
 2. Navigate to Downloads and look for the file
 
