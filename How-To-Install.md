@@ -11,9 +11,12 @@ Our main goal for this project is to make it as easy as possible for the newbies
 
 That's why we mainly focus to keep it simple and straightforward without spending the already limited hours in installing and researching every aspect separately.
 
+
+After installation, this will be the pipeline and what you got:
+
 Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexer
 
-### Pre-requirements and troubleshooting
+## Pre-requirements and troubleshooting
 
 **Req**
 
