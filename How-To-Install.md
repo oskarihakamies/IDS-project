@@ -166,7 +166,7 @@ Now, finally - go get some fresh air. This installation should take around 5-15 
 
 1. Create a new VM or use an existing one. (Debian 13)
 
-### Step 2 - Download, Unzip, Run, Enjoy
+## Step 2 - Download, Unzip, Run, Enjoy
 
 1. Download the zip file:
 
