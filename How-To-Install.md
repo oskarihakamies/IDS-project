@@ -185,7 +185,7 @@ Log in
 
 <img width="1279" height="883" alt="kuva" src="https://github.com/user-attachments/assets/b69cc7aa-220d-4cce-8b63-aa8f00996d3b" />
 
-Check ```sudo nano /etc/apt/sources.list``` that this line is # commented
+Check ```sudo nano /etc/apt/sources.list``` that this line cdrom line is # commented
 
 <img width="814" height="525" alt="kuva" src="https://github.com/user-attachments/assets/209f6a49-d981-4348-8c9e-ba89d65334c7" />
 
