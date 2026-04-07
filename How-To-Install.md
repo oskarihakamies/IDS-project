@@ -48,6 +48,50 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 - After clicking, it should start download
 
+- When download has finished, open up Oracle VirtualBox
+
+- Press "new" <img width="802" height="118" alt="kuva" src="https://github.com/user-attachments/assets/7c0669d9-dbdf-48c1-849f-bfb27656f5af" />
+
+- Name your VM as you wish
+- Find the correct iso - file that you downloaded
+- Make sure the OS is Linux and Debian (64-bit)
+
+<img width="954" height="778" alt="kuva" src="https://github.com/user-attachments/assets/a6b8fa36-d814-4b73-b17c-43e8357a0ca0" />
+
+- Move onto "Specify Virtual hardware"
+- Choose +8000MB Base memory if your computer has enough
+- Number of CPUs -> experiment, but we've been running 2-3
+
+<img width="1177" height="813" alt="kuva" src="https://github.com/user-attachments/assets/823427dc-3231-4b47-a852-8309e3cbf3f2" />
+
+- Virtual Hard disk is the size of the disk for the VM
+- +25GB recommended
+- Finish
+
+- It should appear to the list
+- Choose it and press "start"
+- A lot of ways, but choose "Graphical Install"
+
+<img width="621" height="561" alt="kuva" src="https://github.com/user-attachments/assets/862b5217-1d15-43ab-8ee9-0c52101eca1b" />
+
+Your preferred language
+
+<img width="804" height="727" alt="kuva" src="https://github.com/user-attachments/assets/1103e53c-0f27-442d-947c-3503e34bc2f2" />
+
+Location is important for timezone, but do as you wish
+
+<img width="787" height="559" alt="kuva" src="https://github.com/user-attachments/assets/62de7994-e5c5-4359-b2dd-78f528a1fbf7" />
+
+Keyboard.. Once again choose your own
+
+<img width="793" height="690" alt="kuva" src="https://github.com/user-attachments/assets/c0d01b57-678a-4afc-985c-6dca070ffbbf" />
+
+After you continue, it will start the install. Grab a coffee and wait. Will take around 2-10 minutes ☕
+
+<img width="799" height="684" alt="kuva" src="https://github.com/user-attachments/assets/6dac26a7-f2f2-4230-a218-466deab3fef9" />
+
+
+
 
 1. Create a new VM or use an existing one. (Debian 13)
 
