@@ -19,21 +19,6 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 1. Make sure your Debian is well set beforehand:
 
-If some packets are missing, simple Googling will usually do the trick, f.ex the right packages for the apt-manager
-
-```
-/etc/apt/sources.list
-
-deb http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
-deb-src http://deb.debian.org/debian/ trixie main non-free-firmware contrib non-free
-
-deb http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
-deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware contrib non-free
-
-deb http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
-deb-src http://deb.debian.org/debian/ trixie-updates main non-free-firmware contrib non-free
-```
-
 2. User not in sudo group
  ```su``` -> ```sudo adduser (youruser) sudo``` -> Reboot
 
