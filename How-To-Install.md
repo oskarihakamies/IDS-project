@@ -5,7 +5,7 @@
 This is the pipeline that will be installed and functional after following the steps:
 
 Thank you for stopping by and showing interest. We appreciate every feedback you have.
-You can send feedback to: [osiris-t-form@protonmail.com]
+You can send feedback to: osiris-t-form@protonmail.com
 
 Our main goal for this project is to make it as easy as possible for the newbies and veterans to start experimenting and learning on their own terms.
 
