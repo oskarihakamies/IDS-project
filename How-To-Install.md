@@ -32,8 +32,13 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 3. If got any more issues, please inform us at osiris-t-form@protonmail.com
 
 # How to install?
+For beginners, keep on reading. Full setup guide.
 
-## Step 1 - Environment
+For advanced users: 
+- Install Debian 13 on a virtual machine, set +25BGB disc space and +8GB RAM. 
+- After that, head to [Step 2](https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md#step-2---download-unzip-run-enjoy)
+
+## Step 1 - Environment - Full guide
 ### If you have Debian 13 installed on a clean Virtual machine or know how to install, Skip to [Step 2](https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md#step-2---download-unzip-run-enjoy)
 
 #### 1. Managing machines
@@ -164,6 +169,17 @@ Next.. lighter is Xfce, most commonly used GNOME. This part is optional as well,
 
 Now, finally - go get some fresh air. This installation should take around 5-15 minutes.
 
+It will once again ask for questions. If you run this inside a vm, no need to worry - if not, read carefully before choosing
+
+<img width="796" height="253" alt="kuva" src="https://github.com/user-attachments/assets/92a51339-ea45-4380-b42e-9f84faaf7b12" />
+
+<img width="796" height="274" alt="kuva" src="https://github.com/user-attachments/assets/95966380-884e-4970-b441-c49b4fe3f3bf" />
+
+Rest of the install 2 - minutes
+
+<img width="781" height="166" alt="kuva" src="https://github.com/user-attachments/assets/a4263c44-2702-445e-bb47-a17eb2ed2c95" />
+
+Reboot and you should have yourself a Debian 13 running on a Virtual Machine
 
 ## Step 2 - Download, Unzip, Run, Enjoy
 
