@@ -116,12 +116,6 @@ Accept the risks
 
 ### Thank you
 
-Thank you for stopping by and showing interest.
-We appreciate every feedback you have.
-
-Our main goal for this project is to make it as easy as possible for the newbies and veterans to start experimenting and learning on their own terms. 
-
-That's why we mainly focus to keep it simple and straightforward without spending the already limited hours in installing and researching every aspect separately. 
-
+Remember to send any feedback to: osiris-t-form@protonmail.com
 ~ Make installation and configuration easy, Open-Source and let the open-minded explore their own path ~
 
