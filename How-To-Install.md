@@ -1,5 +1,7 @@
 ## Please Note. The product isn't fully finished, is in development and for testing only
 
+Our tests have been ran on different Windows hosts and Arm64 by using Virtual Machines with Debian 13
+
 ## Feedback
 Thank you for stopping by and showing interest.
 You can send any feedback related to this project to: osiris-t-form@protonmail.com
@@ -164,37 +166,37 @@ Now, finally - go get some fresh air. This installation should take around 5-15 
 
 1. Create a new VM or use an existing one. (Debian 13)
 
-2. Download the zip file
+### Step 2 - Download, Unzip, Run, Enjoy
+
+1. Download the zip file:
 
 [soc-project-v4.zip](https://github.com/user-attachments/files/26421526/soc-project-v4.zip)
 
 
-
-
-3. Navigate to Downloads and look for the file
+2. Navigate to Downloads and look for the file
 
 <img width="735" height="301" alt="kuva" src="https://github.com/user-attachments/assets/640f9480-8673-4f41-8bcc-154deb6fc857" />
 
 
-4. Download zip ```sudo apt-get install zip```
+3. Download zip ```sudo apt-get install zip```
 
-5. Unzip the file ```unzip soc-project.zip```
+4. Unzip the file ```unzip soc-project.zip```
 
-6. Navigate to the unzipped file ```cd soc-project```, ```ls``` to list the files
+5. Navigate to the unzipped file ```cd soc-project```, ```ls``` to list the files
 
-7. Use ```sudo bash install.sh``` to launch it
+6. Use ```sudo bash install.sh``` to launch it
 
-8. Let it do its magic. This takes around 2-10 minutes. Grab a coffee.
+7. Let it do its magic. This takes around 2-10 minutes. Grab a coffee.
 
  <img width="741" height="484" alt="kuva" src="https://github.com/user-attachments/assets/d328d9b8-a918-4048-b2df-b04cb162458d" />
 
-9. You should get this once it's finished. If errors, please report them!
+8. You should get this once it's finished. If errors, please report them!
    
 <img width="1311" height="169" alt="kuva" src="https://github.com/user-attachments/assets/a22330e2-3e34-403f-89ec-3f60bf242e53" />
 
-11. When it's done, navigate to Firefox or w.e Browser
+9. When it's done, navigate to Firefox or w.e Browser
 
-13. Type into the URL: localhost
+10. Type into the URL: localhost
 
 <img width="1501" height="198" alt="kuva" src="https://github.com/user-attachments/assets/cc7f5f88-c062-4912-9127-3272325f499a" />
 
@@ -202,34 +204,34 @@ Accept the risks
 
 <img width="924" height="730" alt="kuva" src="https://github.com/user-attachments/assets/93b5b4b3-e649-43c4-a87d-a1c90b6816a6" />
 
-14. user ```admin``` pass ```admin```
+11. user ```admin``` pass ```admin```
 
-15. NOTE: IF Wazuh sends an error, change the address to /app/home/ - this tends to happen.
+12. NOTE: IF Wazuh sends an error, change the address to /app/home/ - this tends to happen.
 
 <img width="1660" height="991" alt="kuva" src="https://github.com/user-attachments/assets/8d1f1653-a383-4fea-a97f-04f70b9e106e" />
 
 <img width="1620" height="859" alt="kuva" src="https://github.com/user-attachments/assets/d2d65d77-b345-40b1-962a-6f5590f8d773" />
 
-16. Navigate here:
+13. Navigate here:
 
 <img width="1657" height="646" alt="kuva" src="https://github.com/user-attachments/assets/5f5bf856-6dcf-460a-8536-4afe20673e8b" />
 
-17. Navigate to the Security Events or Threat Hunting tab. Some initial traffic should be visible. If not, refresh the page a couple of times
+14. Navigate to the Security Events or Threat Hunting tab. Some initial traffic should be visible. If not, refresh the page a couple of times
 
-18. If you don't see any alerts, let's trigger one manually. Open your terminal and run this curl command, which is widely used for testing IDS systems:
+15. If you don't see any alerts, let's trigger one manually. Open your terminal and run this curl command, which is widely used for testing IDS systems:
 ```curl http://testmynids.org/uid/index.html```
 
 (read more [here](https://github.com/3CORESec/testmynids.org))
 
-19. Now check your Wazuh dashboard again. You should see that something has happened. If not, every single field will be 0 which means that the setup is not fully working or you haven't been fully successfull in creating any alerts.
+16. Now check your Wazuh dashboard again. You should see that something has happened. If not, every single field will be 0 which means that the setup is not fully working or you haven't been fully successfull in creating any alerts.
 
 <img width="1650" height="445" alt="kuva" src="https://github.com/user-attachments/assets/87d019e8-88e4-48e4-b100-14de7d542638" />
 
-20. Your setup should now work and function properly, hooray!
+17. Your setup should now work and function properly, hooray!
 
-21. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
+18. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
 
-22.  You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
+19.  You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
  https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap.
 
 ### Thank you
