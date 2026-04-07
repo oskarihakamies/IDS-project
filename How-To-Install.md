@@ -185,6 +185,22 @@ Log in
 
 <img width="1279" height="883" alt="kuva" src="https://github.com/user-attachments/assets/b69cc7aa-220d-4cce-8b63-aa8f00996d3b" />
 
+Check ```sudo nano /etc/apt/sources.list``` that this line is # commented
+
+<img width="814" height="525" alt="kuva" src="https://github.com/user-attachments/assets/209f6a49-d981-4348-8c9e-ba89d65334c7" />
+
+If not, put # in front and save
+
+If you get a notification that user is not in sudoers file
+
+> su
+
+> log in using sudo or the root password you set earlier
+
+> sudo adduser (replace with your user) sudo
+
+> reboot the Virtual Machine and try again
+
 Follow to Step 2
 
 ## Step 2 - Download, Unzip, Run, Enjoy
