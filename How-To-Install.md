@@ -36,14 +36,14 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 ## Step 1 - Environment
 ### If you have Debian 13 installed on a clean Virtual machine or know how to install, Skip to [Step 2](https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md#step-2---download-unzip-run-enjoy)
 
-1. Managing machines
+#### 1. Managing machines
 - For Windows hosts, the most common way is to download https://www.virtualbox.org/wiki/Downloads which will be the "manager" for your Virtual Machines
 - For Arm https://mac.getutm.app/
 - Choose your host OS
 - Download and follow the installation process
 
 
- 2. Getting Debian
+####  2. Getting Debian
 - Navigate to https://www.debian.org/distrib/
 - You can basically choose any Debian 13 - version, but this is the most straighforward without the need to tinker that much
 
@@ -164,8 +164,6 @@ Next.. lighter is Xfce, most commonly used GNOME. This part is optional as well,
 
 Now, finally - go get some fresh air. This installation should take around 5-15 minutes.
 
-
-1. Create a new VM or use an existing one. (Debian 13)
 
 ## Step 2 - Download, Unzip, Run, Enjoy
 
