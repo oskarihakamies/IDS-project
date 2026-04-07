@@ -275,5 +275,6 @@ Accept the risks
 ### Thank you
 
 Remember to send any feedback to: osiris-t-form@protonmail.com
+
 ~ Make installation and configuration easy, Open-Source and let the open-minded explore their own path ~
 
