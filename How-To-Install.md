@@ -53,7 +53,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 - Press "new" <img width="802" height="118" alt="kuva" src="https://github.com/user-attachments/assets/7c0669d9-dbdf-48c1-849f-bfb27656f5af" />
 
 - Name your VM as you wish
-- Find the correct iso - file that you downloaded
+- Find the correct ISO - file that you downloaded
 - Make sure the OS is Linux and Debian (64-bit)
 
 <img width="954" height="778" alt="kuva" src="https://github.com/user-attachments/assets/a6b8fa36-d814-4b73-b17c-43e8357a0ca0" />
