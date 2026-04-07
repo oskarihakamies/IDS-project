@@ -209,8 +209,13 @@ or ```wget https://github.com/user-attachments/files/26421526/soc-project-v4.zip
 6. Use ```sudo bash install.sh``` to launch it
 
 If you don't manage to install because "user is not in sudoers file"
+
 > su
+
+> log in
+
 > sudo adduser (insert your user) sudo
+
 > reboot the vm
 
 8. Let it do its magic. This takes around 2-10 minutes. Grab a coffee.
