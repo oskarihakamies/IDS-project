@@ -34,14 +34,19 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 ### Step 1, Environment - If you have Debian 13 installed on a clean Virtual machine, Skip to Step 2, if not follow from here on
 
 1. Managing machines
-- The most common way is to download https://www.virtualbox.org/wiki/Downloads which will be the "manager" for your Virtual Machines
+- For Windows hosts, the most common way is to download https://www.virtualbox.org/wiki/Downloads which will be the "manager" for your Virtual Machines
+- For Arm https://mac.getutm.app/
 - Choose your host OS
 - Download and follow the installation process
 
 
  2. Getting Debian
-- Navigate to https://www.debian.org/download
-- 
+- Navigate to https://www.debian.org/distrib/
+- You can basically choose any Debian 13 - version, but this is the most straighforward without the need to tinker that much
+
+<img width="1876" height="859" alt="kuva" src="https://github.com/user-attachments/assets/5a9fac78-a57d-41bd-9b11-0b46a791f53d" />
+
+- After clicking, it should start download
 
 
 1. Create a new VM or use an existing one. (Debian 13)
