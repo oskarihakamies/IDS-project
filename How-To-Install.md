@@ -86,9 +86,55 @@ Keyboard.. Once again choose your own
 
 <img width="793" height="690" alt="kuva" src="https://github.com/user-attachments/assets/c0d01b57-678a-4afc-985c-6dca070ffbbf" />
 
-After you continue, it will start the install. Grab a coffee and wait. Will take around 2-10 minutes ☕
+After you continue, it will start the install. Grab a coffee and wait. Will take around 2 minutes ☕
 
 <img width="799" height="684" alt="kuva" src="https://github.com/user-attachments/assets/6dac26a7-f2f2-4230-a218-466deab3fef9" />
+
+It will stop and ask for a hostname. This will be visible for other machines in your network.
+
+<img width="793" height="696" alt="kuva" src="https://github.com/user-attachments/assets/13dcd578-11a6-485f-937d-e3e030b56154" />
+
+Domain name can be left blank in home environments
+
+<img width="799" height="691" alt="kuva" src="https://github.com/user-attachments/assets/02bd5c53-5b17-496c-92cf-f347cb7f7d0b" />
+
+Set up a Root password or read through the instructions
+
+<img width="781" height="523" alt="kuva" src="https://github.com/user-attachments/assets/582bb8da-bb91-46e6-9b0c-b926f6b0e3d7" />
+
+Name
+
+<img width="787" height="294" alt="kuva" src="https://github.com/user-attachments/assets/10823ad2-cf53-4962-bcab-cbf4b03ef605" />
+
+Username. Not recommended to be too complicated nor long.
+
+<img width="784" height="193" alt="kuva" src="https://github.com/user-attachments/assets/11f0190f-be41-4219-9eba-e7500455f269" />
+
+Password for the user
+
+<img width="787" height="351" alt="kuva" src="https://github.com/user-attachments/assets/e3ce979c-914b-4d6d-828b-c846319ad4c0" />
+
+After that the installation will continue, this will take 1-3 minutes, jump around for a bit
+
+It will stop and ask for partitions - Use entire disk
+<img width="790" height="300" alt="kuva" src="https://github.com/user-attachments/assets/04f9ae31-cc14-4fc0-8af8-90e2ddee785a" />
+
+One might have more than one depending on previous setup, but choose the one we made
+
+<img width="778" height="241" alt="kuva" src="https://github.com/user-attachments/assets/31b53025-7cb8-4186-bd94-75353d71dd00" />
+
+This part is optional
+
+<img width="793" height="465" alt="kuva" src="https://github.com/user-attachments/assets/398b4ac8-4312-409d-9ee4-c5697c8ce61f" />
+
+Keep pressing Continue
+
+<img width="801" height="415" alt="kuva" src="https://github.com/user-attachments/assets/893fde55-3246-4774-8061-87d661752548" />
+
+<img width="787" height="474" alt="kuva" src="https://github.com/user-attachments/assets/6e95a8bb-3298-4d20-bff3-304927409350" />
+
+After pressing continue, it will run for 2-10 minutes. Go get some fresh air.
+
 
 
 
