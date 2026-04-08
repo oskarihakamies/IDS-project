@@ -26,7 +26,7 @@ The prototype is meant to successfully detect common attack types such as DoS, p
 
 ## Test & Runtime Environment
 
-(These versions are used as of 2/4/2025)
+(These versions are used as of 2/4/2026)
 
 **Hypervisor**: VirtualBox 7.2.4
 
