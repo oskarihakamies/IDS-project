@@ -119,6 +119,17 @@ VM specs:
 
 ---
 
+## Ansible Deployment
+
+The playbook deploys all components in the correct dependency order:
+
+```
+common → wazuh_indexer → wazuh_manager → wazuh_dashboard → sensors
+```
+
+---
+
+
 ### Role breakdown
 
 **`common`**
