@@ -150,8 +150,6 @@ common → wazuh_indexer → wazuh_manager → wazuh_dashboard → sensors
 - Installs wazuh-manager 
 - Creates correct systemd service file (`Type=oneshot`)
 - Fixes `MANAGER_IP` placeholder in ossec.conf automatically
-- Enables authd on port 1515 for agent enrollment
-- Configures Filebeat with Wazuh module
 - Installs and starts **wazuh-alerts-shipper v2** as systemd service
 
 **`wazuh_dashboard`**
