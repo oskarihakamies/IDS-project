@@ -49,7 +49,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 #### 1. Managing machines
 - For Windows hosts, the most common way is to download https://www.virtualbox.org/wiki/Downloads which will be the "manager" for your Virtual Machines
-- For Arm64 https://mac.getutm.app/ (guide coming soon)
+- For Arm64 chech here: https://github.com/oskarihakamies/IDS-project/blob/main/How-To_Install_arm64.md
 - Choose your host OS
 - Download and follow the installation process
 
