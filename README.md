@@ -96,20 +96,67 @@ VM specs:
 │         │     Web UI / HTTPS      │  admin / admin      │
 │         └─────────────────────────┘                     │
 └─────────────────────────────────────────────────────────┘
-
-
 ```
 
+---
 
-Tools & Technologies
-ToolVersionPurposeSuricata7.xSignature-based IDS, alert generationWazuh Manager4.14.4SIEM, log correlation, alert managementWazuh Indexer4.14.4OpenSearch-based log storage and indexingWazuh Dashboard4.14.4Web UI, security event visualizationFilebeat7.10.2Log forwarding (superseded by custom shipper)wazuh-alerts-shipperv2 (custom)Python shipper with TLS, registry, batch sendingAnsible2.xFull automated deploymentPython 33.xCustom alert shipper runtimetcpreplaylatestPCAP replay for attack simulationnmaplatestPort scanning for test traffictsharklatestNetwork packet capture to PCAPOpenSSLlatestTLS certificate generation and inspection
+## Tools & Technologies
+
+| Tool | Version | Purpose |
+|------|---------|---------|
+| **Suricata** | 7.0.10 | Signature-based IDS, alert generation |
+| **Wazuh Manager** | 4.14.4 | SIEM, log correlation, alert management |
+| **Wazuh Indexer** | 4.14.4 | OpenSearch-based log storage and indexing |
+| **Wazuh Dashboard** | 4.14.4 | Web UI, security event visualization |
+| **wazuh-alerts-shipper** | v2 (custom) | Python shipper with TLS, registry, batch sending |
+| **Ansible** | 2.x | Full automated deployment |
+| **Python 3** | 3.x | Custom alert shipper runtime |
+| **tcpreplay** | latest | PCAP replay for attack simulation |
+| **nmap** | latest | Port scanning for test traffic |
+| **tshark** | latest | Network packet capture to PCAP |
+| **OpenSSL** | latest | TLS certificate generation and inspection |
 
 
+---
 
+### Role breakdown
 
+**`common`**
+- Installs baseline packages: curl, wget, gnupg, unzip, python3
+- Installs test tools: tcpreplay, nmap, tshark, net-tools, openssl
+- Creates `/etc/apt/keyrings/` for external repositories
 
+**`wazuh_indexer`**
+- Adds Wazuh APT repository and GPG key
+- Installs wazuh-indexer (OpenSearch 2.19.4)
+- Generates TLS/SSL certificates with wazuh-certs-tool.sh
+- Reads admin certificate DN dynamically with openssl
+- Writes opensearch.yml with correct admin_dn **before** starting indexer
+- Copies securityconfig files to correct location
+- Starts indexer and runs securityadmin.sh to initialize security plugin
 
+**`wazuh_manager`**
+- Installs wazuh-manager and filebeat
+- Creates correct systemd service file (`Type=oneshot`)
+- Fixes `MANAGER_IP` placeholder in ossec.conf automatically
+- Enables authd on port 1515 for agent enrollment
+- Configures Filebeat with Wazuh module
+- Installs and starts **wazuh-alerts-shipper v2** as systemd service
 
+**`wazuh_dashboard`**
+- Installs wazuh-dashboard
+- Copies TLS certificates to dashboard directory
+- Configures opensearch_dashboards.yml (port 443, SSL enabled)
+- Waits for dashboard to be available on port 443
+
+**`sensors`**
+- Installs Suricata and updates ET Open rules
+- Auto-detects network interface with `ansible_default_ipv4.interface`
+- Sets correct permissions for Wazuh Manager to read Suricata logs
+- Adds localfile configuration to Manager ossec.conf
+- Note: wazuh-agent is **not** installed — it conflicts with wazuh-manager on Debian
+
+---
 
 ## Contact
 
