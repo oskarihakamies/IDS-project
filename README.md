@@ -18,27 +18,11 @@ https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md
 
 ## Project Overview
 
-This school project implements a modular Intrusion Detection System (IDS) combining signature-based and behavior-based detection. The system monitors network traffic, generates alerts, enriches data with geolocation, backs up logs, and provides visual analysis via Kibana dashboards.
+This school project implements a modular Intrusion Detection System (IDS) combining signature-based and behavior-based detection. The system monitors network traffic, generates alerts, enriches data with geolocation, backs up logs, and provides visual analysis via Wazuh dashboards. 
 
 
-The prototype is meant to successfully detect common attack types such as DoS, port scans, probing, and brute-force attempts using benchmark datasets and live simulations.
-
-
-## Tools & Technologies Used
-
-  
-     Tool                 Purpose
-|**Suricata**         | Signature-based IDS/IPS, alert generation                    
-| **Zeek**            | Network Security Monitor, protocol analysis & detailed logs   
-| **Filebeat**        | Log collection and forwarding to Elasticsearch               
-| **Elasticsearch**   | Log storage, indexing and search engine                     
-| **Kibana**          | Dashboards, visualizations, GeoIP maps, alert exploration     
-| **Wazuh**           | SIEM layer, backups, alert correlation and management       
-| **tcpreplay**       | PCAP replay for offline attack simulation                     
-| **MaxMind GeoLite2**| Geolocation enrichment for IP addresses                        
-| **Docker**          | Container management (mainly for ELK Stack & Wazuh components)
-
-
+The prototype is meant to successfully detect common attack types such as DoS, port scans, probing, and brute-force attempts using benchmark datasets and live simulations. The entire stack is also deployed with a single command using Ansible, making it reproducible and easy to set up from scratch on any Debian 13 machine.
+ 
 
 ## Test & Runtime Environment
 
@@ -51,32 +35,65 @@ The prototype is meant to successfully detect common attack types such as DoS, p
   
 VM specs: 
 
-- BM (Recommended) 8-12 MB
-- -4 CPU 
-- Disk size 20,00 GB
-- Network: Internal Network or Bridged Adapter (for traffic mirroring)
-- 
+- RAM 8-12 GB 
+- 2-4 CPU 
+- Disk size +30,00 GB
+- Network: NAT While installing + Internal Network for attacking
+  
 
 
 **Attack Simulation OS**:
 
 
-- VM specs: 2–4 GB RAM, 2 vCPUs
+- VM specs: 2-6 GB RAM, 2 vCPUs
 
 **Test Datasets**:
 
 - Small manual PCAP files
 
 
-## Quick Setup Summary
+## Architecture
 
-1. Create Debian VM in VirtualBox → `sudo apt update && sudo apt upgrade`
-2. Install Suricata, Zeek, Filebeat, ELK Stack, Wazuh (via official repositories)
-3. Configure monitoring interface in `suricata.yaml` and `node.cfg` (Zeek)
-4. Enable Filebeat modules: `filebeat modules enable suricata zeek`
-5. Start services: `systemctl enable --now elasticsearch kibana filebeat`
-6. Test traffic generation: `sudo tcpreplay --intf1=ens160 sample.pcap`
-7. Access Kibana → http://localhost:5601 → create index pattern `filebeat-*` → build dashboards
+┌─────────────────────────────────────────────────────────┐
+│                    OSIRIS-T Stack                       │
+│                                                         │
+│  ┌──────────┐    ┌──────────────┐    ┌───────────────┐  │
+│  │ tcpreplay│    │     nmap     │    │    tshark     │  │
+│  │  (PCAP)  │    │  (scanning)  │    │  (capture)    │  │
+│  └────┬─────┘    └──────┬───────┘    └───────┬───────┘  │
+│       └─────────────────┴───────────────────┘           │
+│                         │ network packets               │
+│                         ▼                               │
+│              ┌───────────────────┐                      │
+│              │     Suricata      │  ET Open rules       │
+│              │  Signature IDS    │  40 000+ signatures  │
+│              └────────┬──────────┘                      │
+│                       │ /var/log/suricata/eve.json      │
+│                       ▼                                 │
+│              ┌───────────────────┐                      │
+│              │   Wazuh Manager   │  Rule correlation    │
+│              │      SIEM         │  Alert generation    │
+│              └────────┬──────────┘  port 1514 / 1515    │
+│                       │ /var/ossec/logs/alerts/         │
+│                       ▼                                 │
+│         ┌─────────────────────────┐                     │
+│         │  wazuh-alerts-shipper   │  Python systemd     │
+│         │    (custom Python v2)   │  Batch · Retry      │
+│         │                         │  Registry · TLS     │
+│         └────────────┬────────────┘                     │
+│                      │ HTTPS REST /_bulk                │
+│                      ▼                                  │
+│         ┌─────────────────────────┐                     │
+│         │     Wazuh Indexer       │  OpenSearch 2.19.4  │
+│         │  (OpenSearch engine)    │  port 9200 · TLS    │
+│         └────────────┬────────────┘                     │
+│                      │                                  │
+│                      ▼                                  │
+│         ┌─────────────────────────┐                     │
+│         │    Wazuh Dashboard      │  https://127.0.0.1  │
+│         │     Web UI / HTTPS      │  admin / admin      │
+│         └─────────────────────────┘                     │
+└─────────────────────────────────────────────────────────┘
 
 
 
