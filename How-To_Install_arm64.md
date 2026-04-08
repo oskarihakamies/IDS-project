@@ -53,3 +53,21 @@ You should have at least 32GB to run this smoothly. With 20-25GB's it is lagging
 
 <img width="436" height="497" alt="Näyttökuva 2026-04-08 kello 12 22 15" src="https://github.com/user-attachments/assets/735da676-9ccb-4ddd-9c9e-8f5dc61095e6" />
 
+Last thing is to choose Shared folder if you want. In this case you don't need to choose anything.
+
+
+<img width="439" height="503" alt="Näyttökuva 2026-04-08 kello 12 26 30" src="https://github.com/user-attachments/assets/12bfd4c9-b05c-47f7-aa5b-9705c306f772" />
+
+And the last screen is Summary. 
+
+In here you can name your VM
+
+<img width="440" height="506" alt="Näyttökuva 2026-04-08 kello 12 30 20" src="https://github.com/user-attachments/assets/4bd14c7d-e4cf-4d52-a588-a77d905cd854" />
+
+-> Now you can start your VM! 
+
+### After this
+
+You can go back to main https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md and start with you debian. 
+
+
