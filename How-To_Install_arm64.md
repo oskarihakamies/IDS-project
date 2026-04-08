@@ -68,6 +68,8 @@ In here you can name your VM
 
 ### After this
 
-You can go back to main https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md and start with you debian. 
+Configuring inside Debian it is exactly the same as in main insturctions.
 
+
+You can go back to main https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md and start with you debian. 
 
