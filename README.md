@@ -147,7 +147,7 @@ common → wazuh_indexer → wazuh_manager → wazuh_dashboard → sensors
 - Starts indexer and runs securityadmin.sh to initialize security plugin
 
 **`wazuh_manager`**
-- Installs wazuh-manager and filebeat
+- Installs wazuh-manager 
 - Creates correct systemd service file (`Type=oneshot`)
 - Fixes `MANAGER_IP` placeholder in ossec.conf automatically
 - Enables authd on port 1515 for agent enrollment
@@ -165,7 +165,7 @@ common → wazuh_indexer → wazuh_manager → wazuh_dashboard → sensors
 - Auto-detects network interface with `ansible_default_ipv4.interface`
 - Sets correct permissions for Wazuh Manager to read Suricata logs
 - Adds localfile configuration to Manager ossec.conf
-- Note: wazuh-agent is **not** installed — it conflicts with wazuh-manager on Debian
+- Note: wazuh-agent is **not** installed because it conflicts with wazuh-manager on Debian
 
 ---
 
