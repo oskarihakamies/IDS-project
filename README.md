@@ -54,6 +54,8 @@ VM specs:
 
 ## Architecture
 
+
+```
 ┌─────────────────────────────────────────────────────────┐
 │                    OSIRIS-T Stack                       │
 │                                                         │
@@ -94,6 +96,13 @@ VM specs:
 │         │     Web UI / HTTPS      │  admin / admin      │
 │         └─────────────────────────┘                     │
 └─────────────────────────────────────────────────────────┘
+
+
+```
+
+
+Tools & Technologies
+ToolVersionPurposeSuricata7.xSignature-based IDS, alert generationWazuh Manager4.14.4SIEM, log correlation, alert managementWazuh Indexer4.14.4OpenSearch-based log storage and indexingWazuh Dashboard4.14.4Web UI, security event visualizationFilebeat7.10.2Log forwarding (superseded by custom shipper)wazuh-alerts-shipperv2 (custom)Python shipper with TLS, registry, batch sendingAnsible2.xFull automated deploymentPython 33.xCustom alert shipper runtimetcpreplaylatestPCAP replay for attack simulationnmaplatestPort scanning for test traffictsharklatestNetwork packet capture to PCAPOpenSSLlatestTLS certificate generation and inspection
 
 
 
