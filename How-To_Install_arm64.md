@@ -1,6 +1,6 @@
 # How to Intstall on Mac
 
-Usually Virtual Box won't work on newer Macs because they use ARM architecture. But no worries you can still use our project! I used UTM for this, and UTM works because it’s designed for Apple Silicon and uses Apple’s Hypervisor framework (and QEMU) to run ARM-based systems efficiently.
+Usually Virtual Box won't work on newer Macs because they use ARM architecture. But no worries you can still use our project! I used UTM for this, and it works because it’s designed for Apple Silicon and uses Apple’s Hypervisor framework (and QEMU) to run ARM-based systems efficiently.
 
 You can download it from here https://mac.getutm.app/
 
