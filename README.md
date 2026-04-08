@@ -57,43 +57,43 @@ VM specs:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    OSIRIS-T Stack                        │
+│                    OSIRIS-T Stack                       │
 │                                                         │
 │  ┌──────────┐    ┌──────────────┐    ┌───────────────┐  │
 │  │ tcpreplay│    │     nmap     │    │    tshark     │  │
 │  │  (PCAP)  │    │  (scanning)  │    │  (capture)    │  │
 │  └────┬─────┘    └──────┬───────┘    └───────┬───────┘  │
 │       └─────────────────┴───────────────────┘           │
-│                         │ network packets                │
+│                         │ network packets               │
 │                         ▼                               │
 │              ┌───────────────────┐                      │
-│              │     Suricata      │  ET Open rules        │
-│              │  Signature IDS    │  40 000+ signatures   │
+│              │     Suricata      │  ET Open rules       │
+│              │  Signature IDS    │  40 000+ signatures  │
 │              └────────┬──────────┘                      │
-│                       │ /var/log/suricata/eve.json       │
+│                       │ /var/log/suricata/eve.json      │
 │                       ▼                                 │
 │              ┌───────────────────┐                      │
-│              │   Wazuh Manager   │  Rule correlation     │
-│              │      SIEM         │  Alert generation     │
+│              │   Wazuh Manager   │  Rule correlation    │
+│              │      SIEM         │  Alert generation    │
 │              └────────┬──────────┘  port 1514 / 1515    │
-│                       │ /var/ossec/logs/alerts/          │
+│                       │ /var/ossec/logs/alerts/         │
 │                       ▼                                 │
 │         ┌─────────────────────────┐                     │
-│         │  wazuh-alerts-shipper   │  Python systemd      │
-│         │    (custom Python v2)   │  Batch · Retry       │
-│         │                         │  Registry · TLS      │
+│         │  wazuh-alerts-shipper   │  Python systemd     │
+│         │    (custom Python v2)   │  Batch · Retry      │
+│         │                         │  Registry · TLS     │
 │         └────────────┬────────────┘                     │
-│                      │ HTTPS REST /_bulk                 │
+│                      │ HTTPS REST /_bulk                │
 │                      ▼                                  │
 │         ┌─────────────────────────┐                     │
-│         │     Wazuh Indexer       │  OpenSearch 2.19.4   │
-│         │  (OpenSearch engine)    │  port 9200 · TLS     │
+│         │     Wazuh Indexer       │  OpenSearch 2.19.4  │
+│         │  (OpenSearch engine)    │  port 9200 · TLS    │
 │         └────────────┬────────────┘                     │
 │                      │                                  │
 │                      ▼                                  │
 │         ┌─────────────────────────┐                     │
-│         │    Wazuh Dashboard      │  https://127.0.0.1   │
-│         │     Web UI / HTTPS      │  admin / admin       │
+│         │    Wazuh Dashboard      │  https://127.0.0.1  │
+│         │     Web UI / HTTPS      │  admin / admin      │
 │         └─────────────────────────┘                     │
 └─────────────────────────────────────────────────────────┘   
 ```
