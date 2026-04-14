@@ -152,13 +152,16 @@ After pressing continue, it will run for 2 minutes again.
 <img width="789" height="453" alt="kuva" src="https://github.com/user-attachments/assets/ab9dd99d-36a5-4534-a095-8c02f9dbdc93" />
 
 Choose "Yes" 
+
 <img width="796" height="297" alt="kuva" src="https://github.com/user-attachments/assets/89180391-f553-4e85-a88a-8c07f8441fce" />
 
 Choose the one closest
 
 <img width="795" height="547" alt="kuva" src="https://github.com/user-attachments/assets/a3395dc8-10d8-45fe-b53e-237d342a05d6" />
 
-And <img width="772" height="319" alt="kuva" src="https://github.com/user-attachments/assets/a2124afe-4afe-4549-b216-d49cb07891aa" />
+And 
+
+<img width="772" height="319" alt="kuva" src="https://github.com/user-attachments/assets/a2124afe-4afe-4549-b216-d49cb07891aa" />
 
 Can be left blank
 
