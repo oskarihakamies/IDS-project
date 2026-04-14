@@ -170,6 +170,7 @@ Can be left blank
 The next installation will take around 1 minute.
 
 Optional
+
 <img width="787" height="298" alt="kuva" src="https://github.com/user-attachments/assets/70a7eb8b-05ca-47a6-9642-1df0503759d8" />
 
 Next.. lighter is Xfce, most commonly used GNOME. This part is optional as well, feel free to explore
