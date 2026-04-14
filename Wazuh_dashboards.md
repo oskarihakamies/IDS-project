@@ -2,6 +2,7 @@
 
 How to use dashboards in Wazuh?
 
+
 <img width="1344" height="754" alt="Näyttökuva 2026-04-05 kello 19 41 05" src="https://github.com/user-attachments/assets/68a5e73a-6dcc-48ee-8656-273fcb070931" />
 
 
