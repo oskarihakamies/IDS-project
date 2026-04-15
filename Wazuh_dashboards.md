@@ -130,3 +130,14 @@ This dashboard will provide overview of security alerts collected by the Wazuh s
 ### Overall 
 
 Based on this dashboard there are no no critical threats detected and majority of alerts are concentrated in medium severity. It is also good to konw that activty is low and not continuous. But keep in mind that data volume in this dashboard is small.
+
+
+### Another Model
+
+This one is made with Sample Malware Detection data. 
+
+<img width="944" height="435" alt="Näyttökuva 2026-04-15 kello 14 23 00" src="https://github.com/user-attachments/assets/725352d7-d482-41aa-b708-aa0e2e846ca7" />
+
+
+
+<img width="1470" height="738" alt="Näyttökuva 2026-04-15 kello 14 22 06" src="https://github.com/user-attachments/assets/518675b6-d0ed-4ecf-96e8-cc4223bb6bc6" />
