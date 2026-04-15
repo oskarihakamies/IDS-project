@@ -276,15 +276,6 @@ After that. You can go to your dashboard and check the alert you created.
 I used pcap file. a simple port scan with tcpreplay.
 
 
-Tarkistuskomennot 
-
-sudo systemctl restart suricata
-sleep 5
-sudo grep -c "^alert" /var/lib/suricata/rules/emerging-scan.rules
-
-sudo grep "suricata.rules" /etc/suricata/suricata.yaml
-
-sudo sed -i 's|- suricata.rules|- suricata.rules\n  - emerging-scan.rules|' /etc/suricata/suricata.yaml
 
 
 ## TROUBLESHOOTING:
