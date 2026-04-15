@@ -197,6 +197,19 @@ Log in
 
 Check ```sudo nano /etc/apt/sources.list``` that this line cdrom line is # commented
 
+```# Perusarkistot (ohjelmat ja kirjastot)
+deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+
+# Turvapäivitykset
+deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+
+# Päivitykset (updates)
+deb http://deb.debian.org/debian/ trixie-updates main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian/ trixie-updates main contrib non-free non-free-firmware
+```
+
 <img width="814" height="525" alt="kuva" src="https://github.com/user-attachments/assets/209f6a49-d981-4348-8c9e-ba89d65334c7" />
 
 If not, put # in front and save
