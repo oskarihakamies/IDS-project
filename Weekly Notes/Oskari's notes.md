@@ -278,9 +278,9 @@ I used pcap file. a simple port scan with tcpreplay.
 
 Tarkistuskomennot 
 
-sudo grep -l "nmap\|NMAP" /etc/suricata/rules/*.rules 2>/dev/null
+sudo find / -name "emerging-scan.rules" 2>/dev/null
 
-sudo grep -c "^alert" /etc/suricata/rules/*.rules 2>/dev/null | grep -v ":0" | head -10
+sudo find / -name "*.rules" 2>/dev/null | head -10
 
 
 
