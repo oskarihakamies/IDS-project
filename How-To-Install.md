@@ -282,6 +282,43 @@ Accept the risks
 19.  You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
  https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap.
 
+
+## Instructions for tcpreplay
+
+### What is tcpreplay and a PCAP file? 
+
+Tcpreplay is like a recordplayer for the wanted capture packet. Tcpreplay replays the recording onto a network interface. Suricata processes the packets as if the attack is happening live, even though it is just a historical capture.
+
+PCAP file which is used is a recorded packet capture so to speak. Basically a captured snapshot of real traffic such as a port scan or brute-force attempt.
+
+1. Download a PCAP file - We have listed few sites, where you can download them from.
+
+2. Check your interface name
+
+ ``` ip a  ```
+
+3. Replay the PCAP
+
+```sudo tcpreplay --intf1=enp0s3 ~/Downloads/portscan.pcap```
+
+
+(Command is an example. You have to check the correct interface and pcap files name)
+   
+
+5. Open the Dashboard
+   
+
+```https://127.0.0.1/app/home```
+
+
+6. Analyse
+   
+
+*Did an alert appear in Wazuh?*
+
+*What rule fired? What severity?*
+
+
 ### Thank you
 
 Remember to send any feedback to: osiris-t-form@protonmail.com
