@@ -74,12 +74,12 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 - Move onto "Specify Virtual hardware"
 - Choose +8000MB Base memory if your computer has enough
-- Number of CPUs -> experiment, but we've been running 2-3
+- Number of CPUs -> experiment as long as it's not on the red part, you should be fine.
 
 <img width="1177" height="813" alt="kuva" src="https://github.com/user-attachments/assets/823427dc-3231-4b47-a852-8309e3cbf3f2" />
 
 - Virtual Hard disk is the size of the disk for the VM
-- +30GB recommended
+- +35GB recommended
 - Finish
 
 - It should appear to the list
