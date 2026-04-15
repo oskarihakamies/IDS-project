@@ -278,7 +278,8 @@ I used pcap file. a simple port scan with tcpreplay.
 
 Tarkistuskomennot 
 
-sudo grep -c "nmap\|portscan\|SCAN" /var/lib/suricata/rules/suricata.rules
+sudo curl -o /var/lib/suricata/rules/emerging-scan.rules \
+  https://rules.emergingthreats.net/open/suricata-7.0.10/rules/emerging-scan.rules
 
 ## TROUBLESHOOTING:
 
