@@ -300,8 +300,6 @@ Accept the risks
 
 <img width="651" height="69" alt="kuva" src="https://github.com/user-attachments/assets/80e28649-6b2b-4387-8184-8b6e0ce5fcf6" />
 
-<img width="1113" height="747" alt="kuva" src="https://github.com/user-attachments/assets/7a2ba2df-4802-43c6-b8c5-176feca0e101" />
-
 
 
 - You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
