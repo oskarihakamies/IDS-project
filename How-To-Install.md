@@ -333,6 +333,11 @@ PCAP file which is used is a recorded packet capture so to speak. Basically a ca
 
 1. Download a PCAP file - We have listed few sites, where you can download them from.
 
+https://github.com/markofu/pcaps/tree/master/PracticalPacketAnalysis/ppa-capture-files
+
+https://share.netresec.com/s/nF5zNcaXLgwdQFZ?opendetails=
+
+
 2. Check your interface name
 
  ``` ip a  ```
