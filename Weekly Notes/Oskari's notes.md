@@ -278,9 +278,7 @@ I used pcap file. a simple port scan with tcpreplay.
 
 Tarkistuskomennot 
 
-sudo grep -c "^alert" /var/lib/suricata/rules/suricata.rules
-
-sudo grep -i "nmap\|portscan\|scan" /var/lib/suricata/rules/suricata.rules | head -10
+sudo grep -c "nmap\|portscan\|SCAN" /var/lib/suricata/rules/suricata.rules
 
 ## TROUBLESHOOTING:
 
