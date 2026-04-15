@@ -278,10 +278,9 @@ I used pcap file. a simple port scan with tcpreplay.
 
 Tarkistuskomennot 
 
-sudo suricata -T -c /etc/suricata/suricata.yaml 2>&1 | grep -i "rules\|loaded\|error" | head -10
+sudo grep -l "nmap\|NMAP" /etc/suricata/rules/*.rules 2>/dev/null
 
-
-sudo grep -r "nmap\|NMAP\|scan" /etc/suricata/rules/ 2>/dev/null | grep "^alert" | head -10
+sudo grep -c "^alert" /etc/suricata/rules/*.rules 2>/dev/null | grep -v ":0" | head -10
 
 
 
