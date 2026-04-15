@@ -282,6 +282,7 @@ Accept the risks
 19.  You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
  https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap.
 
+## Task for the lesson - shoot a packet with tcpreplay - analyze
 
 ## Instructions for tcpreplay
 
@@ -311,12 +312,14 @@ PCAP file which is used is a recorded packet capture so to speak. Basically a ca
 ```https://127.0.0.1/app/home```
 
 
-6. Analyse
+6. Analyze
    
 
 *Did an alert appear in Wazuh?*
 
 *What rule fired? What severity?*
+
+Imagine the possibilities - you can record your own attacks and see how the system tracks it, what are the delays, how to read different attacks or just an overall network safety tool.
 
 
 ### Thank you
