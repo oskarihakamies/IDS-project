@@ -278,13 +278,9 @@ I used pcap file. a simple port scan with tcpreplay.
 
 Tarkistuskomennot 
 
-sudo find / -name "emerging-scan.rules" 2>/dev/null
+sudo grep -c "^alert" /var/lib/suricata/rules/suricata.rules
 
-sudo find / -name "*.rules" 2>/dev/null | head -10
-
-sudo grep -A5 "default-rule-path" /etc/suricata/suricata.yaml
-
-sudo suricata-update --suricata-conf /etc/suricata/suricata.yaml 2>&1 | tail -10
+sudo grep -i "nmap\|portscan\|scan" /var/lib/suricata/rules/suricata.rules | head -10
 
 ## TROUBLESHOOTING:
 
