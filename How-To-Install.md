@@ -279,8 +279,36 @@ Accept the risks
 
 18. Be creative and safe! The fastest test is to use this command ```curl http://testmynids.org/uid/index.html```which is widely used for testing IDS - systems. This SHOULD come up in Wazuh
 
-19.  You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
+## . Turn off your internet for testing
+- Go to Oracle VirtualBox Manager
+- Choose your VM
+- Click on "Settings"
+
+<img width="1117" height="742" alt="kuva" src="https://github.com/user-attachments/assets/cfc1f4bc-749a-4189-9afa-1c61d07277fb" />
+
+
+- Go to "Network"
+
+<img width="966" height="630" alt="kuva" src="https://github.com/user-attachments/assets/68287604-eb93-4aa6-a8a8-10f7b10340da" />
+
+- Click "Virtual Cable Connected" to unmark it
+
+<img width="1120" height="741" alt="kuva" src="https://github.com/user-attachments/assets/05e7b1c6-fabb-48d2-9d8b-ee12948278a8" />
+
+- Ping 8.8.8.8 on your VM and/or go to the browser and do a search
+- Should be "unreachable"
+
+<img width="651" height="69" alt="kuva" src="https://github.com/user-attachments/assets/80e28649-6b2b-4387-8184-8b6e0ce5fcf6" />
+
+<img width="1113" height="747" alt="kuva" src="https://github.com/user-attachments/assets/7a2ba2df-4802-43c6-b8c5-176feca0e101" />
+
+
+
+- You can also test the system using ```tcpreplay``` and a portscan PCAP file from Practical Packet Analysis. Instructions for this will be added soon.
  https://github.com/markofu/pcaps/blob/master/PracticalPacketAnalysis/ppa-capture-files/portscan.pcap.
+
+
+
 
 ## Task for the lesson - shoot a packet with tcpreplay - analyze
 
