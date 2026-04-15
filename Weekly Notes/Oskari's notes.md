@@ -282,7 +282,9 @@ sudo find / -name "emerging-scan.rules" 2>/dev/null
 
 sudo find / -name "*.rules" 2>/dev/null | head -10
 
+sudo grep -A5 "default-rule-path" /etc/suricata/suricata.yaml
 
+sudo suricata-update --suricata-conf /etc/suricata/suricata.yaml 2>&1 | tail -10
 
 ## TROUBLESHOOTING:
 
