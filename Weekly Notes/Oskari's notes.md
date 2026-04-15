@@ -282,6 +282,11 @@ sudo systemctl restart suricata
 sleep 5
 sudo grep -c "^alert" /var/lib/suricata/rules/emerging-scan.rules
 
+sudo grep "suricata.rules" /etc/suricata/suricata.yaml
+
+sudo sed -i 's|- suricata.rules|- suricata.rules\n  - emerging-scan.rules|' /etc/suricata/suricata.yaml
+
+
 ## TROUBLESHOOTING:
 
 I initially had a memory issue, as I was unable to start Elasticsearch and the VM was lagging too much. I resolved the situation by increasing my laptop's memory allocation. The recommended VM memory would be at least 8 GB.
