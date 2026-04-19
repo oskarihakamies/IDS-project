@@ -15,7 +15,7 @@
 
 We were able to test this in a course with the help of Tero Karvinen that teaches the class. You can find more information here: https://terokarvinen.com/palvelinten-hallinta/. Thanks to Tero for letting us try it with his students and to all the students that took part and gave us valuable feedback.
 
-Most of the students have a little bit of knowledge / background from Linux but most of them are fairly new.
+Most of the students have a little bit of knowledge / background from Linux but most of them are fairly new. They have been using Ansible during the course.
 
 There were 18 participants that ran the whole project from scratch. 
 
