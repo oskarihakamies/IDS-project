@@ -152,3 +152,10 @@ Now we know how to do basic dashboards. Next step is to understand them and make
 <img width="1300" height="506" alt="Näyttökuva 2026-04-19 kello 20 55 01" src="https://github.com/user-attachments/assets/011dc392-9f62-48cb-aa26-9e94f8217f13" />
 
 In this picture we are at Wazuh Discover window, where we can see some alerts from the last 30 minutes of time. 
+
+Basic info from this view:
+
+- you can see timestamp for 30 minutes (20.24 - 20.54)
+- hits = 89
+- histogram = shows alarms or logs, you can see that the peak is around 20.35
+
