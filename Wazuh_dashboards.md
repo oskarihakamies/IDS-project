@@ -146,7 +146,7 @@ This one is made with Sample Malware Detection data.
 
 ## Logs and how to read them?
 
-Now we know how to do basic dashboards. Next step is to understand them and make observaisons about them. Here is something close to a recap that you can try to. 
+Now we know how to do basic dashboards. Next step is to understand them and make observaisons about them. Here is something close to a recap that you can try to use to understand your findings. 
 
 
 <img width="1300" height="506" alt="Näyttökuva 2026-04-19 kello 20 55 01" src="https://github.com/user-attachments/assets/011dc392-9f62-48cb-aa26-9e94f8217f13" />
@@ -158,4 +158,12 @@ Basic info from this view:
 - you can see timestamp for 30 minutes (20.24 - 20.54)
 - hits = 89
 - histogram = shows alarms or logs, you can see that the peak is around 20.35
+
+
+After basics, a bit lower you should see something like this: 
+
+<img width="1125" height="264" alt="Näyttökuva 2026-04-19 kello 22 48 28" src="https://github.com/user-attachments/assets/d486c637-5dfe-4d77-b504-42ae4f456c2a" />
+
+
+This is a Wazuh agent inventory log that captures ```netstat ``` command
 
