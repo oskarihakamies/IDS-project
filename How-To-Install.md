@@ -20,7 +20,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 **Req**
 
 - Debian 13 running on a Virtual Machine (recommended) - Not tested in other versions or distros.
-- At least 30GB of disk space +8GB RAM preferred as well
+- At least 40GB of disk space +8GB RAM preferred as well
 
 **Troubleshooting**
 
