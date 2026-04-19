@@ -165,5 +165,26 @@ After basics, a bit lower you should see something like this:
 <img width="1125" height="264" alt="Näyttökuva 2026-04-19 kello 22 48 28" src="https://github.com/user-attachments/assets/d486c637-5dfe-4d77-b504-42ae4f456c2a" />
 
 
-This is a Wazuh agent inventory log that captures ```netstat ``` command
+This is a Wazuh agent inventory log that captures ```netstat ```command, to be specific this tells which ports are listening on that host at that moment.
+
+Log: 
+
+field: ```previous_log```
+source: ``ossec``` = Wazuh agent is based on this ossec
+command executed: ```netstat listening ports```
+
+This is part of Wazuh’s system inventory / command monitoring, not an attack alert by itself!
+
+Listening services: 
+
+0.0.0.0:22 = SSH (accessible from anywhere)
+0.0.0.0:443 = HTTPS (web service)
+0.0.0.0:1514 = Wazuh agent communication
+0.0.0.0:1515 = Wazuh authd
+
+There is one local service = CUPS (Common Unix Printing System)
+
+127.0.0.1:631
+
+
 
