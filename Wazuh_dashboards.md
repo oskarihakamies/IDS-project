@@ -141,3 +141,14 @@ This one is made with Sample Malware Detection data.
 
 
 <img width="1470" height="738" alt="Näyttökuva 2026-04-15 kello 14 22 06" src="https://github.com/user-attachments/assets/518675b6-d0ed-4ecf-96e8-cc4223bb6bc6" />
+
+
+
+## Logs and how to read them?
+
+Now we know how to do basic dashboards. Next step is to understand them and make observaisons about them. Here is something close to a recap that you can try to. 
+
+
+<img width="1300" height="506" alt="Näyttökuva 2026-04-19 kello 20 55 01" src="https://github.com/user-attachments/assets/011dc392-9f62-48cb-aa26-9e94f8217f13" />
+
+In this picture we are at Wazuh Discover window, where we can see some alerts from the last 30 minutes of time. 
