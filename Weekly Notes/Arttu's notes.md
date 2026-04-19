@@ -607,3 +607,8 @@ This dashboard will provide overview of security alerts collected by the Wazuh s
 ### Overall 
 
 Based on this dashboard there are no no critical threats detected and majority of alerts are concentrated in medium severity. It is also good to konw that activty is low and not continuous. But keep in mind that data volume in this dashboard is small.
+
+
+### Week 17 - 18
+
+Last week we had test drive with multiple students at online course. It went by well and our project worked almost too well to be honest at this point. There is still work to do and next step for me is to make 
