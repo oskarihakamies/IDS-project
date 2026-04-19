@@ -1,3 +1,5 @@
+## Don't use this. Havigate to How-To-Install
+
 ## Note. The product isn't fully finished, not completely ready and everything that happens is at users own risk
 
 ## Updated "GUIDE" on https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md
@@ -10,14 +12,7 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Filebeat -> Wazuh Indexer
 
 2. Download the zip file
 
-[soc-project.zip](https://github.com/user-attachments/files/26360296/soc-project.zip)
-
 Maybe a ready zip file: 
-
-
-[soc-project-v4.zip](https://github.com/user-attachments/files/26421526/soc-project-v4.zip)
-
-
 
 
 3. Navigate to Downloads and look for the file
