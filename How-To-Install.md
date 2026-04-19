@@ -92,7 +92,9 @@ Your preferred language
 
 <img width="804" height="727" alt="kuva" src="https://github.com/user-attachments/assets/1103e53c-0f27-442d-947c-3503e34bc2f2" />
 
-Location is important for timezone, but do as you wish
+Location is important for timezone, but do as you wish. Just think of it as this: if you need to work for another country, it's more convenient to use the timezone it already is.
+
+For personal use, always the closest to you to not have to tinker around too much
 
 <img width="787" height="559" alt="kuva" src="https://github.com/user-attachments/assets/62de7994-e5c5-4359-b2dd-78f528a1fbf7" />
 
@@ -197,15 +199,17 @@ Log in
 
 Check ```sudo nano /etc/apt/sources.list``` that this line cdrom line is # commented
 
+If the other lines are missing, copy+paste these into the file and save.
+
 ```# Perusarkistot (ohjelmat ja kirjastot)
 deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
 
-# Turvapäivitykset
+# Security updates
 deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
 deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
 
-# Päivitykset (updates)
+# Updates
 deb http://deb.debian.org/debian/ trixie-updates main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian/ trixie-updates main contrib non-free non-free-firmware
 ```
@@ -252,6 +256,8 @@ or ```wget https://github.com/user-attachments/files/26421526/soc-project-v4.zip
  <img width="741" height="484" alt="kuva" src="https://github.com/user-attachments/assets/d328d9b8-a918-4048-b2df-b04cb162458d" />
 
 8. You should get this once it's finished. If errors, please report them!
+
+*Note* if there's an error with Python, you can ignore it. It's mainly because Debian 13 has the lastest Python already installed/or configured.
    
 <img width="1311" height="169" alt="kuva" src="https://github.com/user-attachments/assets/a22330e2-3e34-403f-89ec-3f60bf242e53" />
 
