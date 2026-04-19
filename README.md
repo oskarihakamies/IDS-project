@@ -31,7 +31,7 @@ After 70 minutes the results were surprisingly good:
  
 - 7 in phase 2 (trying to run the script) -> Most of the problems came with Debian ISO - image or setting it up instead of the actual project
 
-- 3 in phase 3 (tcpreplay) -> All 3 had Wazuh running or set up
+- 3 in phase 3 (tcpreplay) -> All 3 had Wazuh running or set up. Some even got tcpreplay to play the pcap - file to see it in Wazuh.
 
 Overall our test was successfull. Even beginners are able to set it up in live test with only us giving help in details such as setting up your keyboard for Linux, updating ```apt/sources.list```file so that Debian is able to update
 
