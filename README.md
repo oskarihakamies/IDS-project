@@ -21,7 +21,7 @@ There were 18 participants that ran the whole project from scratch.
 
 Only pre-requirement was that they installed the Debian 13 ISO - image we sent them beforehand.
 
-*Results*
+### Results
 
 In 40 minutes first 2 participants were able to build it from scratch and get notifications to Wazuh.
 
