@@ -611,4 +611,6 @@ Based on this dashboard there are no no critical threats detected and majority o
 
 ### Week 17 - 18
 
-Last week we had test drive with multiple students at online course. It went by well and our project worked almost too well to be honest at this point. There is still work to do and next step for me is to make 
+Last week we had test drive with multiple students at online course. It went by well and our project worked almost too well to be honest at this point. There is still work to do and next step for me is to study and help others how to read data in dashboards and what it actually means.
+
+
