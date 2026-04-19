@@ -1,4 +1,4 @@
-# Don't use this. Havigate to How-To-Install
+# Don't use this. Navigate to How-To-Install
 
 ## Note. The product isn't fully finished, not completely ready and everything that happens is at users own risk
 
