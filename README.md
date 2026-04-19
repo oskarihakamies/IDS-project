@@ -11,6 +11,28 @@
 
 **Purpose**: Build and demonstrate a functional open-source IDS capable of detecting known attacks, enriching logs with context (e.g. geolocation), and visualizing results in dashboards.
 
+## Validation 15/04/2026
+
+We were able to test this in a course with the help of Tero Karvinen that teaches the class. You can find more information here: https://terokarvinen.com/palvelinten-hallinta/
+
+Most of the students have a little bit of knowledge / background from Linux but most of them are fairly new.
+
+There were 18 participants that ran the whole project from scratch. 
+
+Only pre-requirement was that they installed the Debian 13 ISO - image we sent them beforehand.
+
+*Results*
+
+In 40 minutes first 2 participants were able to build it from scratch and get notifications to Wazuh.
+
+After 70 minutes the results were surprisingly good:
+
+8 in phase 1 (downloading/installing) -> Some of them had to download the full image (missed e-mail ect.)
+7 in phase 2 (trying to run the script) -> Most of the problems came with Debian ISO - image or setting it up instead of the actual project
+3 in phase 3 (tcpreplay) -> All 3 had Wazuh running or set up
+
+Overall our test was successfull. Even beginners are able to set it up in live test with only us giving help in details such as setting up your keyboard for Linux, updating ```apt/sources.list```file so that Debian is able to update
+
 ## **TO INSTALL** Follow this link to the guide: 
 
 https://github.com/oskarihakamies/IDS-project/blob/main/How-To-Install.md
