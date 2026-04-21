@@ -372,6 +372,28 @@ https://share.netresec.com/s/nF5zNcaXLgwdQFZ?opendetails=
 Imagine the possibilities - you can record your own attacks and see how the system tracks it, what are the delays, how to read different attacks or just an overall network safety tool.
 
 
+## Troubleshooting tips and Health check ups
+
+
+If there's going to be any problems with the IDS, you should always start with service status to see if they are active. 
+
+
+```
+sudo systemctl status wazuh-indexer --no-pager 
+sudo systemctl status wazuh-manager --no-pager 
+sudo systemctl status wazuh-dashboard --no-pager 
+sudo systemctl status wazuh-shipper --no-pager 
+sudo systemctl status suricata --no-pager 
+```
+All five should say active (running). If one shows failed or just sits in activating forever, that's where to look first.
+
+You can start the individual process manually again. For example wazuh-manager with ```sudo systemctl start wazuh-manager```. Just replace the one you want to manually start again with *wazuh-manager* 
+
+
+
+
+
+
 ### Thank you
 
 Remember to send any feedback to: osiris-t-form@protonmail.com
