@@ -32,6 +32,7 @@ After 70 minutes the results were surprisingly good:
 - 7 in phase 2 (trying to run the script) -> Most of the problems came with Debian ISO - image or setting it up instead of the actual project
 
 - 3 in phase 3 (tcpreplay) -> All 3 had Wazuh running or set up. Some even got to a point where they were testing the tcpreplay files but were unable to get it to show up in Wazuh.
+
 *There was an error in documenting the validation. We accidentally put that they managed to get pcap - file with tcpreplay to show up in Wazuh. In reality, Wazuh only showed up running sudo. 
 
 Overall our test was successfull. Even beginners are able to set it up in live test with only us giving help in details such as setting up your keyboard for Linux, updating ```apt/sources.list```file so that Debian is able to update
