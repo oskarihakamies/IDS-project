@@ -391,14 +391,7 @@ You can start the individual process manually again. For example wazuh-manager w
 
 Another check up you should make is inside of the suricata file. Look inside of it by command below. 
 
- ```sudo nano /etc/suricata/suricata.yaml ```
 
-
-If the part that says ```HOME_NET``` has your own ip address inside the ```address-groups:``` part of the file. You should change it to ```any```. 
-
-<img width="400" height="173" alt="image" src="https://github.com/user-attachments/assets/b6aa1d0f-9adf-43c0-a072-8a3bae949905" />
-
-This might be the reason your tcpreplay isn't registering any traffic to suricata from the PCAP files. 
 
 
 
