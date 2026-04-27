@@ -187,4 +187,28 @@ There is one local service = CUPS (Common Unix Printing System)
 127.0.0.1:631
 
 
+Ports 9200 and 9300 are most likely to Java processes that are listening REST API (9200) and internal cluster communication (9300). -> This matches most likely to OpenSearch in Wazuh. 
+
+Port 9200
+
+These need to be secure beacuse if exposed publicly:
+
+- Anyone could read,modify or delete your data
+- And this is also historically a very common breach vector
+
+
+Port 9300 is in the transport layer 
+
+Also needs to be secure! It is most likely to be used for:
+
+- Node-to-node communication (the direct transfer of data between two adjacent network devices (nodes), such as computers, routers, or switches, within a network)
+- Cluster formation
+
+In my picture it shows ```:::```= Pv6 “all interfaces” (It is equivalent to 0.0.0.0 in IPv4)
+
+Meaning? = These services are listening on all network interfaces
+
+Port 55000 is for Python 
+
+
 
