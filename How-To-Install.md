@@ -56,6 +56,11 @@ Suricata -> Wazuh Agent -> Wazuh Manager -> Wazuh Alerts Shipper -> Wazuh Indexe
 
 ####  2. Getting Debian
 - Navigate to https://www.debian.org/distrib/
+
+- If you are familiar with Debian and wan't the smaller image, this will work as well https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso
+
+<img width="922" height="171" alt="kuva" src="https://github.com/user-attachments/assets/e76a256d-eabc-4392-9ef0-caa22ea699f5" />
+
 - You can basically choose any Debian 13 - version, but this is the most straighforward without the need to tinker that much
 
 <img width="1876" height="859" alt="kuva" src="https://github.com/user-attachments/assets/5a9fac78-a57d-41bd-9b11-0b46a791f53d" />
