@@ -1461,4 +1461,7 @@ krotti@ansibel:~/soc-project$ sudo tail -f /var/ossec/logs/ossec.log [sudo] pass
 - This is the working file [soc-project-v4.zip](https://github.com/user-attachments/files/26519081/soc-project-v4.zip)
 - I focused on creating the first "How-To-Install-Guide" and validating the progress
 
-
+ ## Update 4/5/2026
+ - We managed to get test runs, been active in completing the project.
+ - Been focusing on completing the project as a whole. This includes simplifying, modifying and clearning the instructions, Github, creating presentations. Just finalizing the project.
+ - Notes are done for now. Nothing interesting to report on. Just minor fixes, cleaning etc.
