@@ -1,4 +1,5 @@
-[osiris-t.zip](https://github.com/user-attachments/files/27376857/soc-project-v4.zip)
+[osiris-t.zip](https://github.com/user-attachments/files/27376931/osiris-t.zip)
+
 
 ## Please Note. The product isn't fully finished, is in development and for testing only
 
@@ -241,7 +242,7 @@ Follow to Step 2
 
 1. Download the zip file:
 
-[osiris-t.zip](https://github.com/user-attachments/files/27376857/soc-project-v4.zip)
+[osiris-t.zip](https://github.com/user-attachments/files/27376931/osiris-t.zip)
 
 
 or ```wget https://github.com/user-attachments/files/26421526/soc-project-v4.zip```
